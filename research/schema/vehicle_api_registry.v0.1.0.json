@@ -1,0 +1,206 @@
+{
+  "registry_version": "0.1.0",
+  "status": "working_draft",
+  "schema_file": "vehicle_api_schema.v0.1.0.json",
+  "prediction_envelope": {
+    "required_keys": [
+      "calls"
+    ],
+    "schema_version_in_model_output": false
+  },
+  "evaluation": {
+    "primary": "ordered_full_call_exact_match",
+    "secondary": "unordered_call_multiset_exact_match",
+    "complexity_basis": "canonical_call_count",
+    "call_order": "source_semantic_unit_order"
+  },
+  "runtime_contract": {
+    "kind": "non_actuating_simulator",
+    "real_vehicle_execution": false,
+    "numeric_clamping": false,
+    "implicit_gold_defaults": false,
+    "temperature_unit": "celsius",
+    "temperature_range": [
+      16,
+      32
+    ],
+    "temperature_increment": 0.5,
+    "fan_level_range": [
+      1,
+      8
+    ],
+    "aperture_percent": {
+      "fully_closed": 0,
+      "fully_open_or_retracted": 100
+    },
+    "relative_magnitude": [
+      "default",
+      "small",
+      "medium",
+      "large"
+    ]
+  },
+  "mapping_outcomes": [
+    "mapped",
+    "ambiguous",
+    "unsupported",
+    "needs_context"
+  ],
+  "functions": {
+    "set_hvac_power": {
+      "tier": "pilot_core",
+      "argument_order": [
+        "state",
+        "zone"
+      ]
+    },
+    "set_hvac_temperature": {
+      "tier": "pilot_core",
+      "argument_order": [
+        "target",
+        "zone"
+      ]
+    },
+    "set_hvac_fan_speed": {
+      "tier": "pilot_core",
+      "argument_order": [
+        "target",
+        "zone"
+      ]
+    },
+    "set_window_position": {
+      "tier": "pilot_core",
+      "argument_order": [
+        "zone",
+        "target"
+      ]
+    },
+    "set_sunroof_position": {
+      "tier": "pilot_core",
+      "argument_order": [
+        "target"
+      ]
+    },
+    "set_sunshade_position": {
+      "tier": "pilot_core",
+      "argument_order": [
+        "target"
+      ]
+    },
+    "set_seat_climate": {
+      "tier": "pilot_core",
+      "argument_order": [
+        "zone",
+        "feature",
+        "setting"
+      ]
+    },
+    "set_seat_massage": {
+      "tier": "pilot_core",
+      "argument_order": [
+        "zone",
+        "setting"
+      ]
+    }
+  },
+  "deferred_extensions": [
+    {
+      "stage": "E1",
+      "families": [
+        "hvac_airflow",
+        "hvac_air_source",
+        "hvac_mode",
+        "defogger",
+        "seat_position"
+      ],
+      "gate": "typed selector and required-target audit"
+    },
+    {
+      "stage": "E2",
+      "families": [
+        "display",
+        "audio"
+      ],
+      "mac_train_marker_upper_bounds": {
+        "display": 470,
+        "audio": 439
+      },
+      "gate": "mutually exclusive selectors and complete value normalization"
+    },
+    {
+      "stage": "E3",
+      "families": [
+        "interior_light",
+        "ambient_light"
+      ],
+      "mac_train_marker_upper_bounds": {
+        "interior_light": 218,
+        "ambient_light": 137
+      },
+      "gate": "explicit subtype separation and safety review"
+    },
+    {
+      "stage": "E4",
+      "families": [
+        "system_page",
+        "connectivity"
+      ],
+      "mac_train_marker_upper_bounds": {
+        "page": 326,
+        "module": 387
+      },
+      "gate": "page and module carry-over resolution"
+    },
+    {
+      "stage": "E5",
+      "families": [
+        "camera_view",
+        "camera_capture"
+      ],
+      "mac_train_marker_upper_bound": 50,
+      "gate": "manual view-versus-capture audit"
+    }
+  ],
+  "mivs_only_extensions": [
+    {
+      "family": "system_app",
+      "source_slot": "应用名",
+      "disposition": "defer_until_MAC_train_support_or_report_as_function_OOV"
+    },
+    {
+      "family": "light_show",
+      "source_slot": "灯光秀类型",
+      "disposition": "unsupported_oem_macro"
+    }
+  ],
+  "unsupported_families": {
+    "safety_critical_control": [
+      "adas",
+      "steering",
+      "braking",
+      "autonomous_parking",
+      "direct_longitudinal_or_lateral_control",
+      "drive_mode",
+      "exterior_light"
+    ],
+    "access_and_alert_actuation": [
+      "door",
+      "lock",
+      "tailgate",
+      "horn"
+    ],
+    "unmodeled_system_operations": [
+      "charging_actuation",
+      "reboot_or_reset",
+      "arbitrary_touch_gesture_or_back",
+      "oem_macro_or_light_show"
+    ],
+    "semantically_incomplete": [
+      "query_only",
+      "complaint_without_action",
+      "prohibition",
+      "contradictory_command",
+      "out_of_contract_value"
+    ]
+  }
+}

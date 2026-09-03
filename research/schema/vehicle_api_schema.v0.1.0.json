@@ -1,0 +1,737 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vehicle-agent-ondevice-benchmark:vehicle-api:0.1.0",
+  "title": "Canonical Vehicle API pilot prediction envelope",
+  "description": "Working-draft, language-independent calls for a non-actuating vehicle simulator.",
+  "type": "object",
+  "required": [
+    "calls"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "calls": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/canonical_call"
+      }
+    }
+  },
+  "$defs": {
+    "on_off": {
+      "type": "string",
+      "enum": [
+        "on",
+        "off"
+      ]
+    },
+    "relative_magnitude": {
+      "type": "string",
+      "enum": [
+        "default",
+        "small",
+        "medium",
+        "large"
+      ]
+    },
+    "hvac_zone": {
+      "type": "string",
+      "enum": [
+        "driver",
+        "front_passenger",
+        "rear",
+        "all"
+      ]
+    },
+    "window_zone": {
+      "type": "string",
+      "enum": [
+        "driver",
+        "front_passenger",
+        "rear_left",
+        "rear_right",
+        "front_row",
+        "rear_row",
+        "left_side",
+        "right_side",
+        "all"
+      ]
+    },
+    "seat_zone": {
+      "type": "string",
+      "enum": [
+        "driver",
+        "front_passenger",
+        "rear_left",
+        "rear_right",
+        "rear_row",
+        "all"
+      ]
+    },
+    "temperature_target": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "value",
+            "unit"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "absolute"
+            },
+            "value": {
+              "type": "number",
+              "minimum": 16,
+              "maximum": 32,
+              "multipleOf": 0.5
+            },
+            "unit": {
+              "const": "celsius"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "direction",
+            "magnitude"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "relative"
+            },
+            "direction": {
+              "type": "string",
+              "enum": [
+                "increase",
+                "decrease"
+              ]
+            },
+            "magnitude": {
+              "$ref": "#/$defs/relative_magnitude"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "extreme"
+            },
+            "value": {
+              "type": "string",
+              "enum": [
+                "min",
+                "max"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "fan_speed_target": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "value",
+            "unit"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "absolute"
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 8
+            },
+            "unit": {
+              "const": "level"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "direction",
+            "magnitude"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "relative"
+            },
+            "direction": {
+              "type": "string",
+              "enum": [
+                "increase",
+                "decrease"
+              ]
+            },
+            "magnitude": {
+              "$ref": "#/$defs/relative_magnitude"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "extreme"
+            },
+            "value": {
+              "type": "string",
+              "enum": [
+                "min",
+                "max"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "aperture_target": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "named"
+            },
+            "value": {
+              "type": "string",
+              "enum": [
+                "open",
+                "closed",
+                "vent"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "absolute_percent"
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "direction",
+            "magnitude"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "relative"
+            },
+            "direction": {
+              "type": "string",
+              "enum": [
+                "open",
+                "close"
+              ]
+            },
+            "magnitude": {
+              "$ref": "#/$defs/relative_magnitude"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "direction",
+            "value"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "relative_percent"
+            },
+            "direction": {
+              "type": "string",
+              "enum": [
+                "open",
+                "close"
+              ]
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        }
+      ]
+    },
+    "sunshade_target": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "named"
+            },
+            "value": {
+              "type": "string",
+              "enum": [
+                "open",
+                "closed"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "absolute_percent"
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "direction",
+            "magnitude"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "relative"
+            },
+            "direction": {
+              "type": "string",
+              "enum": [
+                "open",
+                "close"
+              ]
+            },
+            "magnitude": {
+              "$ref": "#/$defs/relative_magnitude"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "direction",
+            "value"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "relative_percent"
+            },
+            "direction": {
+              "type": "string",
+              "enum": [
+                "open",
+                "close"
+              ]
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        }
+      ]
+    },
+    "seat_setting": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "state"
+            },
+            "value": {
+              "$ref": "#/$defs/on_off"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "absolute_level"
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 3
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "direction",
+            "magnitude"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "relative"
+            },
+            "direction": {
+              "type": "string",
+              "enum": [
+                "increase",
+                "decrease"
+              ]
+            },
+            "magnitude": {
+              "$ref": "#/$defs/relative_magnitude"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "extreme"
+            },
+            "value": {
+              "type": "string",
+              "enum": [
+                "min",
+                "max"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "canonical_call": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/set_hvac_power_call"
+        },
+        {
+          "$ref": "#/$defs/set_hvac_temperature_call"
+        },
+        {
+          "$ref": "#/$defs/set_hvac_fan_speed_call"
+        },
+        {
+          "$ref": "#/$defs/set_window_position_call"
+        },
+        {
+          "$ref": "#/$defs/set_sunroof_position_call"
+        },
+        {
+          "$ref": "#/$defs/set_sunshade_position_call"
+        },
+        {
+          "$ref": "#/$defs/set_seat_climate_call"
+        },
+        {
+          "$ref": "#/$defs/set_seat_massage_call"
+        }
+      ]
+    },
+    "set_hvac_power_call": {
+      "type": "object",
+      "required": [
+        "function",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "function": {
+          "const": "set_hvac_power"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "state"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "state": {
+              "$ref": "#/$defs/on_off"
+            },
+            "zone": {
+              "$ref": "#/$defs/hvac_zone"
+            }
+          }
+        }
+      }
+    },
+    "set_hvac_temperature_call": {
+      "type": "object",
+      "required": [
+        "function",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "function": {
+          "const": "set_hvac_temperature"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "target"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "target": {
+              "$ref": "#/$defs/temperature_target"
+            },
+            "zone": {
+              "$ref": "#/$defs/hvac_zone"
+            }
+          }
+        }
+      }
+    },
+    "set_hvac_fan_speed_call": {
+      "type": "object",
+      "required": [
+        "function",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "function": {
+          "const": "set_hvac_fan_speed"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "target"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "target": {
+              "$ref": "#/$defs/fan_speed_target"
+            },
+            "zone": {
+              "$ref": "#/$defs/hvac_zone"
+            }
+          }
+        }
+      }
+    },
+    "set_window_position_call": {
+      "type": "object",
+      "required": [
+        "function",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "function": {
+          "const": "set_window_position"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "zone",
+            "target"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "zone": {
+              "$ref": "#/$defs/window_zone"
+            },
+            "target": {
+              "$ref": "#/$defs/aperture_target"
+            }
+          }
+        }
+      }
+    },
+    "set_sunroof_position_call": {
+      "type": "object",
+      "required": [
+        "function",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "function": {
+          "const": "set_sunroof_position"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "target"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "target": {
+              "$ref": "#/$defs/aperture_target"
+            }
+          }
+        }
+      }
+    },
+    "set_sunshade_position_call": {
+      "type": "object",
+      "required": [
+        "function",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "function": {
+          "const": "set_sunshade_position"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "target"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "target": {
+              "$ref": "#/$defs/sunshade_target"
+            }
+          }
+        }
+      }
+    },
+    "set_seat_climate_call": {
+      "type": "object",
+      "required": [
+        "function",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "function": {
+          "const": "set_seat_climate"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "zone",
+            "feature",
+            "setting"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "zone": {
+              "$ref": "#/$defs/seat_zone"
+            },
+            "feature": {
+              "type": "string",
+              "enum": [
+                "heating",
+                "ventilation"
+              ]
+            },
+            "setting": {
+              "$ref": "#/$defs/seat_setting"
+            }
+          }
+        }
+      }
+    },
+    "set_seat_massage_call": {
+      "type": "object",
+      "required": [
+        "function",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "function": {
+          "const": "set_seat_massage"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "zone",
+            "setting"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "zone": {
+              "$ref": "#/$defs/seat_zone"
+            },
+            "setting": {
+              "$ref": "#/$defs/seat_setting"
+            }
+          }
+        }
+      }
+    }
+  }
+}

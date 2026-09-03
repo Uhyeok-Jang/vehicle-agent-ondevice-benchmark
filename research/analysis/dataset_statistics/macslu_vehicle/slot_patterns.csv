@@ -1,0 +1,256 @@
+﻿slot_pattern,count
+intent | 对象 | 操作,1832
+intent | 位置 | 对象 | 操作,978
+intent | 对象 | 对象功能 | 操作,759
+intent | value | 对象 | 操作 | 调节内容,732
+intent | value | 对象 | 操作 | 操作_concrete | 调节内容,560
+intent | 位置 | 对象 | 对象功能 | 操作,550
+intent | value | 操作 | 操作_concrete | 调节内容,523
+intent | value | 操作 | 调节内容,512
+intent | value | 位置 | 对象 | 操作 | 调节内容,396
+intent | 对象功能 | 操作,390
+intent | 操作 | 模式 | 调节内容,386
+intent | 功能 | 操作,284
+intent | 对象 | 操作 | 车外灯类型,210
+intent | value | 操作 | 调节内容 | 车机模块,163
+intent | 位置 | 对象功能 | 操作,157
+intent | 功能 | 操作 | 模式 | 调节内容,143
+intent | 对象 | 操作 | 模式 | 调节内容,128
+intent | 功能 | 子功能 | 操作,125
+intent | value | 位置 | 对象 | 操作 | 操作_concrete | 调节内容,100
+intent | 对象 | 操作 | 操作_concrete | 模式 | 调节内容,99
+intent | 对象 | 操作 | 车内灯类型,89
+intent | 操作 | 车机模块,76
+intent | value | 对象 | 操作 | 操作_concrete,69
+intent | value | 操作 | 操作_concrete | 调节内容 | 车机模块,63
+intent | value | 对象 | 操作,62
+intent | value | 对象 | 操作 | 操作_concrete | 方向偏移量 | 调节内容,62
+intent | 对象 | 操作 | 模式 | 调节内容 | 页面,61
+intent | 操作 | 模式 | 调节内容 | 页面,59
+intent | 对象 | 操作 | 调节内容,58
+intent | 对象 | 操作 | 页面,48
+intent | value | 位置 | 操作 | 调节内容,47
+intent | 模式 | 调节内容,45
+intent | 操作 | 操作_concrete | 模式 | 调节内容,43
+intent | value | 对象 | 操作 | 操作_concrete | 调节内容 | 车内灯类型,43
+intent | value | 位置 | 操作 | 操作_concrete | 调节内容,41
+intent | value | 对象功能 | 操作 | 调节内容,40
+intent | 操作 | 模式 | 调节内容 | 车机模块,40
+intent | 操作 | 调节内容,38
+intent | 位置 | 功能 | 操作,37
+intent | value | 对象功能 | 操作 | 操作_concrete | 调节内容,37
+intent | value | 对象 | 对象功能 | 操作 | 操作_concrete | 调节内容,37
+intent | 操作 | 调节内容 | 音效,36
+intent | value | 对象 | 对象功能 | 操作 | 调节内容,35
+intent | value | 位置 | 对象 | 对象功能 | 操作 | 调节内容,35
+intent | 位置 | 对象 | 操作 | 车内灯类型,34
+intent | 位置 | 操作 | 模式 | 调节内容,30
+intent | 操作 | 操作_concrete | 调节内容 | 音效,29
+intent | 对象 | 对象功能 | 操作 | 操作_concrete | 模式 | 调节内容,29
+intent | 对象 | 模式 | 调节内容,29
+intent | 对象 | 操作 | 模式 | 调节内容 | 车内灯类型,28
+intent | 位置 | 对象 | 操作 | 调节内容,28
+intent | 对象功能 | 操作 | 模式 | 调节内容,28
+intent | 位置 | 对象 | 操作 | 模式 | 调节内容,27
+intent | 对象功能 | 操作 | 页面,27
+intent | 位置 | 对象 | 操作 | 页面,26
+intent | 对象 | 对象功能 | 操作 | 模式 | 调节内容,24
+intent | value | 功能 | 子功能 | 操作 | 操作_concrete | 调节内容,24
+intent | value | 对象 | 操作 | 调节内容 | 车内灯类型,21
+intent | 操作 | 页面,21
+intent | value | 功能 | 操作 | 操作_concrete | 调节内容,20
+intent | value | 功能 | 子功能 | 操作 | 调节内容,18
+intent | 位置 | 对象 | 对象功能 | 操作 | 操作_concrete | 模式 | 调节内容,18
+intent | 摄像头模式 | 操作 | 调节内容,17
+intent | 位置 | 对象 | 操作 | 车外灯类型,16
+intent | 对象 | 对象功能 | 操作 | 页面,15
+intent | 对象 | 操作 | 模式 | 调节内容 | 车外灯类型,15
+intent | value | 位置 | 对象 | 对象功能 | 操作 | 操作_concrete | 调节内容,15
+intent | 对象功能 | 操作 | 操作_concrete | 模式 | 调节内容,15
+intent | 位置 | 操作,15
+intent | value | 操作,15
+intent | 操作 | 操作_concrete | 模式 | 调节内容 | 车机模块,15
+intent | 功能 | 子功能 | 操作 | 页面,14
+intent | 操作 | 操作_concrete | 页面,14
+intent | 对象 | 操作 | 操作_concrete | 模式 | 调节内容 | 车内灯类型,14
+intent | value | 位置 | 对象 | 操作 | 方向偏移量 | 调节内容,13
+intent | 对象 | 操作 | 调节内容 | 车内灯类型,13
+intent | 功能 | 操作 | 页面,12
+intent | 操作 | 调节内容 | 页面,12
+intent | value | 对象 | 操作 | 方向偏移量 | 调节内容,11
+intent | 对象 | 对象功能 | 操作 | 调节内容,11
+intent | value | 功能 | 操作 | 调节内容,11
+intent | value | 操作 | 操作_concrete | 模式 | 调节内容,11
+intent | 位置 | 对象 | 座椅记忆位置 | 操作 | 操作_concrete | 调节内容,10
+intent | 操作 | 操作_concrete | 调节内容,10
+intent | 对象 | 操作 | 操作_concrete | 调节内容,10
+intent | 功能 | 操作 | 车机模块,9
+intent | 对象 | 操作 | 操作_concrete,9
+intent | 操作 | 操作_concrete,9
+intent | value | 功能 | 子功能 | 操作 | 调节内容 | 页面,8
+intent | 对象功能 | 操作 | 调节内容,8
+intent | 功能 | 对象 | 操作,7
+intent | value | 位置 | 对象 | 操作 | 操作_concrete | 方向偏移量 | 调节内容,7
+intent | 对象 | 操作 | 车机模块,7
+intent | value | 位置 | 对象功能 | 操作 | 调节内容,7
+intent | value | 位置 | 对象功能 | 操作 | 操作_concrete | 调节内容,7
+intent | 对象功能 | 操作 | 操作_concrete | 调节内容 | 音效,7
+intent | 对象 | 对象功能 | 操作 | 操作_concrete,7
+intent | 位置 | 对象,7
+intent | 调节内容,7
+intent | 操作 | 车机模块 | 页面,6
+intent | 功能,6
+intent | 位置 | 对象 | 操作 | 操作_concrete | 模式 | 调节内容,6
+intent | 操作 | 调节内容 | 车机模块 | 页面,6
+intent | value | 操作 | 模式 | 调节内容,6
+intent | 功能 | 子功能 | 操作 | 操作_concrete,6
+intent | value | 对象 | 操作 | 调节内容 | 车外灯类型,6
+intent | value | 对象功能 | 操作 | 调节内容 | 车机模块,6
+intent | 操作 | 调节内容 | 车机模块,6
+intent | 位置 | 模式 | 调节内容,6
+intent | 位置 | 操作 | 车机模块,6
+intent | value | 位置 | 对象 | 操作,6
+intent | 位置 | 对象功能 | 操作 | 操作_concrete | 模式 | 调节内容,6
+intent | 操作,6
+intent | 对象功能 | 操作 | 操作_concrete,5
+intent | value | 对象 | 操作 | 操作_concrete | 调节内容 | 车外灯类型,5
+intent | 对象功能,5
+intent | value | 对象 | 操作 | 操作_concrete | 模式 | 调节内容,5
+intent | 对象,5
+intent | 对象 | 座椅记忆位置 | 操作 | 操作_concrete | 调节内容,5
+intent | 功能 | 摄像头模式 | 操作 | 调节内容,5
+intent | 功能 | 操作 | 操作_concrete,4
+intent | 功能 | 操作 | 操作_concrete | 模式 | 调节内容,4
+intent | 对象 | 对象功能 | 操作 | 车内灯类型 | 页面,4
+intent | value | 对象 | 操作 | 操作_concrete | 调节内容 | 车机模块,4
+intent | 位置 | 功能 | 操作 | 页面,4
+intent | 功能 | 模式 | 调节内容,4
+intent | 位置 | 摄像头模式 | 操作 | 调节内容,4
+intent | value | 操作 | 调节内容 | 页面,4
+intent | 对象 | 对象功能 | 操作 | 车内灯类型,4
+intent | value | 功能 | 操作 | 操作_concrete | 模式 | 调节内容,4
+intent | value | 对象 | 操作 | 模式 | 调节内容,4
+intent | 功能 | 操作 | 调节内容,4
+intent | 位置 | 操作 | 调节内容,4
+intent | value | 对象 | 对象功能 | 操作 | 操作_concrete | 方向偏移量 | 调节内容,4
+intent | 位置 | 对象 | 调节内容,4
+intent | 对象 | 操作 | 调节内容 | 页面,4
+intent | value | 对象功能 | 操作 | 操作_concrete | 调节内容 | 车机模块,4
+intent | value | 对象 | 操作 | 调节内容 | 车机模块,4
+intent | 功能 | 子功能 | 操作 | 操作_concrete | 模式 | 调节内容,4
+intent | value | 操作 | 操作_concrete,4
+intent | 位置 | 对象功能 | 操作 | 页面,3
+intent | 位置 | 对象 | 座椅记忆位置 | 操作 | 调节内容,3
+intent | value | 对象 | 操作 | 操作_concrete | 模式 | 调节内容 | 车内灯类型,3
+intent | 位置 | 对象功能 | 操作 | 模式 | 调节内容,3
+intent | 位置 | 对象 | 操作 | 操作_concrete | 调节内容,3
+intent | 对象 | 操作 | 调节内容 | 车机模块,3
+intent | 功能 | 操作 | 操作_concrete | 调节内容 | 音效,3
+intent | 功能 | 子功能,3
+intent | 对象 | 对象功能 | 序列号 | 操作 | 调节内容,3
+intent | value | 对象功能 | 操作 | 操作_concrete | 模式 | 调节内容,3
+intent | value | 对象 | 操作 | 调节内容 | 身体位置,3
+intent | 功能 | 子功能 | 操作 | 操作_concrete | 调节内容 | 音效,3
+intent | 位置 | 功能 | 对象 | 操作,3
+intent | 位置 | 对象 | 对象功能 | 操作 | 页面,3
+intent | 对象功能 | 操作 | 调节内容 | 车机模块,3
+intent | 对象 | 操作 | 操作_concrete | 车外灯类型,3
+intent | 对象 | 对象功能 | 操作 | 车机模块,3
+intent | 位置 | 对象 | 对象功能 | 操作 | 模式 | 调节内容,3
+intent | value | 位置 | 操作 | 调节内容 | 身体位置,2
+intent | value | 对象 | 摄像头模式 | 操作 | 调节内容,2
+intent | value | 对象 | 对象功能 | 操作 | 操作_concrete | 模式 | 调节内容,2
+intent | value | 操作 | 调节内容 | 车机模块 | 页面,2
+intent | value | 对象功能 | 操作 | 方向偏移量 | 调节内容,2
+intent | 对象功能 | 操作 | 操作_concrete | 调节内容,2
+intent | value | 位置 | 摄像头模式 | 操作 | 调节内容,2
+intent | value | 位置 | 对象 | 操作 | 操作_concrete,2
+intent | 对象 | 对象功能 | 序列号 | 操作,2
+intent | 对象功能 | 操作 | 身体位置,2
+intent | 对象 | 操作 | 操作_concrete | 模式 | 调节内容 | 车机模块,2
+intent | 车机模块,2
+intent | 对象功能 | 操作 | 调节内容 | 音效,2
+intent | 对象 | 操作 | 车内灯类型 | 页面,2
+intent | 对象 | 操作 | 操作_concrete | 页面,2
+intent | 功能 | 子功能 | 操作 | 调节内容 | 音效,2
+intent | 位置 | 对象 | 对象功能 | 操作 | 调节内容,2
+intent | 位置 | 对象 | 操作 | 操作_concrete | 页面,2
+intent | 位置 | 对象功能 | 操作 | 身体位置,2
+intent | 对象 | 操作 | 操作_concrete | 调节内容 | 车内灯类型,2
+intent | 位置 | 功能 | 操作 | 操作_concrete | 模式 | 调节内容,2
+intent | 对象功能 | 页面,2
+intent | 对象 | 车外灯类型,1
+intent | 功能 | 子功能 | 操作 | 操作_concrete | 模式 | 调节内容 | 车机模块,1
+intent | 页面,1
+intent | 对象 | 操作 | 操作_concrete | 车内灯类型,1
+intent | 位置 | 对象功能 | 操作 | 调节内容,1
+intent | 对象 | 操作 | 车外灯类型 | 页面,1
+intent | 位置 | 对象 | 操作 | 模式 | 调节内容 | 车机模块,1
+intent | value | 对象 | 操作 | 调节内容 | 页面,1
+intent | value | 功能 | 对象 | 操作 | 操作_concrete | 调节内容,1
+intent | 位置 | 对象 | 对象功能 | 操作 | 操作_concrete,1
+intent | value | 操作 | 操作_concrete | 模式 | 音效,1
+intent | value | 位置 | 对象 | 操作 | 操作_concrete | 调节内容 | 车机模块,1
+intent | 对象 | 对象功能 | 操作 | 操作_concrete | 车机模块,1
+intent | 对象功能 | 操作 | 模式 | 调节内容 | 身体位置,1
+intent | 位置 | 对象功能 | 操作 | 模式 | 调节内容 | 身体位置,1
+intent | value | 位置 | 对象 | 操作 | 调节内容 | 车外灯类型,1
+intent | value | 位置 | 功能 | 操作 | 操作_concrete,1
+intent | 对象功能 | 操作 | 车机模块,1
+intent | value | 操作 | 操作_concrete | 方向偏移量 | 调节内容,1
+intent | value | 功能 | 操作 | 操作_concrete,1
+intent | value | 位置 | 对象 | 操作 | 操作_concrete | 调节内容 | 车内灯类型,1
+intent | 对象功能 | 序列号 | 操作,1
+intent | 位置 | 对象 | 摄像头模式 | 操作 | 调节内容,1
+intent | value | 功能 | 子功能 | 操作,1
+intent | 位置 | 摄像头模式 | 调节内容,1
+intent | 对象 | 对象功能 | 操作 | 模式 | 调节内容 | 页面,1
+intent | 对象 | 调节内容,1
+intent | 位置 | 对象 | 操作 | 操作_concrete,1
+intent | value | 位置 | 功能 | 对象 | 操作 | 操作_concrete,1
+intent | 功能 | 对象功能 | 操作,1
+intent | value | 操作 | 操作_concrete | 调节内容 | 身体位置,1
+intent | 位置 | 对象 | 操作 | 操作_concrete | 方向偏移量,1
+intent | 摄像头模式 | 操作 | 操作_concrete | 调节内容,1
+intent | 对象 | 操作 | 操作_concrete | 调节内容 | 车机模块,1
+action | body | feature | intent | object | part | value | 操作,1
+intent | 对象 | 模式 | 调节内容 | 车内灯类型,1
+intent | 功能 | 子功能 | 操作 | 调节内容 | 页面,1
+intent | 对象 | 座椅记忆位置 | 操作 | 调节内容,1
+intent | 位置 | 对象功能,1
+intent | value | 位置 | 对象 | 操作 | 调节内容 | 车机模块,1
+intent | value | 位置 | 操作,1
+intent | value | 位置 | 操作 | 操作_concrete | 方向偏移量 | 调节内容,1
+intent | 操作 | 模式 | 调节内容 | 身体位置,1
+intent | 功能 | 操作 | 操作_concrete | 页面,1
+intent | 位置 | 操作 | 模式 | 调节内容 | 页面,1
+intent | value | 对象 | 对象功能 | 操作 | 操作_concrete,1
+intent | 对象 | 操作_concrete | 调节内容,1
+intent | 位置 | 对象 | 操作_concrete | 模式 | 调节内容,1
+intent | value | 位置 | 对象功能 | 操作 | 操作_concrete | 方向偏移量 | 调节内容,1
+intent | 位置 | 操作 | 调节内容 | 车机模块,1
+intent | 功能 | 对象 | 操作 | 模式 | 调节内容,1
+intent | 操作 | 操作_concrete | 调节内容 | 车机模块,1
+intent | 功能 | 摄像头模式 | 操作 | 调节内容 | 页面,1
+intent | value | 对象 | 对象功能 | 操作 | 调节内容 | 身体位置,1
+intent | 功能 | 序列号 | 操作,1
+intent | 位置 | 对象 | 操作 | 模式 | 调节内容 | 身体位置,1
+intent | 操作 | 车机来源,1
+intent | 对象 | 操作 | 操作_concrete | 模式 | 调节内容 | 车外灯类型,1
+intent | 对象功能 | 操作 | 操作_concrete | 页面,1
+intent | 位置 | 操作 | 操作_concrete,1
+intent | 功能 | 子功能 | 页面,1
+intent | value | 功能 | 操作,1
+intent | value | 位置 | 对象 | 对象功能 | 操作 | 操作_concrete | 方向偏移量 | 调节内容,1
+intent | 功能 | 调节内容,1
+intent | 位置 | 对象 | 模式 | 调节内容,1
+intent | 对象功能 | 序列号 | 操作 | 调节内容,1
+intent | 对象 | 对象功能 | 操作 | 车外灯类型,1
+intent | 对象功能 | 操作 | 调节内容 | 页面,1
+intent | 位置 | 对象 | 页面,1
+intent | 位置 | 对象 | 车内灯类型,1
+intent | 位置 | 功能 | 操作 | 操作_concrete,1
+intent | 对象 | 对象功能 | 操作 | 操作_concrete | 调节内容,1
+intent | 功能 | 子功能 | 调节内容 | 音效,1
+intent | 操作 | 操作_concrete | 调节内容 | 页面,1
+intent | 位置 | 对象 | 操作 | 车机模块,1

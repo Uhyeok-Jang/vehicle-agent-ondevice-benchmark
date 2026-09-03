@@ -1,0 +1,324 @@
+{
+  "artifacts": {
+    "issues": {
+      "name": "issues.csv",
+      "rows": 6838,
+      "sha256": "54c25104c39fe9aa29954d8283860d9bb0434e953df9abfadc6ed2a8831777c9"
+    }
+  },
+  "audit_config": {
+    "allowed_vehicle_slots": [
+      "intent",
+      "value",
+      "位置",
+      "功能",
+      "子功能",
+      "对象",
+      "对象功能",
+      "序列号",
+      "座椅记忆位置",
+      "摄像头模式",
+      "操作",
+      "操作_concrete",
+      "方向偏移量",
+      "模式",
+      "调节内容",
+      "身体位置",
+      "车内灯类型",
+      "车外灯类型",
+      "车机来源",
+      "车机模块",
+      "音效",
+      "页面"
+    ],
+    "max_intent_claim": 5,
+    "normalization_version": "2",
+    "quarantine_normalization": "NFKC + lowercase + remove whitespace",
+    "review_normalization": "quarantine normalization + remove non-numeric punctuation",
+    "vehicle_domain": "车载控制"
+  },
+  "composition_overlap": {
+    "diagnostic": "composition_overlap",
+    "evaluation": {
+      "all": {
+        "eval_fragment_occurrences": 1766,
+        "eval_samples_with_nonempty_fragments": 1178,
+        "fragment_occurrence_overlap_ratio": 0.4365798414496036,
+        "fragment_occurrences_in_train": 771,
+        "sample_all_fragments_overlap_ratio": 0.22750424448217318,
+        "samples_all_nonempty_fragments_in_train": 268
+      },
+      "test": {
+        "eval_fragment_occurrences": 999,
+        "eval_samples_with_nonempty_fragments": 661,
+        "fragment_occurrence_overlap_ratio": 0.45245245245245247,
+        "fragment_occurrences_in_train": 452,
+        "sample_all_fragments_overlap_ratio": 0.2556732223903177,
+        "samples_all_nonempty_fragments_in_train": 169
+      },
+      "validation": {
+        "eval_fragment_occurrences": 767,
+        "eval_samples_with_nonempty_fragments": 517,
+        "fragment_occurrence_overlap_ratio": 0.41590612777053454,
+        "fragment_occurrences_in_train": 319,
+        "sample_all_fragments_overlap_ratio": 0.19148936170212766,
+        "samples_all_nonempty_fragments_in_train": 99
+      }
+    },
+    "normalization": "review key: NFKC + lowercase + remove whitespace and non-numeric punctuation",
+    "train_split": "train",
+    "train_unique_nonempty_fragments": 6673
+  },
+  "composition_overlap_clean_vehicle_aligned": {
+    "diagnostic": "composition_overlap",
+    "evaluation": {
+      "all": {
+        "eval_fragment_occurrences": 1489,
+        "eval_samples_with_nonempty_fragments": 1044,
+        "fragment_occurrence_overlap_ratio": 0.41302887844190733,
+        "fragment_occurrences_in_train": 615,
+        "sample_all_fragments_overlap_ratio": 0.2193486590038314,
+        "samples_all_nonempty_fragments_in_train": 229
+      },
+      "test": {
+        "eval_fragment_occurrences": 861,
+        "eval_samples_with_nonempty_fragments": 595,
+        "fragment_occurrence_overlap_ratio": 0.43205574912891986,
+        "fragment_occurrences_in_train": 372,
+        "sample_all_fragments_overlap_ratio": 0.2453781512605042,
+        "samples_all_nonempty_fragments_in_train": 146
+      },
+      "validation": {
+        "eval_fragment_occurrences": 628,
+        "eval_samples_with_nonempty_fragments": 449,
+        "fragment_occurrence_overlap_ratio": 0.3869426751592357,
+        "fragment_occurrences_in_train": 243,
+        "sample_all_fragments_overlap_ratio": 0.18485523385300667,
+        "samples_all_nonempty_fragments_in_train": 83
+      }
+    },
+    "normalization": "review key: NFKC + lowercase + remove whitespace and non-numeric punctuation",
+    "train_split": "train",
+    "train_unique_nonempty_fragments": 5707
+  },
+  "issue_counts_by_code": {
+    "cross_split_query_overlap_exact": 2,
+    "cross_split_query_overlap_normalized": 3,
+    "cross_split_query_overlap_review_normalized": 3,
+    "max_intent_claim_violation": 2,
+    "mixed_domain_example": 430,
+    "split_sens_gt_semantic_units": 6041,
+    "split_sens_lt_semantic_units": 352,
+    "unexpected_vehicle_slot": 5
+  },
+  "provenance": {
+    "dataset": "Gatsby1984/MAC_SLU",
+    "declared_source_files": {
+      "test": {
+        "records": 1151,
+        "relative_path": "label/test_set.jsonl",
+        "sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572"
+      },
+      "train": {
+        "records": 18000,
+        "relative_path": "label/train_set.jsonl",
+        "sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681"
+      },
+      "validation": {
+        "records": 1391,
+        "relative_path": "label/dev_set.jsonl",
+        "sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1"
+      }
+    },
+    "files": [
+      {
+        "bytes": 442493,
+        "expected_records": 1151,
+        "expected_sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+        "records": 1151,
+        "records_match_manifest": true,
+        "relative_path": "label/test_set.jsonl",
+        "sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+        "sha256_matches_manifest": true,
+        "split": "test"
+      },
+      {
+        "bytes": 5494519,
+        "expected_records": 18000,
+        "expected_sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+        "records": 18000,
+        "records_match_manifest": true,
+        "relative_path": "label/train_set.jsonl",
+        "sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+        "sha256_matches_manifest": true,
+        "split": "train"
+      },
+      {
+        "bytes": 422144,
+        "expected_records": 1391,
+        "expected_sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+        "records": 1391,
+        "records_match_manifest": true,
+        "relative_path": "label/dev_set.jsonl",
+        "sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+        "sha256_matches_manifest": true,
+        "split": "validation"
+      }
+    ],
+    "generator": {
+      "name": "audit_macslu.py",
+      "sha256": "2c715457862cef7d5f010d787e8925e8e6cbf334ccb4216650c69e15289ca889"
+    },
+    "loader": "local_jsonl",
+    "manifest": {
+      "bytes": 2445,
+      "name": "macslu_source_manifest.json",
+      "sha256": "9671aa48ff026b992475e0d54a45792d64d8e8494e614c102ef39e03d2d5f318"
+    },
+    "python_version": "3.13.9",
+    "revision": "40670d121a89ad7142e3536ee6dc05374d095f6b"
+  },
+  "schema_version": 2,
+  "source_verification": {
+    "files": [
+      {
+        "expected_records": 1151,
+        "expected_sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+        "observed_records": 1151,
+        "observed_sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+        "records_match": true,
+        "relative_path": "label/test_set.jsonl",
+        "sha256_match": true,
+        "split": "test"
+      },
+      {
+        "expected_records": 18000,
+        "expected_sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+        "observed_records": 18000,
+        "observed_sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+        "records_match": true,
+        "relative_path": "label/train_set.jsonl",
+        "sha256_match": true,
+        "split": "train"
+      },
+      {
+        "expected_records": 1391,
+        "expected_sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+        "observed_records": 1391,
+        "observed_sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+        "records_match": true,
+        "relative_path": "label/dev_set.jsonl",
+        "sha256_match": true,
+        "split": "validation"
+      }
+    ],
+    "status": "verified"
+  },
+  "splits": {
+    "test": {
+      "active_intents": 1481,
+      "active_semantic_units": 1481,
+      "count_mismatches": 55,
+      "duplicate_id_records": 0,
+      "duplicate_id_values": 0,
+      "examples": 1151,
+      "ids_unique": true,
+      "max_active_intents": 5,
+      "max_active_semantic_units": 5,
+      "max_intent_claim_violations": 0,
+      "missing_ids": 0,
+      "mixed_domain_examples": 38,
+      "multi_domain_intents": 0,
+      "split_sens_gt_semantic_units": 33,
+      "split_sens_lt_semantic_units": 22,
+      "unannotated_examples": 26,
+      "unexpected_slot_occurrences": 0,
+      "unique_ids": 1151,
+      "vehicle_count_mismatches": 29,
+      "vehicle_examples": 661,
+      "vehicle_semantic_units": 977,
+      "vehicle_split_sens_gt_semantic_units": 7,
+      "vehicle_split_sens_lt_semantic_units": 22
+    },
+    "train": {
+      "active_intents": 16009,
+      "active_semantic_units": 16009,
+      "count_mismatches": 5871,
+      "duplicate_id_records": 0,
+      "duplicate_id_values": 0,
+      "examples": 18000,
+      "ids_unique": true,
+      "max_active_intents": 7,
+      "max_active_semantic_units": 7,
+      "max_intent_claim_violations": 2,
+      "missing_ids": 0,
+      "mixed_domain_examples": 370,
+      "multi_domain_intents": 0,
+      "split_sens_gt_semantic_units": 5565,
+      "split_sens_lt_semantic_units": 306,
+      "unannotated_examples": 5306,
+      "unexpected_slot_occurrences": 5,
+      "unique_ids": 18000,
+      "vehicle_count_mismatches": 538,
+      "vehicle_examples": 6879,
+      "vehicle_semantic_units": 9747,
+      "vehicle_split_sens_gt_semantic_units": 239,
+      "vehicle_split_sens_lt_semantic_units": 299
+    },
+    "validation": {
+      "active_intents": 1228,
+      "active_semantic_units": 1228,
+      "count_mismatches": 467,
+      "duplicate_id_records": 0,
+      "duplicate_id_values": 0,
+      "examples": 1391,
+      "ids_unique": true,
+      "max_active_intents": 5,
+      "max_active_semantic_units": 5,
+      "max_intent_claim_violations": 0,
+      "missing_ids": 0,
+      "mixed_domain_examples": 22,
+      "multi_domain_intents": 0,
+      "split_sens_gt_semantic_units": 443,
+      "split_sens_lt_semantic_units": 24,
+      "unannotated_examples": 419,
+      "unexpected_slot_occurrences": 0,
+      "unique_ids": 1391,
+      "vehicle_count_mismatches": 47,
+      "vehicle_examples": 517,
+      "vehicle_semantic_units": 747,
+      "vehicle_split_sens_gt_semantic_units": 23,
+      "vehicle_split_sens_lt_semantic_units": 24
+    }
+  },
+  "totals": {
+    "active_intents": 18718,
+    "active_semantic_units": 18718,
+    "count_mismatches": 6393,
+    "cross_split_query_overlap_exact_groups": 2,
+    "cross_split_query_overlap_normalized_groups": 3,
+    "cross_split_query_overlap_review_normalized_groups": 3,
+    "duplicate_id_records": 0,
+    "duplicate_id_records_globally": 0,
+    "duplicate_id_values": 0,
+    "duplicate_id_values_globally": 0,
+    "examples": 20542,
+    "ids_unique_globally": true,
+    "max_active_intents": 7,
+    "max_active_semantic_units": 7,
+    "max_intent_claim_violations": 2,
+    "missing_ids": 0,
+    "mixed_domain_examples": 430,
+    "multi_domain_intents": 0,
+    "split_sens_gt_semantic_units": 6041,
+    "split_sens_lt_semantic_units": 352,
+    "unannotated_examples": 5751,
+    "unexpected_slot_occurrences": 5,
+    "unique_ids": 20542,
+    "vehicle_count_mismatches": 614,
+    "vehicle_examples": 8057,
+    "vehicle_semantic_units": 11471,
+    "vehicle_split_sens_gt_semantic_units": 269,
+    "vehicle_split_sens_lt_semantic_units": 345
+  }
+}

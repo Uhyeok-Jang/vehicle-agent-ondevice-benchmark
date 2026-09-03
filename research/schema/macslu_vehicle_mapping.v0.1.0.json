@@ -1,0 +1,1912 @@
+{
+  "registry_version": "0.1.0",
+  "status": "working_draft",
+  "source_format": "macslu",
+  "vehicle_domain": "车载控制",
+  "canonical_schema_file": "vehicle_api_schema.v0.1.0.json",
+  "canonical_registry_file": "vehicle_api_registry.v0.1.0.json",
+  "mapping_outcomes": [
+    "mapped",
+    "ambiguous",
+    "unsupported",
+    "needs_context"
+  ],
+  "reason_codes": {
+    "mapped": [],
+    "ambiguous": [
+      "source_annotation_conflict",
+      "mixed_domain_example",
+      "multi_domain_per_intent",
+      "unexpected_source_slot",
+      "unrecognized_source_value",
+      "multiple_normalizations",
+      "multiple_mapping_rules",
+      "multiple_outcome_rules",
+      "unconsumed_executable_slot",
+      "no_mapping_rule",
+      "missing_emission_value",
+      "canonical_schema_validation_failed"
+    ],
+    "unsupported": [
+      "function_outside_schema"
+    ],
+    "needs_context": [
+      "missing_entity_context",
+      "missing_required_argument"
+    ]
+  },
+  "executable_slot_names": [
+    "intent",
+    "操作",
+    "对象",
+    "调节内容",
+    "value",
+    "位置",
+    "对象功能",
+    "操作_concrete",
+    "模式",
+    "功能",
+    "车机模块",
+    "页面",
+    "车内灯类型",
+    "车外灯类型",
+    "子功能",
+    "方向偏移量",
+    "音效",
+    "摄像头模式",
+    "座椅记忆位置",
+    "身体位置",
+    "序列号",
+    "车机来源"
+  ],
+  "normalizers": [
+    {
+      "id": "intent.body_control",
+      "stage": 1,
+      "input": {
+        "path": "intent",
+        "values": [
+          "车身控制"
+        ]
+      },
+      "emit": {
+        "intent_class": "body_control"
+      }
+    },
+    {
+      "id": "intent.information_fragment",
+      "stage": 1,
+      "input": {
+        "path": "intent",
+        "values": [
+          "提供信息"
+        ]
+      },
+      "emit": {
+        "intent_class": "information_fragment"
+      }
+    },
+    {
+      "id": "intent.infotainment_control",
+      "stage": 1,
+      "input": {
+        "path": "intent",
+        "values": [
+          "车机控制"
+        ]
+      },
+      "emit": {
+        "intent_class": "infotainment_control"
+      }
+    },
+    {
+      "id": "entity.hvac",
+      "stage": 1,
+      "input": {
+        "path": "slots.对象",
+        "values": [
+          "空调",
+          "车辆空调"
+        ]
+      },
+      "emit": {
+        "entity": "hvac"
+      }
+    },
+    {
+      "id": "entity.window",
+      "stage": 1,
+      "input": {
+        "path": "slots.对象",
+        "values": [
+          "车窗",
+          "窗户",
+          "窗",
+          "窗子",
+          "车窗玻璃",
+          "玻璃窗"
+        ]
+      },
+      "emit": {
+        "entity": "window"
+      }
+    },
+    {
+      "id": "entity.sunroof",
+      "stage": 1,
+      "input": {
+        "path": "slots.对象",
+        "values": [
+          "天窗",
+          "太阳窗",
+          "玻璃天窗",
+          "车顶天窗"
+        ]
+      },
+      "emit": {
+        "entity": "sunroof"
+      }
+    },
+    {
+      "id": "entity.sunshade",
+      "stage": 1,
+      "input": {
+        "path": "slots.对象",
+        "values": [
+          "遮阳帘",
+          "电动遮阳帘",
+          "窗帘",
+          "遮光帘"
+        ]
+      },
+      "emit": {
+        "entity": "sunshade"
+      }
+    },
+    {
+      "id": "entity.seat",
+      "stage": 1,
+      "input": {
+        "path": "slots.对象",
+        "values": [
+          "座椅",
+          "座位",
+          "椅",
+          "椅子"
+        ]
+      },
+      "emit": {
+        "entity": "seat"
+      }
+    },
+    {
+      "id": "feature.seat_ventilation",
+      "stage": 1,
+      "input": {
+        "path": "slots.对象功能",
+        "values": [
+          "通风",
+          "通风模式"
+        ]
+      },
+      "emit": {
+        "feature": "ventilation"
+      }
+    },
+    {
+      "id": "feature.seat_heating",
+      "stage": 1,
+      "input": {
+        "path": "slots.对象功能",
+        "values": [
+          "加热",
+          "变热"
+        ]
+      },
+      "emit": {
+        "feature": "heating"
+      }
+    },
+    {
+      "id": "feature.seat_massage",
+      "stage": 1,
+      "input": {
+        "path": "slots.对象功能",
+        "values": [
+          "按摩",
+          "按摩功能"
+        ]
+      },
+      "emit": {
+        "feature": "massage"
+      }
+    },
+    {
+      "id": "property.temperature",
+      "stage": 1,
+      "input": {
+        "path": "slots.调节内容",
+        "values": [
+          "温度"
+        ]
+      },
+      "emit": {
+        "property": "temperature"
+      }
+    },
+    {
+      "id": "property.fan_speed",
+      "stage": 1,
+      "input": {
+        "path": "slots.调节内容",
+        "values": [
+          "风量",
+          "风速",
+          "风力",
+          "风",
+          "出风量"
+        ]
+      },
+      "emit": {
+        "property": "fan_speed"
+      }
+    },
+    {
+      "id": "operator.activate",
+      "stage": 1,
+      "input": {
+        "path": "slots.操作",
+        "values": [
+          "打开",
+          "开启",
+          "开",
+          "启动",
+          "启用",
+          "开一下",
+          "打开一下",
+          "开开",
+          "启动一下",
+          "开启一下"
+        ]
+      },
+      "emit": {
+        "operator": "activate"
+      }
+    },
+    {
+      "id": "operator.deactivate",
+      "stage": 1,
+      "input": {
+        "path": "slots.操作",
+        "values": [
+          "关闭",
+          "关掉",
+          "关",
+          "关一下",
+          "关闭一下",
+          "关了",
+          "关上",
+          "关下"
+        ]
+      },
+      "emit": {
+        "operator": "deactivate"
+      }
+    },
+    {
+      "id": "operator.set",
+      "stage": 1,
+      "input": {
+        "path": "slots.操作",
+        "values": [
+          "调",
+          "调节",
+          "设置",
+          "调到",
+          "设置为",
+          "设为",
+          "调整",
+          "调为",
+          "调成",
+          "调至",
+          "设置到",
+          "调整到"
+        ]
+      },
+      "emit": {
+        "operator": "set"
+      }
+    },
+    {
+      "id": "operator_modifier.assignment",
+      "stage": 1,
+      "input": {
+        "path": "slots.操作_concrete",
+        "values": [
+          "到",
+          "为",
+          "成",
+          "至"
+        ]
+      },
+      "emit": {
+        "operator_modifier": "assignment"
+      }
+    },
+    {
+      "id": "zone.driver",
+      "stage": 2,
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "主驾",
+          "主驾驶",
+          "驾驶位",
+          "驾驶座",
+          "驾驶员",
+          "驾驶席",
+          "司机",
+          "司机位"
+        ]
+      },
+      "emit": {
+        "zone": "driver"
+      }
+    },
+    {
+      "id": "zone.front_passenger",
+      "stage": 2,
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "副驾",
+          "副驾驶",
+          "副驾座",
+          "副驾驶座位",
+          "副驾座位"
+        ]
+      },
+      "emit": {
+        "zone": "front_passenger"
+      }
+    },
+    {
+      "id": "zone.all",
+      "stage": 2,
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "所有",
+          "全部",
+          "全车",
+          "整车",
+          "all",
+          "ALL"
+        ]
+      },
+      "emit": {
+        "zone": "all"
+      }
+    },
+    {
+      "id": "zone.hvac_rear",
+      "stage": 2,
+      "requires": {
+        "entity": "hvac"
+      },
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "后排",
+          "后座",
+          "第二排",
+          "二排"
+        ]
+      },
+      "emit": {
+        "zone": "rear"
+      }
+    },
+    {
+      "id": "zone.window_rear_left",
+      "stage": 2,
+      "requires": {
+        "entity": "window"
+      },
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "左后",
+          "后左",
+          "左后座",
+          "左后侧"
+        ]
+      },
+      "emit": {
+        "zone": "rear_left"
+      }
+    },
+    {
+      "id": "zone.window_rear_right",
+      "stage": 2,
+      "requires": {
+        "entity": "window"
+      },
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "右后",
+          "后右",
+          "右后座",
+          "右后侧"
+        ]
+      },
+      "emit": {
+        "zone": "rear_right"
+      }
+    },
+    {
+      "id": "zone.window_front_row",
+      "stage": 2,
+      "requires": {
+        "entity": "window"
+      },
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "前排",
+          "主副驾",
+          "主驾副驾",
+          "主驾和副驾"
+        ]
+      },
+      "emit": {
+        "zone": "front_row"
+      }
+    },
+    {
+      "id": "zone.window_rear_row",
+      "stage": 2,
+      "requires": {
+        "entity": "window"
+      },
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "后排",
+          "后座",
+          "第二排",
+          "二排"
+        ]
+      },
+      "emit": {
+        "zone": "rear_row"
+      }
+    },
+    {
+      "id": "zone.window_left_side",
+      "stage": 2,
+      "requires": {
+        "entity": "window"
+      },
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "左",
+          "左侧",
+          "左边"
+        ]
+      },
+      "emit": {
+        "zone": "left_side"
+      }
+    },
+    {
+      "id": "zone.window_right_side",
+      "stage": 2,
+      "requires": {
+        "entity": "window"
+      },
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "右",
+          "右侧",
+          "右边"
+        ]
+      },
+      "emit": {
+        "zone": "right_side"
+      }
+    },
+    {
+      "id": "zone.seat_rear_left",
+      "stage": 2,
+      "requires": {
+        "entity": "seat"
+      },
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "左后",
+          "后左",
+          "左后座",
+          "左后侧"
+        ]
+      },
+      "emit": {
+        "zone": "rear_left"
+      }
+    },
+    {
+      "id": "zone.seat_rear_right",
+      "stage": 2,
+      "requires": {
+        "entity": "seat"
+      },
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "右后",
+          "后右",
+          "右后座",
+          "右后侧"
+        ]
+      },
+      "emit": {
+        "zone": "rear_right"
+      }
+    },
+    {
+      "id": "zone.seat_rear_row",
+      "stage": 2,
+      "requires": {
+        "entity": "seat"
+      },
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "后排",
+          "后座",
+          "第二排",
+          "二排"
+        ]
+      },
+      "emit": {
+        "zone": "rear_row"
+      }
+    },
+    {
+      "id": "target.temperature.16c",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "十六",
+          "十六度",
+          "16",
+          "16度"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 16,
+          "unit": "celsius"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.18c",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "十八",
+          "十八度",
+          "18",
+          "18度"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 18,
+          "unit": "celsius"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.20c",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "二十",
+          "二十度",
+          "20",
+          "20度"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 20,
+          "unit": "celsius"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.21c",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "二十一",
+          "二十一度",
+          "21",
+          "21度"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 21,
+          "unit": "celsius"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.22c",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "二十二",
+          "二十二度",
+          "22",
+          "22度"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 22,
+          "unit": "celsius"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.22_5c",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "二十二点五",
+          "二十二点五度",
+          "22.5",
+          "22.5度"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 22.5,
+          "unit": "celsius"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.23c",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "二十三",
+          "二十三度",
+          "23",
+          "23度"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 23,
+          "unit": "celsius"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.23_5c",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "二十三点五",
+          "二十三点五度",
+          "23.5",
+          "23.5度"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 23.5,
+          "unit": "celsius"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.24c",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "二十四",
+          "二十四度",
+          "24",
+          "24度"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 24,
+          "unit": "celsius"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.25c",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "二十五",
+          "二十五度",
+          "25",
+          "25度"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 25,
+          "unit": "celsius"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.26c",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "二十六",
+          "二十六度",
+          "26",
+          "26度"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 26,
+          "unit": "celsius"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.28c",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "二十八",
+          "二十八度",
+          "28",
+          "28度"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 28,
+          "unit": "celsius"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.min",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "最低",
+          "温度最低",
+          "min",
+          "MIN"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "extreme",
+          "value": "min"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.max",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "最高",
+          "温度最高",
+          "最大",
+          "max",
+          "MAX"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "extreme",
+          "value": "max"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.increase_default",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "+",
+          "调高",
+          "升高",
+          "提高"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "relative",
+          "direction": "increase",
+          "magnitude": "default"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.decrease_default",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "-",
+          "调低",
+          "降低"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "relative",
+          "direction": "decrease",
+          "magnitude": "default"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.increase_small",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "调高一点",
+          "升高一点",
+          "提高一点",
+          "增加一点",
+          "高一点"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "relative",
+          "direction": "increase",
+          "magnitude": "small"
+        }
+      }
+    },
+    {
+      "id": "target.temperature.decrease_small",
+      "stage": 2,
+      "requires": {
+        "property": "temperature"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "调低一点",
+          "降低一点",
+          "减小一点",
+          "低一点"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "relative",
+          "direction": "decrease",
+          "magnitude": "small"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.1",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "一",
+          "一挡",
+          "一档",
+          "一级",
+          "1"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 1,
+          "unit": "level"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.2",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "二",
+          "两挡",
+          "二挡",
+          "二档",
+          "二级",
+          "2"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 2,
+          "unit": "level"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.3",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "三",
+          "三挡",
+          "三档",
+          "三级",
+          "3"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 3,
+          "unit": "level"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.4",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "四",
+          "四挡",
+          "四档",
+          "四级",
+          "4"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 4,
+          "unit": "level"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.5",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "五",
+          "五挡",
+          "五档",
+          "五级",
+          "5"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 5,
+          "unit": "level"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.6",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "六",
+          "六挡",
+          "六档",
+          "六级",
+          "6"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 6,
+          "unit": "level"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.7",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "七",
+          "七挡",
+          "七档",
+          "七级",
+          "7"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 7,
+          "unit": "level"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.8",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "八",
+          "八挡",
+          "八档",
+          "八级",
+          "8"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "absolute",
+          "value": 8,
+          "unit": "level"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.min",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "最低",
+          "最小",
+          "最低速",
+          "min",
+          "MIN"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "extreme",
+          "value": "min"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.max",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "最高",
+          "最大",
+          "最高挡",
+          "max",
+          "MAX"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "extreme",
+          "value": "max"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.increase_default",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "+",
+          "调大",
+          "调高",
+          "增加",
+          "增大"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "relative",
+          "direction": "increase",
+          "magnitude": "default"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.decrease_default",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "-",
+          "调小",
+          "调低",
+          "降低",
+          "减小"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "relative",
+          "direction": "decrease",
+          "magnitude": "default"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.increase_small",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "大一点",
+          "调大一点",
+          "调高一点",
+          "增加一点",
+          "增大一点"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "relative",
+          "direction": "increase",
+          "magnitude": "small"
+        }
+      }
+    },
+    {
+      "id": "target.fan_speed.decrease_small",
+      "stage": 2,
+      "requires": {
+        "property": "fan_speed"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "小一点",
+          "调小一点",
+          "调低一点",
+          "降低一点",
+          "减小一点"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "relative",
+          "direction": "decrease",
+          "magnitude": "small"
+        }
+      }
+    }
+  ],
+  "rules": [
+    {
+      "id": "map.hvac_power.activate",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "hvac",
+          "operator": "activate"
+        },
+        "absent": [
+          "feature",
+          "property",
+          "target"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "operator",
+        "zone"
+      ],
+      "emit": {
+        "function": "set_hvac_power",
+        "arguments": {
+          "state": {
+            "const": "on"
+          },
+          "zone": {
+            "from": "zone",
+            "optional": true
+          }
+        }
+      }
+    },
+    {
+      "id": "map.hvac_power.deactivate",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "hvac",
+          "operator": "deactivate"
+        },
+        "absent": [
+          "feature",
+          "property",
+          "target"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "operator",
+        "zone"
+      ],
+      "emit": {
+        "function": "set_hvac_power",
+        "arguments": {
+          "state": {
+            "const": "off"
+          },
+          "zone": {
+            "from": "zone",
+            "optional": true
+          }
+        }
+      }
+    },
+    {
+      "id": "map.hvac_temperature",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "hvac",
+          "property": "temperature",
+          "operator": "set"
+        },
+        "present": [
+          "target"
+        ],
+        "absent": [
+          "feature"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "property",
+        "operator",
+        "operator_modifier",
+        "target",
+        "zone"
+      ],
+      "emit": {
+        "function": "set_hvac_temperature",
+        "arguments": {
+          "target": {
+            "from": "target"
+          },
+          "zone": {
+            "from": "zone",
+            "optional": true
+          }
+        }
+      }
+    },
+    {
+      "id": "map.hvac_fan_speed",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "hvac",
+          "property": "fan_speed",
+          "operator": "set"
+        },
+        "present": [
+          "target"
+        ],
+        "absent": [
+          "feature"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "property",
+        "operator",
+        "operator_modifier",
+        "target",
+        "zone"
+      ],
+      "emit": {
+        "function": "set_hvac_fan_speed",
+        "arguments": {
+          "target": {
+            "from": "target"
+          },
+          "zone": {
+            "from": "zone",
+            "optional": true
+          }
+        }
+      }
+    },
+    {
+      "id": "map.window.open",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "window",
+          "operator": "activate"
+        },
+        "present": [
+          "zone"
+        ],
+        "absent": [
+          "feature",
+          "property",
+          "target",
+          "operator_modifier"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "operator",
+        "zone"
+      ],
+      "emit": {
+        "function": "set_window_position",
+        "arguments": {
+          "zone": {
+            "from": "zone"
+          },
+          "target": {
+            "const": {
+              "kind": "named",
+              "value": "open"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "map.window.close",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "window",
+          "operator": "deactivate"
+        },
+        "present": [
+          "zone"
+        ],
+        "absent": [
+          "feature",
+          "property",
+          "target",
+          "operator_modifier"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "operator",
+        "zone"
+      ],
+      "emit": {
+        "function": "set_window_position",
+        "arguments": {
+          "zone": {
+            "from": "zone"
+          },
+          "target": {
+            "const": {
+              "kind": "named",
+              "value": "closed"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "map.sunroof.open",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "sunroof",
+          "operator": "activate"
+        },
+        "absent": [
+          "feature",
+          "property",
+          "target",
+          "zone",
+          "operator_modifier"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "operator"
+      ],
+      "emit": {
+        "function": "set_sunroof_position",
+        "arguments": {
+          "target": {
+            "const": {
+              "kind": "named",
+              "value": "open"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "map.sunroof.close",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "sunroof",
+          "operator": "deactivate"
+        },
+        "absent": [
+          "feature",
+          "property",
+          "target",
+          "zone",
+          "operator_modifier"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "operator"
+      ],
+      "emit": {
+        "function": "set_sunroof_position",
+        "arguments": {
+          "target": {
+            "const": {
+              "kind": "named",
+              "value": "closed"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "map.sunshade.open",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "sunshade",
+          "operator": "activate"
+        },
+        "absent": [
+          "feature",
+          "property",
+          "target",
+          "zone",
+          "operator_modifier"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "operator"
+      ],
+      "emit": {
+        "function": "set_sunshade_position",
+        "arguments": {
+          "target": {
+            "const": {
+              "kind": "named",
+              "value": "open"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "map.sunshade.close",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "sunshade",
+          "operator": "deactivate"
+        },
+        "absent": [
+          "feature",
+          "property",
+          "target",
+          "zone",
+          "operator_modifier"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "operator"
+      ],
+      "emit": {
+        "function": "set_sunshade_position",
+        "arguments": {
+          "target": {
+            "const": {
+              "kind": "named",
+              "value": "closed"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "map.seat_climate.activate",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "seat",
+          "operator": "activate"
+        },
+        "in": {
+          "feature": [
+            "heating",
+            "ventilation"
+          ]
+        },
+        "present": [
+          "zone"
+        ],
+        "absent": [
+          "property",
+          "target",
+          "operator_modifier"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "operator",
+        "feature",
+        "zone"
+      ],
+      "emit": {
+        "function": "set_seat_climate",
+        "arguments": {
+          "zone": {
+            "from": "zone"
+          },
+          "feature": {
+            "from": "feature"
+          },
+          "setting": {
+            "const": {
+              "kind": "state",
+              "value": "on"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "map.seat_climate.deactivate",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "seat",
+          "operator": "deactivate"
+        },
+        "in": {
+          "feature": [
+            "heating",
+            "ventilation"
+          ]
+        },
+        "present": [
+          "zone"
+        ],
+        "absent": [
+          "property",
+          "target",
+          "operator_modifier"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "operator",
+        "feature",
+        "zone"
+      ],
+      "emit": {
+        "function": "set_seat_climate",
+        "arguments": {
+          "zone": {
+            "from": "zone"
+          },
+          "feature": {
+            "from": "feature"
+          },
+          "setting": {
+            "const": {
+              "kind": "state",
+              "value": "off"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "map.seat_massage.activate",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "seat",
+          "feature": "massage",
+          "operator": "activate"
+        },
+        "present": [
+          "zone"
+        ],
+        "absent": [
+          "property",
+          "target",
+          "operator_modifier"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "operator",
+        "feature",
+        "zone"
+      ],
+      "emit": {
+        "function": "set_seat_massage",
+        "arguments": {
+          "zone": {
+            "from": "zone"
+          },
+          "setting": {
+            "const": {
+              "kind": "state",
+              "value": "on"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "map.seat_massage.deactivate",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "seat",
+          "feature": "massage",
+          "operator": "deactivate"
+        },
+        "present": [
+          "zone"
+        ],
+        "absent": [
+          "property",
+          "target",
+          "operator_modifier"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "operator",
+        "feature",
+        "zone"
+      ],
+      "emit": {
+        "function": "set_seat_massage",
+        "arguments": {
+          "zone": {
+            "from": "zone"
+          },
+          "setting": {
+            "const": {
+              "kind": "state",
+              "value": "off"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "outcome_rules": [
+    {
+      "id": "outcome.information_fragment",
+      "phase": "pre_normalization_errors",
+      "match": {
+        "equals": {
+          "intent_class": "information_fragment"
+        }
+      },
+      "status": "needs_context",
+      "reason_code": "missing_entity_context"
+    },
+    {
+      "id": "outcome.infotainment_deferred",
+      "phase": "pre_normalization_errors",
+      "match": {
+        "equals": {
+          "intent_class": "infotainment_control"
+        }
+      },
+      "status": "unsupported",
+      "reason_code": "function_outside_schema"
+    },
+    {
+      "id": "outcome.window_missing_zone",
+      "phase": "post_mapping",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "window"
+        },
+        "absent": [
+          "zone"
+        ]
+      },
+      "status": "needs_context",
+      "reason_code": "missing_required_argument"
+    },
+    {
+      "id": "outcome.seat_missing_zone",
+      "phase": "post_mapping",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "seat"
+        },
+        "absent": [
+          "zone"
+        ]
+      },
+      "status": "needs_context",
+      "reason_code": "missing_required_argument"
+    }
+  ]
+}

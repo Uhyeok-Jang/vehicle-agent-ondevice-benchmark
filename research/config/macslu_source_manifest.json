@@ -1,0 +1,88 @@
+{
+  "manifest_version": "1.0.0",
+  "audited_at": "2026-09-03",
+  "dataset": {
+    "id": "Gatsby1984/MAC_SLU",
+    "revision": "40670d121a89ad7142e3536ee6dc05374d095f6b",
+    "datasets_cache_fingerprint": "a6ff836e735de975451dfccefa33237d9dd7f2b5",
+    "license": "apache-2.0",
+    "corpus_language": "zh",
+    "vehicle_domain": "车载控制",
+    "urls": {
+      "dataset": "https://huggingface.co/datasets/Gatsby1984/MAC_SLU",
+      "paper": "https://arxiv.org/abs/2512.01603",
+      "code": "https://github.com/Gatsby-web/MAC_SLU"
+    },
+    "source_files": {
+      "train": {
+        "relative_path": "label/train_set.jsonl",
+        "records": 18000,
+        "sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681"
+      },
+      "validation": {
+        "relative_path": "label/dev_set.jsonl",
+        "records": 1391,
+        "sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1"
+      },
+      "test": {
+        "relative_path": "label/test_set.jsonl",
+        "records": 1151,
+        "sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572"
+      }
+    }
+  },
+  "paper_claims": {
+    "train_records": 17997,
+    "validation_records": 1391,
+    "test_records": 1151,
+    "total_records": 20539,
+    "maximum_intents_per_utterance": 5,
+    "domains": 8,
+    "intents": 81,
+    "slots": 192
+  },
+  "known_vehicle_slot_names": [
+    "intent",
+    "操作",
+    "对象",
+    "调节内容",
+    "value",
+    "位置",
+    "对象功能",
+    "操作_concrete",
+    "模式",
+    "功能",
+    "车机模块",
+    "页面",
+    "车内灯类型",
+    "车外灯类型",
+    "子功能",
+    "方向偏移量",
+    "音效",
+    "摄像头模式",
+    "座椅记忆位置",
+    "身体位置",
+    "序列号",
+    "车机来源"
+  ],
+  "known_discrepancies": [
+    {
+      "code": "paper_vs_release_train_count",
+      "paper": 17997,
+      "release": 18000,
+      "disposition": "Preserve the pinned release and report the difference."
+    },
+    {
+      "code": "paper_vs_release_max_intents",
+      "paper": 5,
+      "release": 7,
+      "disposition": "Flag records above five intents for manual review; do not silently delete them."
+    },
+    {
+      "code": "dataset_card_language_metadata",
+      "dataset_card": "en",
+      "observed_corpus": "zh",
+      "disposition": "Treat the source corpus as Chinese and retain the card value as a provenance caveat."
+    }
+  ]
+}

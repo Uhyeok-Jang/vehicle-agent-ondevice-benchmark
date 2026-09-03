@@ -1,0 +1,127 @@
+{
+  "manifest_version": "1.0.0",
+  "audited_at": "2026-09-03",
+  "dataset": {
+    "id": "MIVS",
+    "description": "Multi-Intent Chinese dataset collected from a realistic in-Vehicle System",
+    "corpus_language": "zh",
+    "released_modality": "text",
+    "audio_in_release": false,
+    "repository": {
+      "owner": "X-LANCE",
+      "name": "MIVS_BIRGAT",
+      "revision": "d1055a58d673468b4471e020626e8306ae6e4cb6",
+      "tags_at_audit": []
+    },
+    "archive": {
+      "relative_path": "data/aispeech.zip",
+      "sha256": "f345d359c47acc25a25c0cafda689b10dbed0e43f34b78cbe5e994e056d71588",
+      "record_format": "JSON Lines"
+    },
+    "urls": {
+      "paper_doi": "https://doi.org/10.1109/ICASSP48485.2024.10446325",
+      "paper_arxiv": "https://arxiv.org/abs/2402.18258",
+      "author_publication_page": "https://rhythmcao.github.io/publication/2024-birgat/",
+      "repository": "https://github.com/X-LANCE/MIVS_BIRGAT",
+      "pinned_repository": "https://github.com/X-LANCE/MIVS_BIRGAT/tree/d1055a58d673468b4471e020626e8306ae6e4cb6",
+      "data_directory": "https://github.com/X-LANCE/MIVS_BIRGAT/tree/d1055a58d673468b4471e020626e8306ae6e4cb6/data",
+      "archive": "https://github.com/X-LANCE/MIVS_BIRGAT/blob/d1055a58d673468b4471e020626e8306ae6e4cb6/data/aispeech.zip",
+      "license": "https://github.com/X-LANCE/MIVS_BIRGAT/blob/d1055a58d673468b4471e020626e8306ae6e4cb6/LICENSE"
+    }
+  },
+  "release_counts": {
+    "total_records": 105240,
+    "by_split": {
+      "train": 84049,
+      "valid": 10600,
+      "test": 10591
+    },
+    "components": {
+      "single_domain": {
+        "source_directory": "one_domain_data",
+        "total_records": 39240,
+        "by_split": {
+          "train": 31249,
+          "valid": 4000,
+          "test": 3991
+        },
+        "provenance": "collected_and_manually_annotated_per_paper_and_readme"
+      },
+      "cross_domain": {
+        "source_directory": "cross_data",
+        "total_records": 40000,
+        "by_split": {
+          "train": 32000,
+          "valid": 4000,
+          "test": 4000
+        },
+        "provenance": "automatically_concatenated_from_two_domains"
+      },
+      "cross_domain_multi": {
+        "source_directory": "cross_data_multi",
+        "total_records": 16000,
+        "by_split": {
+          "train": 12800,
+          "valid": 1600,
+          "test": 1600
+        },
+        "provenance": "enhanced_cross_domain_partition"
+      },
+      "null": {
+        "source_directory": "null_data",
+        "total_records": 10000,
+        "by_split": {
+          "train": 8000,
+          "valid": 1000,
+          "test": 1000
+        },
+        "provenance": "empty_semantic_parse"
+      }
+    }
+  },
+  "vehicle_subset": {
+    "domain": "车载控制",
+    "total_records": 20000,
+    "by_split": {
+      "train": 16000,
+      "valid": 2000,
+      "test": 2000
+    },
+    "intent_count": 3,
+    "intents": [
+      "提供信息",
+      "车机控制",
+      "车身控制"
+    ],
+    "slot_count": 18,
+    "slots": [
+      "value",
+      "位置",
+      "功能",
+      "子功能",
+      "对象",
+      "对象功能",
+      "应用名",
+      "座椅记忆位置",
+      "摄像头模式",
+      "操作",
+      "模式",
+      "灯光秀类型",
+      "调节内容",
+      "车内灯类型",
+      "车外灯类型",
+      "车机模块",
+      "音效",
+      "页面"
+    ]
+  },
+  "license": {
+    "repository_spdx": "MIT",
+    "copyright": "Copyright (c) 2023 X-LANCE@SJTU",
+    "dataset_specific_license_found": false,
+    "archive_contains_separate_license": false,
+    "redistribution_ambiguity": "The repository-level MIT license does not separately identify the corpus or document the upstream AISpeech data-rights chain.",
+    "recommended_handling": "Obtain author confirmation before redistributing translated or derived corpus text; until then, publish download and transformation code, mappings, hashes, and required notices instead of source or translated records.",
+    "legal_advice": false
+  }
+}

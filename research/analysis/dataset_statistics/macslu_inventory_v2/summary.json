@@ -1,0 +1,191 @@
+{
+  "artifacts": {
+    "inventory": {
+      "name": "inventory.csv",
+      "rows": 20542,
+      "sha256": "9b6f08b10a13d49bda7fed9f0c0d386bd71d8ddf009b18126d5d2fbbed933e5a"
+    }
+  },
+  "counts": {
+    "excluded_annotated_non_vehicle_rows": 6734,
+    "excluded_no_vehicle_rows": 12485,
+    "excluded_unannotated_rows": 5751,
+    "inventory_rows": 20542,
+    "source_rows": 20542,
+    "vehicle_rows": 8057
+  },
+  "dataset_revision": "40670d121a89ad7142e3536ee6dc05374d095f6b",
+  "issue_code_counts": {
+    "cross_split_query_overlap_exact": 2,
+    "cross_split_query_overlap_normalized": 3,
+    "cross_split_query_overlap_review_normalized": 3,
+    "max_intent_claim_violation": 2,
+    "mixed_domain_example": 430,
+    "no_vehicle_target": 12485,
+    "split_sens_gt_semantic_units": 6041,
+    "split_sens_lt_semantic_units": 352,
+    "unannotated_source": 5751,
+    "unexpected_vehicle_slot": 1
+  },
+  "provenance": {
+    "dataset": "Gatsby1984/MAC_SLU",
+    "files": [
+      {
+        "bytes": 442493,
+        "expected_records": 1151,
+        "expected_sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+        "records": 1151,
+        "records_match_manifest": true,
+        "relative_path": "label/test_set.jsonl",
+        "sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+        "sha256_matches_manifest": true,
+        "split": "test"
+      },
+      {
+        "bytes": 5494519,
+        "expected_records": 18000,
+        "expected_sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+        "records": 18000,
+        "records_match_manifest": true,
+        "relative_path": "label/train_set.jsonl",
+        "sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+        "sha256_matches_manifest": true,
+        "split": "train"
+      },
+      {
+        "bytes": 422144,
+        "expected_records": 1391,
+        "expected_sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+        "records": 1391,
+        "records_match_manifest": true,
+        "relative_path": "label/dev_set.jsonl",
+        "sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+        "sha256_matches_manifest": true,
+        "split": "validation"
+      }
+    ],
+    "generator": {
+      "dependencies": {
+        "audit_macslu.py": "2c715457862cef7d5f010d787e8925e8e6cbf334ccb4216650c69e15289ca889"
+      },
+      "name": "build_macslu_inventory.py",
+      "sha256": "c3030b9b2a1fb3e01d7a25a6f900bea6798ade60e8c357555c4a0b3bdc9654ad"
+    },
+    "loader": "local_jsonl",
+    "manifest": {
+      "bytes": 2445,
+      "name": "macslu_source_manifest.json",
+      "sha256": "9671aa48ff026b992475e0d54a45792d64d8e8494e614c102ef39e03d2d5f318"
+    },
+    "normalization_version": "2",
+    "python_version": "3.13.9",
+    "revision": "40670d121a89ad7142e3536ee6dc05374d095f6b"
+  },
+  "schema_version": 2,
+  "source_verification": {
+    "files": [
+      {
+        "expected_records": 1151,
+        "expected_sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+        "observed_records": 1151,
+        "observed_sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+        "records_match": true,
+        "relative_path": "label/test_set.jsonl",
+        "sha256_match": true,
+        "split": "test"
+      },
+      {
+        "expected_records": 18000,
+        "expected_sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+        "observed_records": 18000,
+        "observed_sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+        "records_match": true,
+        "relative_path": "label/train_set.jsonl",
+        "sha256_match": true,
+        "split": "train"
+      },
+      {
+        "expected_records": 1391,
+        "expected_sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+        "observed_records": 1391,
+        "observed_sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+        "records_match": true,
+        "relative_path": "label/dev_set.jsonl",
+        "sha256_match": true,
+        "split": "validation"
+      }
+    ],
+    "status": "verified"
+  },
+  "splits": {
+    "test": {
+      "candidate": 593,
+      "excluded": 490,
+      "excluded_annotated_non_vehicle_rows": 464,
+      "excluded_no_vehicle_rows": 490,
+      "excluded_unannotated_rows": 26,
+      "inventory_rows": 1151,
+      "manual_review": 66,
+      "quarantined": 2,
+      "source_rows": 1151,
+      "vehicle_rows": 661
+    },
+    "train": {
+      "candidate": 5995,
+      "excluded": 11121,
+      "excluded_annotated_non_vehicle_rows": 5815,
+      "excluded_no_vehicle_rows": 11121,
+      "excluded_unannotated_rows": 5306,
+      "inventory_rows": 18000,
+      "manual_review": 884,
+      "quarantined": 0,
+      "source_rows": 18000,
+      "vehicle_rows": 6879
+    },
+    "validation": {
+      "candidate": 449,
+      "excluded": 874,
+      "excluded_annotated_non_vehicle_rows": 455,
+      "excluded_no_vehicle_rows": 874,
+      "excluded_unannotated_rows": 419,
+      "inventory_rows": 1391,
+      "manual_review": 68,
+      "quarantined": 0,
+      "source_rows": 1391,
+      "vehicle_rows": 517
+    }
+  },
+  "status_counts": {
+    "candidate": 7037,
+    "excluded": 12485,
+    "manual_review": 1018,
+    "quarantined": 2
+  },
+  "status_policy": {
+    "candidate": "no quarantine or manual-review issue",
+    "excluded": [
+      "no_vehicle_target"
+    ],
+    "final_status": "blank until mapping and human review are complete",
+    "manual_review": [
+      "cross_split_query_overlap_review_normalized",
+      "max_intent_claim_violation",
+      "mixed_domain_example",
+      "multi_domain_per_intent",
+      "split_sens_gt_semantic_units",
+      "split_sens_lt_semantic_units",
+      "unexpected_vehicle_slot"
+    ],
+    "priority": [
+      "excluded",
+      "quarantined",
+      "manual_review",
+      "candidate"
+    ],
+    "quarantined": [
+      "cross_split_query_overlap_exact",
+      "cross_split_query_overlap_normalized"
+    ]
+  },
+  "vehicle_domain": "车载控制"
+}

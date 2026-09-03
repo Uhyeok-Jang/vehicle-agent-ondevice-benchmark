@@ -26,3 +26,15 @@ Thumbs.db
 *.jks
 *.keystore
 key.properties
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Research datasets
+research/data/raw/
+research/data/cache/
+
+# Large artifacts
+research/checkpoints/
+research/results/raw/
