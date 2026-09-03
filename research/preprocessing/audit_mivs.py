@@ -1149,13 +1149,8 @@ def write_outputs(
         tempfile.mkdtemp(prefix=f".{output_dir.name}.tmp-", dir=output_dir.parent)
     )
     try:
-        (temporary / "summary.json").write_text(
-            json.dumps(summary, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
-            encoding="utf-8",
-        )
-        with (temporary / "issues.csv").open(
-            "w", encoding="utf-8", newline=""
-        ) as handle:
+        issues_path = temporary / "issues.csv"
+        with issues_path.open("w", encoding="utf-8", newline="") as handle:
             writer = csv.DictWriter(
                 handle, fieldnames=ISSUE_FIELDS, lineterminator="\n"
             )
@@ -1169,9 +1164,8 @@ def write_outputs(
                 int(record["line"]),
             ),
         )
-        with (temporary / "record_index.jsonl").open(
-            "w", encoding="utf-8", newline=""
-        ) as handle:
+        record_index_path = temporary / "record_index.jsonl"
+        with record_index_path.open("w", encoding="utf-8", newline="") as handle:
             for record in ordered_records:
                 handle.write(
                     json.dumps(
@@ -1182,6 +1176,24 @@ def write_outputs(
                     )
                     + "\n"
                 )
+        output_summary = dict(summary)
+        output_summary["artifacts"] = {
+            "issues": {
+                "name": issues_path.name,
+                "rows": len(issues),
+                "sha256": sha256_file(issues_path),
+            },
+            "record_index": {
+                "name": record_index_path.name,
+                "rows": len(ordered_records),
+                "sha256": sha256_file(record_index_path),
+            },
+        }
+        (temporary / "summary.json").write_text(
+            json.dumps(output_summary, ensure_ascii=False, indent=2, sort_keys=True)
+            + "\n",
+            encoding="utf-8",
+        )
         os.replace(temporary, output_dir)
     except Exception:
         shutil.rmtree(temporary, ignore_errors=True)
@@ -1212,6 +1224,13 @@ def main(argv: Sequence[str] | None = None) -> int:
         )
     except (OSError, SourceVerificationError) as error:
         parser.exit(2, f"audit_mivs: {error}\n")
+    summary["provenance"]["generator"] = {
+        "name": Path(__file__).name,
+        "sha256": sha256_file(Path(__file__)),
+        "dependencies": {
+            "audit_macslu.py": sha256_file(Path(audit_macslu.__file__)),
+        },
+    }
     write_outputs(args.output_dir, summary, issues, records)
     print(
         f"Wrote {len(records)} record identities and {len(issues)} findings "

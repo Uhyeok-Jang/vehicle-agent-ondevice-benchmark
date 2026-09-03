@@ -3,6 +3,7 @@
 Status: conditionally adopted for supplementary evaluation  
 Decision date: 2026-09-03  
 Evidence manifest: [`mivs_source_manifest.json`](../config/mivs_source_manifest.json)
+Reproduced audit: [`mivs_audit_v1/summary.json`](../analysis/dataset_statistics/mivs_audit_v1/summary.json)
 
 ## Decision
 
@@ -14,6 +15,8 @@ The recommended source slice is the official 2,000-record vehicle test partition
 - `aispeech/test/one_domain_data/车载控制_multi.json`: 1,000 multi-intent records. Its intent-count distribution is 19 two-intent, 477 three-intent, and 504 four-intent records.
 
 This slice is useful for testing function-call composition and complexity transfer. It is not a drop-in benchmark: the Chinese utterances and hierarchical intent-slot annotations must be converted to reviewed Korean utterances and the same canonical Vehicle API used by the primary MAC-SLU benchmark.
+
+The counts above describe source semantic units. They must not be reported as canonical call counts: unsupported or context-dependent source units can map to zero calls, and canonical call counts exist only after the mapping registry is frozen and applied.
 
 ## Basis for conditional adoption
 

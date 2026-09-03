@@ -1,0 +1,1069 @@
+{
+  "artifacts": {
+    "issues": {
+      "name": "issues.csv",
+      "rows": 387,
+      "sha256": "903678f5f82be55e07f08cf21dd926f3c9fc5b658045b17de980adb9df354acb"
+    },
+    "record_index": {
+      "name": "record_index.jsonl",
+      "rows": 20000,
+      "sha256": "5751dadf41dbacaa1fd0445eecc9eb7706a15f6c743b9c2a0bbd2dccf9ccd486"
+    }
+  },
+  "audit_config": {
+    "exact_key": "raw Unicode string equality",
+    "offset_convention": "zero-based inclusive Unicode code-point indices",
+    "quarantine_normalization": "Unicode NFKC + lowercase + remove whitespace; preserve punctuation",
+    "review_normalization": "quarantine normalization + remove punctuation except decimal points and numeric signs",
+    "revision": "d1055a58d673468b4471e020626e8306ae6e4cb6",
+    "stable_id_spec": "mivs-stable-id-v1",
+    "vehicle_domain": "车载控制"
+  },
+  "counts": {
+    "recommended_test": {
+      "records": 2000,
+      "source_unit_count_distribution": {
+        "1": 1000,
+        "2": 19,
+        "3": 477,
+        "4": 504
+      },
+      "units": 4485
+    },
+    "release": {
+      "by_component": {
+        "cross_domain": {
+          "by_split": {
+            "test": 4000,
+            "train": 32000,
+            "valid": 4000
+          },
+          "total_records": 40000
+        },
+        "cross_domain_multi": {
+          "by_split": {
+            "test": 1600,
+            "train": 12800,
+            "valid": 1600
+          },
+          "total_records": 16000
+        },
+        "null": {
+          "by_split": {
+            "test": 1000,
+            "train": 8000,
+            "valid": 1000
+          },
+          "total_records": 10000
+        },
+        "single_domain": {
+          "by_split": {
+            "test": 3991,
+            "train": 31249,
+            "valid": 4000
+          },
+          "total_records": 39240
+        }
+      },
+      "by_split": {
+        "test": 10591,
+        "train": 84049,
+        "valid": 10600
+      },
+      "records": 105240
+    },
+    "vehicle": {
+      "by_split": {
+        "test": 2000,
+        "train": 16000,
+        "valid": 2000
+      },
+      "partition_records": {
+        "multi": 10000,
+        "single": 10000
+      },
+      "partition_units": {
+        "multi": 34880,
+        "single": 10000
+      },
+      "records": 20000,
+      "units": 44880,
+      "units_by_split": {
+        "test": 4485,
+        "train": 35888,
+        "valid": 4507
+      }
+    }
+  },
+  "issue_counts_by_code": {
+    "mac_query_overlap_exact": 96,
+    "mac_query_overlap_quarantine_normalized": 96,
+    "mac_query_overlap_review_normalized": 96,
+    "mivs_cross_split_query_exact": 32,
+    "mivs_cross_split_query_quarantine_normalized": 32,
+    "mivs_cross_split_query_review_normalized": 32,
+    "slot_value_span_mismatch": 3
+  },
+  "offsets": {
+    "by_slot": {
+      "value": {
+        "pos_exact": 5264,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 1376,
+        "pos_present": 5264,
+        "slots": 6640
+      },
+      "位置": {
+        "pos_exact": 10414,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 137,
+        "pos_present": 10414,
+        "slots": 10551
+      },
+      "功能": {
+        "pos_exact": 3858,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 4,
+        "pos_present": 3858,
+        "slots": 3862
+      },
+      "子功能": {
+        "pos_exact": 4591,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 645,
+        "pos_present": 4591,
+        "slots": 5236
+      },
+      "对象": {
+        "pos_exact": 20576,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 2963,
+        "pos_present": 20576,
+        "slots": 23539
+      },
+      "对象功能": {
+        "pos_exact": 10364,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 1080,
+        "pos_present": 10364,
+        "slots": 11444
+      },
+      "应用名": {
+        "pos_exact": 1094,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 0,
+        "pos_present": 1094,
+        "slots": 1094
+      },
+      "座椅记忆位置": {
+        "pos_exact": 12,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 0,
+        "pos_present": 12,
+        "slots": 12
+      },
+      "摄像头模式": {
+        "pos_exact": 21,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 4,
+        "pos_present": 21,
+        "slots": 25
+      },
+      "操作": {
+        "pos_exact": 43419,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 1251,
+        "pos_present": 43419,
+        "slots": 44670
+      },
+      "模式": {
+        "pos_exact": 8712,
+        "pos_invalid": 0,
+        "pos_mismatch": 3,
+        "pos_missing": 42,
+        "pos_present": 8715,
+        "slots": 8757
+      },
+      "灯光秀类型": {
+        "pos_exact": 57,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 1233,
+        "pos_present": 57,
+        "slots": 1290
+      },
+      "调节内容": {
+        "pos_exact": 2951,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 12393,
+        "pos_present": 2951,
+        "slots": 15344
+      },
+      "车内灯类型": {
+        "pos_exact": 1195,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 398,
+        "pos_present": 1195,
+        "slots": 1593
+      },
+      "车外灯类型": {
+        "pos_exact": 506,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 76,
+        "pos_present": 506,
+        "slots": 582
+      },
+      "车机模块": {
+        "pos_exact": 993,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 8,
+        "pos_present": 993,
+        "slots": 1001
+      },
+      "音效": {
+        "pos_exact": 20,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 0,
+        "pos_present": 20,
+        "slots": 20
+      },
+      "页面": {
+        "pos_exact": 1446,
+        "pos_invalid": 0,
+        "pos_mismatch": 0,
+        "pos_missing": 0,
+        "pos_present": 1446,
+        "slots": 1446
+      }
+    },
+    "pos_exact": 115493,
+    "pos_invalid": 0,
+    "pos_mismatch": 3,
+    "pos_missing": 21610,
+    "pos_present": 115496,
+    "slots": 137106
+  },
+  "ontology": {
+    "declared_intents_match_observed": true,
+    "declared_slots_match_observed": true,
+    "intent_count": 3,
+    "manifest_intents_match_ontology": true,
+    "manifest_slots_match_ontology": true,
+    "observed_path_violations": 0,
+    "slot_count": 18,
+    "vehicle_intents": [
+      "提供信息",
+      "车机控制",
+      "车身控制"
+    ],
+    "vehicle_slots": [
+      "value",
+      "位置",
+      "功能",
+      "子功能",
+      "对象",
+      "对象功能",
+      "应用名",
+      "座椅记忆位置",
+      "摄像头模式",
+      "操作",
+      "模式",
+      "灯光秀类型",
+      "调节内容",
+      "车内灯类型",
+      "车外灯类型",
+      "车机模块",
+      "音效",
+      "页面"
+    ]
+  },
+  "overlap": {
+    "mac": {
+      "full_vehicle": {
+        "exact_unique_queries": 96,
+        "full_frame_equal_unique_queries": 28,
+        "intent_sequence_equal_unique_queries": 96,
+        "quarantine_normalized_additional_unique_keys": 0,
+        "quarantine_normalized_total_unique_keys": 96,
+        "review_normalized_additional_unique_keys": 0,
+        "review_normalized_total_unique_keys": 96
+      },
+      "recommended_test": {
+        "exact_records": 13,
+        "exact_records_by_mac_split_nonexclusive": {
+          "test": 1,
+          "train": 11,
+          "validation": 1
+        },
+        "multi_exact_records": 0,
+        "quarantine_normalized_additional_records": 0,
+        "quarantine_normalized_records": 13,
+        "review_normalized_additional_records": 0,
+        "review_normalized_records": 13
+      }
+    },
+    "mivs_cross_split": {
+      "exact": {
+        "groups": 32,
+        "groups_by_split_set": {
+          "train|test": 6,
+          "train|valid": 24,
+          "valid|test": 2
+        },
+        "pairwise_unique_query_keys": {
+          "train_test": 6,
+          "train_valid": 24,
+          "valid_test": 2
+        }
+      },
+      "quarantine_normalized": {
+        "groups": 32,
+        "groups_by_split_set": {
+          "train|test": 6,
+          "train|valid": 24,
+          "valid|test": 2
+        },
+        "pairwise_unique_query_keys": {
+          "train_test": 6,
+          "train_valid": 24,
+          "valid_test": 2
+        }
+      },
+      "review_normalized": {
+        "groups": 32,
+        "groups_by_split_set": {
+          "train|test": 6,
+          "train|valid": 24,
+          "valid|test": 2
+        },
+        "pairwise_unique_query_keys": {
+          "train_test": 6,
+          "train_valid": 24,
+          "valid_test": 2
+        }
+      }
+    }
+  },
+  "provenance": {
+    "archive": {
+      "bytes": 6064823,
+      "expected_sha256": "f345d359c47acc25a25c0cafda689b10dbed0e43f34b78cbe5e994e056d71588",
+      "observed_sha256": "f345d359c47acc25a25c0cafda689b10dbed0e43f34b78cbe5e994e056d71588",
+      "sha256_match": true
+    },
+    "generator": {
+      "dependencies": {
+        "audit_macslu.py": "2c715457862cef7d5f010d787e8925e8e6cbf334ccb4216650c69e15289ca889"
+      },
+      "name": "audit_mivs.py",
+      "sha256": "1f8d48a4b8dd510a66ed60be2b378833924f088dfac512edd73f387954b7f1a5"
+    },
+    "mac": {
+      "manifest": {
+        "bytes": 2445,
+        "name": "macslu_source_manifest.json",
+        "sha256": "9671aa48ff026b992475e0d54a45792d64d8e8494e614c102ef39e03d2d5f318"
+      },
+      "revision": "40670d121a89ad7142e3536ee6dc05374d095f6b",
+      "source_files": [
+        {
+          "bytes": 442493,
+          "expected_records": 1151,
+          "expected_sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+          "records": 1151,
+          "relative_path": "label/test_set.jsonl",
+          "sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+          "split": "test"
+        },
+        {
+          "bytes": 5494519,
+          "expected_records": 18000,
+          "expected_sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+          "records": 18000,
+          "relative_path": "label/train_set.jsonl",
+          "sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+          "split": "train"
+        },
+        {
+          "bytes": 422144,
+          "expected_records": 1391,
+          "expected_sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+          "records": 1391,
+          "relative_path": "label/dev_set.jsonl",
+          "sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+          "split": "validation"
+        }
+      ],
+      "total_records": 20542,
+      "unique_vehicle_queries": 8055,
+      "vehicle_records": 8057
+    },
+    "manifest": {
+      "bytes": 4013,
+      "name": "mivs_source_manifest.json",
+      "sha256": "cd1c274d7666031617b00004ecf4dde926a9ae4143ab9021014c58db270dfc07"
+    },
+    "members": [
+      {
+        "bytes": 13259495,
+        "compressed_bytes": 369032,
+        "kind": "ontology",
+        "path": "aispeech/ontology.json",
+        "sha256": "d4478c3e2884498cd5c53b6223c5d552a495d8122b5e21c678a0501159f5107b"
+      },
+      {
+        "bytes": 194543,
+        "component": "cross_domain",
+        "compressed_bytes": 20088,
+        "kind": "data",
+        "path": "aispeech/test/cross_data/地图_cross_天气.json",
+        "records": 400,
+        "sha256": "f981c97a4a54df0a3b50a2468a1572ba31ca6094a6a57b069275864dfeb6337b",
+        "split": "test"
+      },
+      {
+        "bytes": 184001,
+        "component": "cross_domain",
+        "compressed_bytes": 18551,
+        "kind": "data",
+        "path": "aispeech/test/cross_data/地图_cross_打电话.json",
+        "records": 400,
+        "sha256": "fdc992d3106dfcd2b3e3673c54938a71dc19a14417804b610c6a3dcb2c8e0e6e",
+        "split": "test"
+      },
+      {
+        "bytes": 180807,
+        "component": "cross_domain",
+        "compressed_bytes": 22195,
+        "kind": "data",
+        "path": "aispeech/test/cross_data/地图_cross_音乐.json",
+        "records": 400,
+        "sha256": "829a0e055b8b3b5e67b3984a0c91802f2f9aa097b71897e58a602dcb244af2ad",
+        "split": "test"
+      },
+      {
+        "bytes": 216155,
+        "component": "cross_domain",
+        "compressed_bytes": 18628,
+        "kind": "data",
+        "path": "aispeech/test/cross_data/打电话_cross_天气.json",
+        "records": 400,
+        "sha256": "32b158433b65508002e542f1500101ad5d2a0053a6cbe2b1b658e51dda4683e1",
+        "split": "test"
+      },
+      {
+        "bytes": 204275,
+        "component": "cross_domain",
+        "compressed_bytes": 21377,
+        "kind": "data",
+        "path": "aispeech/test/cross_data/打电话_cross_音乐.json",
+        "records": 400,
+        "sha256": "a99e11a4260572746b7ea8d14cb56126d64c451feff08f8c14fc640b5924522a",
+        "split": "test"
+      },
+      {
+        "bytes": 214954,
+        "component": "cross_domain",
+        "compressed_bytes": 26847,
+        "kind": "data",
+        "path": "aispeech/test/cross_data/车载控制_cross_地图.json",
+        "records": 400,
+        "sha256": "bad8637a12445f560ac28a24a2b5d029ba3d8b01321613e4d0e5b28a7ef86280",
+        "split": "test"
+      },
+      {
+        "bytes": 240737,
+        "component": "cross_domain",
+        "compressed_bytes": 26444,
+        "kind": "data",
+        "path": "aispeech/test/cross_data/车载控制_cross_天气.json",
+        "records": 400,
+        "sha256": "a7ba937441925e67f0883b2c6164c2267fbe36ac56c4acd0776da1c97af4af94",
+        "split": "test"
+      },
+      {
+        "bytes": 233920,
+        "component": "cross_domain",
+        "compressed_bytes": 25212,
+        "kind": "data",
+        "path": "aispeech/test/cross_data/车载控制_cross_打电话.json",
+        "records": 400,
+        "sha256": "f802698f298a7c0dc50cfaec88e4de4d3343152282917d270db421ed78601e0c",
+        "split": "test"
+      },
+      {
+        "bytes": 231990,
+        "component": "cross_domain",
+        "compressed_bytes": 28756,
+        "kind": "data",
+        "path": "aispeech/test/cross_data/车载控制_cross_音乐.json",
+        "records": 400,
+        "sha256": "a916d9e3e7c33a2120420049ffcb576ac32da2382916b20e1da37ac568778a3f",
+        "split": "test"
+      },
+      {
+        "bytes": 208964,
+        "component": "cross_domain",
+        "compressed_bytes": 21591,
+        "kind": "data",
+        "path": "aispeech/test/cross_data/音乐_cross_天气.json",
+        "records": 400,
+        "sha256": "5fbdb7767b24291165fd326aceaf097d30bd484bf1d45147f75195b550312892",
+        "split": "test"
+      },
+      {
+        "bytes": 415305,
+        "component": "cross_domain_multi",
+        "compressed_bytes": 42699,
+        "kind": "data",
+        "path": "aispeech/test/cross_data_multi/车载控制_multi_cross_地图.json",
+        "records": 400,
+        "sha256": "e4ce3009f1c0b65b830810fcbf4fd2e52c55677adbfe319161daffb0ca304c44",
+        "split": "test"
+      },
+      {
+        "bytes": 446222,
+        "component": "cross_domain_multi",
+        "compressed_bytes": 44093,
+        "kind": "data",
+        "path": "aispeech/test/cross_data_multi/车载控制_multi_cross_天气.json",
+        "records": 400,
+        "sha256": "4c8d0e2a8e4296bf7cfe84226164d3ce59a052d2bbd226ab9569214c4a7299a2",
+        "split": "test"
+      },
+      {
+        "bytes": 443309,
+        "component": "cross_domain_multi",
+        "compressed_bytes": 43117,
+        "kind": "data",
+        "path": "aispeech/test/cross_data_multi/车载控制_multi_cross_打电话.json",
+        "records": 400,
+        "sha256": "22f2d489c157321543428ed162982425904d523b81cc5c7ba5534592f6d6b7a0",
+        "split": "test"
+      },
+      {
+        "bytes": 440985,
+        "component": "cross_domain_multi",
+        "compressed_bytes": 46907,
+        "kind": "data",
+        "path": "aispeech/test/cross_data_multi/车载控制_multi_cross_音乐.json",
+        "records": 400,
+        "sha256": "97e3b34ce4d339145ff4b8050bc674305e573e2929a4e9d2d3d7e9b64a667987",
+        "split": "test"
+      },
+      {
+        "bytes": 68870,
+        "component": "null",
+        "compressed_bytes": 20759,
+        "kind": "data",
+        "path": "aispeech/test/null_data/null.json",
+        "records": 1000,
+        "sha256": "85bd2ddc5c9d1fe81ef8bfb51cdb1ef337069ae0ee6b8d7be5362f4efdaaf87c",
+        "split": "test"
+      },
+      {
+        "bytes": 109044,
+        "component": "single_domain",
+        "compressed_bytes": 11153,
+        "kind": "data",
+        "path": "aispeech/test/one_domain_data/地图.json",
+        "records": 500,
+        "sha256": "9988ee7b6330738d5c16445c513b071e2e04c2741ca4eb81cb636fac8e2cdab9",
+        "split": "test"
+      },
+      {
+        "bytes": 144509,
+        "component": "single_domain",
+        "compressed_bytes": 10377,
+        "kind": "data",
+        "path": "aispeech/test/one_domain_data/天气.json",
+        "records": 500,
+        "sha256": "b3791eab893e028a2c1f7d64d909e119593d6a8ee0ef1defe2c07dd88b243a3b",
+        "split": "test"
+      },
+      {
+        "bytes": 131698,
+        "component": "single_domain",
+        "compressed_bytes": 8879,
+        "kind": "data",
+        "path": "aispeech/test/one_domain_data/打电话.json",
+        "records": 491,
+        "sha256": "a46331b63d0c0aadd34a100c6a4d4a97d0359b12ba98f61f2ef3e262848ee043",
+        "split": "test"
+      },
+      {
+        "bytes": 335896,
+        "component": "single_domain",
+        "compressed_bytes": 32405,
+        "kind": "data",
+        "path": "aispeech/test/one_domain_data/车载控制.json",
+        "records": 1000,
+        "sha256": "fbc5ad0d13e1fee81bb423620ed6054f1d736ffde728e79067a60696bffdd9a1",
+        "split": "test"
+      },
+      {
+        "bytes": 856230,
+        "component": "single_domain",
+        "compressed_bytes": 70412,
+        "kind": "data",
+        "path": "aispeech/test/one_domain_data/车载控制_multi.json",
+        "records": 1000,
+        "sha256": "6fae4917e4656bc851322bd3bc6708c6d11e8e07b83aea060b290291ac9b0593",
+        "split": "test"
+      },
+      {
+        "bytes": 129526,
+        "component": "single_domain",
+        "compressed_bytes": 13078,
+        "kind": "data",
+        "path": "aispeech/test/one_domain_data/音乐.json",
+        "records": 500,
+        "sha256": "0b103aca2b776bb1fb8d588fb379b76cace04673b51482a6fcc2ef0e6f76f313",
+        "split": "test"
+      },
+      {
+        "bytes": 1526874,
+        "component": "cross_domain",
+        "compressed_bytes": 156687,
+        "kind": "data",
+        "path": "aispeech/train/cross_data/地图_cross_天气.json",
+        "records": 3200,
+        "sha256": "1cf0e2a3ccecfd233832afa8df0f2ad4141fa9aec29781d26356006a3f4d4ec0",
+        "split": "train"
+      },
+      {
+        "bytes": 1478074,
+        "component": "cross_domain",
+        "compressed_bytes": 149752,
+        "kind": "data",
+        "path": "aispeech/train/cross_data/地图_cross_打电话.json",
+        "records": 3200,
+        "sha256": "c6ffebf74c5408e8fac995555187708667e41f672f654cea00ce68e68d251f84",
+        "split": "train"
+      },
+      {
+        "bytes": 1440462,
+        "component": "cross_domain",
+        "compressed_bytes": 177354,
+        "kind": "data",
+        "path": "aispeech/train/cross_data/地图_cross_音乐.json",
+        "records": 3200,
+        "sha256": "fa09eb4f871ac16a9e35d2eeb8051ade7c7585efd1b00cd5ed4cdc3d67e2f402",
+        "split": "train"
+      },
+      {
+        "bytes": 1714051,
+        "component": "cross_domain",
+        "compressed_bytes": 148780,
+        "kind": "data",
+        "path": "aispeech/train/cross_data/打电话_cross_天气.json",
+        "records": 3200,
+        "sha256": "64d92bcb99adce894736a166cf2179ee271b8771d47fe2a512e837ae9924dde4",
+        "split": "train"
+      },
+      {
+        "bytes": 1618817,
+        "component": "cross_domain",
+        "compressed_bytes": 167028,
+        "kind": "data",
+        "path": "aispeech/train/cross_data/打电话_cross_音乐.json",
+        "records": 3200,
+        "sha256": "145801b53bb45bfeb52fef72532099dbec2c297cf0d450aeca1363717c03bb0b",
+        "split": "train"
+      },
+      {
+        "bytes": 1683524,
+        "component": "cross_domain",
+        "compressed_bytes": 205464,
+        "kind": "data",
+        "path": "aispeech/train/cross_data/车载控制_cross_地图.json",
+        "records": 3200,
+        "sha256": "e938ba7897bc207d4819b26b85546270702a0d0d698fcd70a224154f27613be6",
+        "split": "train"
+      },
+      {
+        "bytes": 1920263,
+        "component": "cross_domain",
+        "compressed_bytes": 206512,
+        "kind": "data",
+        "path": "aispeech/train/cross_data/车载控制_cross_天气.json",
+        "records": 3200,
+        "sha256": "a94e77abb5864d01ba01ee6fc80985cde07f57f080d6610d725ecea7a6681ebe",
+        "split": "train"
+      },
+      {
+        "bytes": 1872668,
+        "component": "cross_domain",
+        "compressed_bytes": 198222,
+        "kind": "data",
+        "path": "aispeech/train/cross_data/车载控制_cross_打电话.json",
+        "records": 3200,
+        "sha256": "c2ecff20bf6157e255c098517d80733a894f1088c70bcba90c7fa7c75f78eec3",
+        "split": "train"
+      },
+      {
+        "bytes": 1827315,
+        "component": "cross_domain",
+        "compressed_bytes": 223146,
+        "kind": "data",
+        "path": "aispeech/train/cross_data/车载控制_cross_音乐.json",
+        "records": 3200,
+        "sha256": "6581ce8047b6bd241e56665fc91ae8e0ae7fda0730a57d7367a725e4bd4f53c6",
+        "split": "train"
+      },
+      {
+        "bytes": 1665829,
+        "component": "cross_domain",
+        "compressed_bytes": 175334,
+        "kind": "data",
+        "path": "aispeech/train/cross_data/音乐_cross_天气.json",
+        "records": 3200,
+        "sha256": "ae64e241ce4d938c236f1299614f593c7525b3d35220a4847483f58544e5bda3",
+        "split": "train"
+      },
+      {
+        "bytes": 3343257,
+        "component": "cross_domain_multi",
+        "compressed_bytes": 341478,
+        "kind": "data",
+        "path": "aispeech/train/cross_data_multi/车载控制_multi_cross_地图.json",
+        "records": 3200,
+        "sha256": "183d93dc28cc30c565ac0ded19bb227caf64961f4ba890092659720a2c55deb2",
+        "split": "train"
+      },
+      {
+        "bytes": 3605812,
+        "component": "cross_domain_multi",
+        "compressed_bytes": 345883,
+        "kind": "data",
+        "path": "aispeech/train/cross_data_multi/车载控制_multi_cross_天气.json",
+        "records": 3200,
+        "sha256": "5ff136ef9f3e6aa20a0079f59e1bb74bf07f3f74b13f8286f9d6b1d978193a46",
+        "split": "train"
+      },
+      {
+        "bytes": 3538292,
+        "component": "cross_domain_multi",
+        "compressed_bytes": 338357,
+        "kind": "data",
+        "path": "aispeech/train/cross_data_multi/车载控制_multi_cross_打电话.json",
+        "records": 3200,
+        "sha256": "18604081f467589e337b7efa8ae1e2233950bd428a2709442b51239f32b61a1f",
+        "split": "train"
+      },
+      {
+        "bytes": 3512716,
+        "component": "cross_domain_multi",
+        "compressed_bytes": 367535,
+        "kind": "data",
+        "path": "aispeech/train/cross_data_multi/车载控制_multi_cross_音乐.json",
+        "records": 3200,
+        "sha256": "7e9d30801a3fa4b89a0fe6ab666761f2139276ff39002706e33b8a58b2826556",
+        "split": "train"
+      },
+      {
+        "bytes": 561186,
+        "component": "null",
+        "compressed_bytes": 163346,
+        "kind": "data",
+        "path": "aispeech/train/null_data/null.json",
+        "records": 8000,
+        "sha256": "8fda454ce97f1303fb9998f61667030dcf0b04566fcf043d045680986a87d61d",
+        "split": "train"
+      },
+      {
+        "bytes": 852580,
+        "component": "single_domain",
+        "compressed_bytes": 82370,
+        "kind": "data",
+        "path": "aispeech/train/one_domain_data/地图.json",
+        "records": 4000,
+        "sha256": "4ca62b2f907c2cff2aaf2acc859d27c583ce4c2f072879358e5293d207c3cc17",
+        "split": "train"
+      },
+      {
+        "bytes": 1149495,
+        "component": "single_domain",
+        "compressed_bytes": 77594,
+        "kind": "data",
+        "path": "aispeech/train/one_domain_data/天气.json",
+        "records": 4000,
+        "sha256": "f18b33392040db97313d64e7e28ba08cdfd85e1a0eadbdeeb032651e08cf4faa",
+        "split": "train"
+      },
+      {
+        "bytes": 871502,
+        "component": "single_domain",
+        "compressed_bytes": 57879,
+        "kind": "data",
+        "path": "aispeech/train/one_domain_data/打电话.json",
+        "records": 3249,
+        "sha256": "ae0f49f48f730ffc2c6aaa9d97dca13fe2fe16c73eb9f5abd41d1d4565ca8a80",
+        "split": "train"
+      },
+      {
+        "bytes": 2672320,
+        "component": "single_domain",
+        "compressed_bytes": 249990,
+        "kind": "data",
+        "path": "aispeech/train/one_domain_data/车载控制.json",
+        "records": 8000,
+        "sha256": "0a52d84c25d976c5164d220365ce59dd2eff49504b6b104566fc0a1fb9504696",
+        "split": "train"
+      },
+      {
+        "bytes": 6847950,
+        "component": "single_domain",
+        "compressed_bytes": 559176,
+        "kind": "data",
+        "path": "aispeech/train/one_domain_data/车载控制_multi.json",
+        "records": 8000,
+        "sha256": "fc8bc06767e11fce1fc42dea7cf5943301448c1b5275a1fb6d98ae0475b3d723",
+        "split": "train"
+      },
+      {
+        "bytes": 1024079,
+        "component": "single_domain",
+        "compressed_bytes": 101109,
+        "kind": "data",
+        "path": "aispeech/train/one_domain_data/音乐.json",
+        "records": 4000,
+        "sha256": "29ee1cc84a9c9ad2c62b23d2804f950efa08d200248cfbef4867390bb928da7e",
+        "split": "train"
+      },
+      {
+        "bytes": 191403,
+        "component": "cross_domain",
+        "compressed_bytes": 19819,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data/地图_cross_天气.json",
+        "records": 400,
+        "sha256": "93b9be0eab4b3a119456585b9920c0aa102ac388f2301eaa1cadad96b89c641f",
+        "split": "valid"
+      },
+      {
+        "bytes": 185588,
+        "component": "cross_domain",
+        "compressed_bytes": 19123,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data/地图_cross_打电话.json",
+        "records": 400,
+        "sha256": "f7cf295bf9b8e1d48f8741eaa94f6d172ba74b755e14b64ecb1a6753734c5e2c",
+        "split": "valid"
+      },
+      {
+        "bytes": 179617,
+        "component": "cross_domain",
+        "compressed_bytes": 22547,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data/地图_cross_音乐.json",
+        "records": 400,
+        "sha256": "5723302766b116f51aea789efba7f720a8e4213c580f774a576bdb43c8ab59f4",
+        "split": "valid"
+      },
+      {
+        "bytes": 213912,
+        "component": "cross_domain",
+        "compressed_bytes": 19202,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data/打电话_cross_天气.json",
+        "records": 400,
+        "sha256": "6000943209a16e9be0878d8abfae352265aabb24b89835a831989d7d94450f31",
+        "split": "valid"
+      },
+      {
+        "bytes": 203560,
+        "component": "cross_domain",
+        "compressed_bytes": 21361,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data/打电话_cross_音乐.json",
+        "records": 400,
+        "sha256": "16117d4e30193cd2d0cb547c60c4ed499bc40e05aafc7d9e4743a310c33ddc26",
+        "split": "valid"
+      },
+      {
+        "bytes": 211027,
+        "component": "cross_domain",
+        "compressed_bytes": 26152,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data/车载控制_cross_地图.json",
+        "records": 400,
+        "sha256": "5f87041f7993e2b95ee518261bcacb6eaedc82536ca37540b905fdc84cf6c2c2",
+        "split": "valid"
+      },
+      {
+        "bytes": 239388,
+        "component": "cross_domain",
+        "compressed_bytes": 26476,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data/车载控制_cross_天气.json",
+        "records": 400,
+        "sha256": "9a6a6c46f6c6469d0d8b06168bf9dbb4c5f11a6219fe7364c8d4b0f2ed26d80b",
+        "split": "valid"
+      },
+      {
+        "bytes": 231950,
+        "component": "cross_domain",
+        "compressed_bytes": 24965,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data/车载控制_cross_打电话.json",
+        "records": 400,
+        "sha256": "5537a9c3456cfe197902b40e1db31f3ac8067784c5ddec3679ebd66b1e26ee48",
+        "split": "valid"
+      },
+      {
+        "bytes": 228857,
+        "component": "cross_domain",
+        "compressed_bytes": 28068,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data/车载控制_cross_音乐.json",
+        "records": 400,
+        "sha256": "f2e0953c018c9c7401328813ec15e0b5bd6042757b8e90ce87cd7065d6935c22",
+        "split": "valid"
+      },
+      {
+        "bytes": 208278,
+        "component": "cross_domain",
+        "compressed_bytes": 22123,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data/音乐_cross_天气.json",
+        "records": 400,
+        "sha256": "6a1819d51a33e9584f91b71154d444fe2227baf6fc218895d12df7c8d20d02dc",
+        "split": "valid"
+      },
+      {
+        "bytes": 422094,
+        "component": "cross_domain_multi",
+        "compressed_bytes": 43946,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data_multi/车载控制_multi_cross_地图.json",
+        "records": 400,
+        "sha256": "9a5a83c598cf291a0b2c4bb520cdbbf5ee71c16cd40af9ed8efe8a72b8890270",
+        "split": "valid"
+      },
+      {
+        "bytes": 452780,
+        "component": "cross_domain_multi",
+        "compressed_bytes": 44960,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data_multi/车载控制_multi_cross_天气.json",
+        "records": 400,
+        "sha256": "12d3ddb9d514e7ce7432f6d9b89188c631245ed40fe158da2a8dad1b5f7df42d",
+        "split": "valid"
+      },
+      {
+        "bytes": 441528,
+        "component": "cross_domain_multi",
+        "compressed_bytes": 43227,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data_multi/车载控制_multi_cross_打电话.json",
+        "records": 400,
+        "sha256": "ca9fdded08e7a88167bf25a0a7ec680fc8a5087f68f3ef62c85c1a66122365ce",
+        "split": "valid"
+      },
+      {
+        "bytes": 439007,
+        "component": "cross_domain_multi",
+        "compressed_bytes": 46906,
+        "kind": "data",
+        "path": "aispeech/valid/cross_data_multi/车载控制_multi_cross_音乐.json",
+        "records": 400,
+        "sha256": "d210513910b6d736f96307bff410f2c086ef44b394f8886d4a6cfa13ca3d46e4",
+        "split": "valid"
+      },
+      {
+        "bytes": 68870,
+        "component": "null",
+        "compressed_bytes": 20759,
+        "kind": "data",
+        "path": "aispeech/valid/null_data/null.json",
+        "records": 1000,
+        "sha256": "85bd2ddc5c9d1fe81ef8bfb51cdb1ef337069ae0ee6b8d7be5362f4efdaaf87c",
+        "split": "valid"
+      },
+      {
+        "bytes": 106769,
+        "component": "single_domain",
+        "compressed_bytes": 10656,
+        "kind": "data",
+        "path": "aispeech/valid/one_domain_data/地图.json",
+        "records": 500,
+        "sha256": "dfd0b1b14e6f0cea58a3916aee3f12b57aceeb2629cd98f284f697fc131317cb",
+        "split": "valid"
+      },
+      {
+        "bytes": 143066,
+        "component": "single_domain",
+        "compressed_bytes": 10320,
+        "kind": "data",
+        "path": "aispeech/valid/one_domain_data/天气.json",
+        "records": 500,
+        "sha256": "350eaa071ec72b954bacad4c803b548303fdf280ece2b4de31d6862ffea0d5d6",
+        "split": "valid"
+      },
+      {
+        "bytes": 134778,
+        "component": "single_domain",
+        "compressed_bytes": 8981,
+        "kind": "data",
+        "path": "aispeech/valid/one_domain_data/打电话.json",
+        "records": 500,
+        "sha256": "dc2e860646cecfd6ad80e05776ba73bbdfb3326a76db2d560c389f8a522310d8",
+        "split": "valid"
+      },
+      {
+        "bytes": 332136,
+        "component": "single_domain",
+        "compressed_bytes": 31676,
+        "kind": "data",
+        "path": "aispeech/valid/one_domain_data/车载控制.json",
+        "records": 1000,
+        "sha256": "d424b3fb47f30cfd71bc3ed7eedd2d256d2f1c17b74e6f8830005b5907232bfa",
+        "split": "valid"
+      },
+      {
+        "bytes": 859466,
+        "component": "single_domain",
+        "compressed_bytes": 70646,
+        "kind": "data",
+        "path": "aispeech/valid/one_domain_data/车载控制_multi.json",
+        "records": 1000,
+        "sha256": "1645e59c4cbcce56890df5288e9804e674891f160b18177a2ed5971dc91c7db8",
+        "split": "valid"
+      },
+      {
+        "bytes": 129890,
+        "component": "single_domain",
+        "compressed_bytes": 13459,
+        "kind": "data",
+        "path": "aispeech/valid/one_domain_data/音乐.json",
+        "records": 500,
+        "sha256": "6bbd96655007fd14b1628c1e40dff27d7ed26c9e5832d793d026dfe38a3cca08",
+        "split": "valid"
+      }
+    ]
+  },
+  "schema_version": 1,
+  "source_verification": {
+    "archive_sha256": "verified",
+    "declared_counts": "verified",
+    "mac_raw_sources": "verified",
+    "status": "verified"
+  }
+}

@@ -461,7 +461,13 @@ class MacsluVehicleMapper:
             "arguments": arguments,
         }
 
-    def map_frame(self, frame: RawFrame) -> dict[str, Any]:
+    def map_frame(
+        self,
+        frame: RawFrame,
+        *,
+        inherited_entity: str | None = None,
+        context_source_unit_ids: Sequence[str] = (),
+    ) -> dict[str, Any]:
         if frame.structural_errors:
             return self._result(
                 frame,
@@ -489,6 +495,18 @@ class MacsluVehicleMapper:
                 trace,
                 status="ambiguous",
                 reason_codes=[normalization_error],
+            )
+
+        if inherited_entity is not None and "entity" not in normalized:
+            normalized["entity"] = inherited_entity
+            trace.append(
+                {
+                    "normalizer_id": "context.entity.unique_in_row",
+                    "source_path": "row_context.entity",
+                    "source_slot_ordinals": [],
+                    "source_unit_ids": list(context_source_unit_ids),
+                    "output_field": "entity",
+                }
             )
 
         early_outcome = self._outcome(
@@ -630,7 +648,45 @@ class MacsluVehicleMapper:
             split=split,
             vehicle_domain=self.registry["vehicle_domain"],
         )
-        units = [self.map_frame(frame) for frame in frames]
+        allowed_slots = set(self.registry["executable_slot_names"])
+        entity_sources: dict[str, list[str]] = {}
+        normalized_frames: list[dict[str, Any]] = []
+        for frame in frames:
+            normalized, _, normalization_error = self._normalize(frame)
+            normalized_frames.append(normalized)
+            if (
+                frame.structural_errors
+                or normalization_error is not None
+                or any(slot.name not in allowed_slots for slot in frame.slots)
+                or "entity" not in normalized
+            ):
+                continue
+            entity_sources.setdefault(str(normalized["entity"]), []).append(
+                frame.unit_id
+            )
+
+        inherited_entity = None
+        context_source_unit_ids: tuple[str, ...] = ()
+        if set(entity_sources) == {"hvac"}:
+            inherited_entity = "hvac"
+            context_source_unit_ids = tuple(entity_sources["hvac"])
+
+        units = []
+        for frame, normalized in zip(frames, normalized_frames, strict=True):
+            use_context = (
+                inherited_entity is not None
+                and normalized.get("intent_class") == "information_fragment"
+                and "entity" not in normalized
+            )
+            units.append(
+                self.map_frame(
+                    frame,
+                    inherited_entity=inherited_entity if use_context else None,
+                    context_source_unit_ids=(
+                        context_source_unit_ids if use_context else ()
+                    ),
+                )
+            )
         payload = None
         if units and all(
             unit["decision"]["status"] == "mapped" for unit in units

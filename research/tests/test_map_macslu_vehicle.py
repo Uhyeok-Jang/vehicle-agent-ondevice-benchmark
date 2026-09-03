@@ -185,6 +185,163 @@ class MacsluVehicleMappingTest(unittest.TestCase):
             with self.subTest(function=function):
                 self.assert_mapped(frame, function, arguments)
 
+    def test_reviewed_window_amplitude_closed_pattern(self):
+        self.assert_mapped(
+            vehicle_frame(
+                "车身控制",
+                slot("value", "关闭"),
+                slot("位置", "前排"),
+                slot("对象", "车窗"),
+                slot("操作", "调节"),
+                slot("调节内容", "幅度"),
+            ),
+            "set_window_position",
+            {
+                "zone": "front_row",
+                "target": {"kind": "named", "value": "closed"},
+            },
+        )
+
+        unresolved_zone = self.map_one(
+            vehicle_frame(
+                "车身控制",
+                slot("value", "关闭"),
+                slot("位置", "前车"),
+                slot("对象", "车窗"),
+                slot("操作", "调节"),
+                slot("调节内容", "幅度"),
+            )
+        )
+        self.assertEqual(unresolved_zone["decision"]["status"], "ambiguous")
+        self.assertEqual(
+            unresolved_zone["decision"]["reason_codes"],
+            ["unrecognized_source_value"],
+        )
+
+        unresolved_percent = self.map_one(
+            vehicle_frame(
+                "车身控制",
+                slot("value", "一半"),
+                slot("位置", "前排"),
+                slot("对象", "车窗"),
+                slot("操作", "调节"),
+                slot("调节内容", "幅度"),
+            )
+        )
+        self.assertEqual(unresolved_percent["decision"]["status"], "ambiguous")
+        self.assertEqual(
+            unresolved_percent["decision"]["reason_codes"],
+            ["unrecognized_source_value"],
+        )
+
+    def test_reviewed_window_group_zone_aliases_are_entity_scoped(self):
+        for source_zone, canonical_zone in (
+            ("前排前排", "front_row"),
+            ("四个", "all"),
+            ("四门", "all"),
+        ):
+            with self.subTest(source_zone=source_zone):
+                self.assert_mapped(
+                    vehicle_frame(
+                        "车身控制",
+                        slot("位置", source_zone),
+                        slot("对象", "车窗"),
+                        slot("操作", "关闭"),
+                    ),
+                    "set_window_position",
+                    {
+                        "zone": canonical_zone,
+                        "target": {"kind": "named", "value": "closed"},
+                    },
+                )
+
+        seat = self.map_one(
+            vehicle_frame(
+                "车身控制",
+                slot("位置", "四门"),
+                slot("对象", "座椅"),
+                slot("对象功能", "按摩"),
+                slot("操作", "关闭"),
+            )
+        )
+        self.assertEqual(seat["decision"]["status"], "ambiguous")
+        self.assertEqual(
+            seat["decision"]["reason_codes"],
+            ["unrecognized_source_value"],
+        )
+
+    def test_information_fragment_inherits_only_unique_hvac_row_context(self):
+        information = vehicle_frame(
+            "提供信息",
+            slot("调节内容", "风量"),
+            slot("操作", "调"),
+            slot("操作_concrete", "到"),
+            slot("value", "三挡"),
+        )
+        hvac = vehicle_frame(
+            "车身控制",
+            slot("对象", "空调"),
+            slot("操作", "打开"),
+        )
+        contextual = self.mapper.map_row(
+            row(hvac, information),
+            revision=REVISION,
+            split="train",
+        )
+        self.assertEqual(
+            contextual["canonical_payload"]["calls"],
+            [
+                {"function": "set_hvac_power", "arguments": {"state": "on"}},
+                {
+                    "function": "set_hvac_fan_speed",
+                    "arguments": {
+                        "target": {
+                            "kind": "absolute",
+                            "unit": "level",
+                            "value": 3,
+                        }
+                    },
+                },
+            ],
+        )
+        context_trace = contextual["units"][1]["decision"]["trace"][-1]
+        self.assertEqual(
+            context_trace["normalizer_id"], "context.entity.unique_in_row"
+        )
+        self.assertEqual(
+            context_trace["source_unit_ids"],
+            [contextual["units"][0]["unit_id"]],
+        )
+
+        standalone = self.map_one(information)
+        self.assertEqual(standalone["decision"]["status"], "needs_context")
+        self.assertEqual(
+            standalone["decision"]["reason_codes"], ["missing_entity_context"]
+        )
+
+        seat = vehicle_frame(
+            "车身控制",
+            slot("位置", "副驾"),
+            slot("对象", "座椅"),
+            slot("对象功能", "通风"),
+            slot("操作", "打开"),
+        )
+        non_hvac = self.mapper.map_row(
+            row(seat, information), revision=REVISION, split="train"
+        )
+        self.assertEqual(
+            non_hvac["units"][1]["decision"]["reason_codes"],
+            ["missing_entity_context"],
+        )
+
+        conflicting = self.mapper.map_row(
+            row(hvac, seat, information), revision=REVISION, split="train"
+        )
+        self.assertEqual(
+            conflicting["units"][2]["decision"]["reason_codes"],
+            ["missing_entity_context"],
+        )
+
     def test_adapter_orders_semantic_units_numerically(self):
         fixture = {
             "id": "ordered",

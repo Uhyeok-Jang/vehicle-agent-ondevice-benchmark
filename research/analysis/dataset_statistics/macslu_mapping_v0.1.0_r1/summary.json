@@ -1,0 +1,306 @@
+{
+  "artifacts": {
+    "failure_signatures": {
+      "name": "failure_signatures.csv",
+      "rows": 573,
+      "sha256": "0a525d98d61ca7ad24e2ba562466d52772d17c88473dd3851ba94d3c264c8e4c"
+    },
+    "unresolved_values": {
+      "name": "unresolved_values.csv",
+      "rows": 2448,
+      "sha256": "439bc8d77c04f0d9c9895e78df2b7c0cd9b685fc1ecebab05eef7a1861b9f0f3"
+    }
+  },
+  "counts": {
+    "source_rows": 20542,
+    "vehicle_rows": 8057,
+    "vehicle_units": 11471
+  },
+  "final_eligibility": {
+    "eligible_rows": null,
+    "note": "mapped is a transformation outcome, not release eligibility; translation review and final adjudication are still required",
+    "status": "not_adjudicated"
+  },
+  "mapped_functions": {
+    "set_hvac_fan_speed": 123,
+    "set_hvac_power": 785,
+    "set_hvac_temperature": 268,
+    "set_seat_climate": 185,
+    "set_seat_massage": 92,
+    "set_sunroof_position": 148,
+    "set_sunshade_position": 141,
+    "set_window_position": 531
+  },
+  "mapping_by_initial_status": {
+    "candidate": {
+      "fully_mapped_ratio": 0.06138979678840415,
+      "row_outcomes": {
+        "fully_mapped": 432,
+        "partially_mapped": 1014,
+        "zero_mapped": 5591
+      },
+      "vehicle_rows": 7037
+    },
+    "manual_review": {
+      "fully_mapped_ratio": 0.06581532416502947,
+      "row_outcomes": {
+        "fully_mapped": 67,
+        "partially_mapped": 158,
+        "zero_mapped": 793
+      },
+      "vehicle_rows": 1018
+    },
+    "quarantined": {
+      "fully_mapped_ratio": 0.0,
+      "row_outcomes": {
+        "fully_mapped": 0,
+        "partially_mapped": 1,
+        "zero_mapped": 1
+      },
+      "vehicle_rows": 2
+    }
+  },
+  "mapping_registry_version": "0.1.0",
+  "population": "all verified MAC-SLU vehicle semantic units",
+  "provenance": {
+    "canonical_registry": {
+      "name": "vehicle_api_registry.v0.1.0.json",
+      "sha256": "911b1c95102cbd0a5a4a771d371d06da0f3652cc6f1f861a6a9b29347de4201d"
+    },
+    "canonical_schema": {
+      "name": "vehicle_api_schema.v0.1.0.json",
+      "sha256": "8c452bfd3bbb2936fe74094ef847d8ddadd0bd6decf1bb00c21b2d6ec5e85491"
+    },
+    "dataset": "Gatsby1984/MAC_SLU",
+    "generator": {
+      "dependencies": {
+        "audit_macslu.py": "2c715457862cef7d5f010d787e8925e8e6cbf334ccb4216650c69e15289ca889",
+        "build_macslu_inventory.py": "c3030b9b2a1fb3e01d7a25a6f900bea6798ade60e8c357555c4a0b3bdc9654ad",
+        "map_macslu_vehicle.py": "7bc0d1d30adcdb12493242af07a482e2c1f98ccaf0e6a272e668cf567ed5f934"
+      },
+      "name": "analyze_macslu_mapping.py",
+      "sha256": "082b16f07bf882a79507409301bcd68392efd63a721beebc04df1118872ae3a0"
+    },
+    "mapping_registry": {
+      "name": "macslu_vehicle_mapping.v0.1.0.json",
+      "sha256": "d47b8003e3e5ae1057a2aaac5801cf2a47891f5dd784b7b04337bb7b0ab798e5"
+    },
+    "mapping_schema": {
+      "name": "vehicle_mapping_registry_schema.v0.1.0.json",
+      "sha256": "825ac3cb68edd2e467c240ad622ed9ca4ec55ef95896bbcf133b52155ba3f436"
+    },
+    "revision": "40670d121a89ad7142e3536ee6dc05374d095f6b",
+    "source": {
+      "files": [
+        {
+          "bytes": 442493,
+          "expected_records": 1151,
+          "expected_sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+          "records": 1151,
+          "records_match_manifest": true,
+          "relative_path": "label/test_set.jsonl",
+          "sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+          "sha256_matches_manifest": true,
+          "split": "test"
+        },
+        {
+          "bytes": 5494519,
+          "expected_records": 18000,
+          "expected_sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+          "records": 18000,
+          "records_match_manifest": true,
+          "relative_path": "label/train_set.jsonl",
+          "sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+          "sha256_matches_manifest": true,
+          "split": "train"
+        },
+        {
+          "bytes": 422144,
+          "expected_records": 1391,
+          "expected_sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+          "records": 1391,
+          "records_match_manifest": true,
+          "relative_path": "label/dev_set.jsonl",
+          "sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+          "sha256_matches_manifest": true,
+          "split": "validation"
+        }
+      ],
+      "loader": "local_jsonl",
+      "manifest": {
+        "bytes": 2445,
+        "name": "macslu_source_manifest.json",
+        "sha256": "9671aa48ff026b992475e0d54a45792d64d8e8494e614c102ef39e03d2d5f318"
+      },
+      "python_version": "3.13.9"
+    },
+    "source_verification": {
+      "files": [
+        {
+          "expected_records": 1151,
+          "expected_sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+          "observed_records": 1151,
+          "observed_sha256": "1b3e8243ea9a9bb544a18b571401c4a057f0246c07d26a3e2a638890d9300572",
+          "records_match": true,
+          "relative_path": "label/test_set.jsonl",
+          "sha256_match": true,
+          "split": "test"
+        },
+        {
+          "expected_records": 18000,
+          "expected_sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+          "observed_records": 18000,
+          "observed_sha256": "d1e9a63fa61ef2d5eec4ef543356fb53d653070916c5ceaf72962047f9aef681",
+          "records_match": true,
+          "relative_path": "label/train_set.jsonl",
+          "sha256_match": true,
+          "split": "train"
+        },
+        {
+          "expected_records": 1391,
+          "expected_sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+          "observed_records": 1391,
+          "observed_sha256": "02ccb2bae0fa1923fb0e3bcdd5d0c13635ac93cfd2880d8a8affd0481157efb1",
+          "records_match": true,
+          "relative_path": "label/dev_set.jsonl",
+          "sha256_match": true,
+          "split": "validation"
+        }
+      ],
+      "status": "verified"
+    }
+  },
+  "row_outcomes": {
+    "counts": {
+      "fully_mapped": 499,
+      "partially_mapped": 1173,
+      "zero_mapped": 6385
+    },
+    "fully_mapped_call_count_distribution": {
+      "1": 128,
+      "2": 326,
+      "3": 35,
+      "4": 8,
+      "5": 2
+    },
+    "fully_mapped_ratio": 0.06193372222911754
+  },
+  "schema_version": 1,
+  "splits": {
+    "test": {
+      "mapped_functions": {
+        "set_hvac_fan_speed": 13,
+        "set_hvac_power": 76,
+        "set_hvac_temperature": 16,
+        "set_seat_climate": 16,
+        "set_seat_massage": 9,
+        "set_sunroof_position": 18,
+        "set_sunshade_position": 13,
+        "set_window_position": 53
+      },
+      "row_outcomes": {
+        "counts": {
+          "fully_mapped": 51,
+          "partially_mapped": 108,
+          "zero_mapped": 502
+        },
+        "fully_mapped_ratio": 0.07715582450832073
+      },
+      "source_rows": 1151,
+      "unit_outcomes": {
+        "counts": {
+          "ambiguous": 447,
+          "mapped": 214,
+          "needs_context": 231,
+          "unsupported": 85
+        },
+        "mapped_ratio": 0.21903787103377687
+      },
+      "vehicle_rows": 661,
+      "vehicle_units": 977
+    },
+    "train": {
+      "mapped_functions": {
+        "set_hvac_fan_speed": 106,
+        "set_hvac_power": 645,
+        "set_hvac_temperature": 239,
+        "set_seat_climate": 155,
+        "set_seat_massage": 76,
+        "set_sunroof_position": 116,
+        "set_sunshade_position": 120,
+        "set_window_position": 431
+      },
+      "row_outcomes": {
+        "counts": {
+          "fully_mapped": 415,
+          "partially_mapped": 974,
+          "zero_mapped": 5490
+        },
+        "fully_mapped_ratio": 0.06032853612443669
+      },
+      "source_rows": 18000,
+      "unit_outcomes": {
+        "counts": {
+          "ambiguous": 4849,
+          "mapped": 1888,
+          "needs_context": 2071,
+          "unsupported": 939
+        },
+        "mapped_ratio": 0.19370062583358982
+      },
+      "vehicle_rows": 6879,
+      "vehicle_units": 9747
+    },
+    "validation": {
+      "mapped_functions": {
+        "set_hvac_fan_speed": 4,
+        "set_hvac_power": 64,
+        "set_hvac_temperature": 13,
+        "set_seat_climate": 14,
+        "set_seat_massage": 7,
+        "set_sunroof_position": 14,
+        "set_sunshade_position": 8,
+        "set_window_position": 47
+      },
+      "row_outcomes": {
+        "counts": {
+          "fully_mapped": 33,
+          "partially_mapped": 91,
+          "zero_mapped": 393
+        },
+        "fully_mapped_ratio": 0.06382978723404255
+      },
+      "source_rows": 1391,
+      "unit_outcomes": {
+        "counts": {
+          "ambiguous": 369,
+          "mapped": 171,
+          "needs_context": 149,
+          "unsupported": 58
+        },
+        "mapped_ratio": 0.2289156626506024
+      },
+      "vehicle_rows": 517,
+      "vehicle_units": 747
+    }
+  },
+  "unit_outcomes": {
+    "counts": {
+      "ambiguous": 5665,
+      "mapped": 2273,
+      "needs_context": 2451,
+      "unsupported": 1082
+    },
+    "mapped_ratio": 0.19815186121523842,
+    "reason_counts": {
+      "function_outside_schema": 1082,
+      "missing_entity_context": 1810,
+      "missing_required_argument": 641,
+      "mixed_domain_example": 566,
+      "no_mapping_rule": 209,
+      "unconsumed_executable_slot": 2,
+      "unexpected_source_slot": 1,
+      "unrecognized_source_value": 4887
+    }
+  }
+}

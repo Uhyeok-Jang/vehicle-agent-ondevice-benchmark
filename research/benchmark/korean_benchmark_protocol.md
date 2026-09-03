@@ -2,7 +2,7 @@
 
 Status: Stage 3 working draft, protocol version `0.1.0`
 
-Bulk translation status: **NO-GO** until the MAC-SLU and MIVS audits are accepted and the canonical Vehicle API schema is frozen. Only a versioned translation pilot may begin after those gates.
+Primary MAC-SLU bulk translation status: **NO-GO** until the primary source audit is accepted and the canonical Vehicle API plus source mapping are frozen. A versioned translation pilot may begin earlier for a reviewed, mapping-complete slice. MIVS is supplementary and has a separate release gate; it does not block the primary pilot.
 
 This protocol turns the Chinese MAC-SLU vehicle subset into a Korean text-to-API benchmark. It preserves source provenance while producing one language-independent canonical target shared by the Encoder and generative SLM baselines. ASR, TTS, dialogue management, and open-ended generation are outside scope.
 
@@ -19,7 +19,7 @@ The pinned source is recorded in [`macslu_source_manifest.json`](../config/macsl
 | 3E. Korean conversion | Korean utterance plus translation provenance | meaning and all executable arguments are preserved |
 | 3F. Freeze | released split files, hashes, QA report | validation/test are sealed before model tuning or comparison |
 
-MAC-SLU packages 3A and 3B are complete at the working-draft level. The reproducible MIVS audit remains open, and the current API checkpoint is the 3C eight-function pilot. API names, argument enums, and final inclusion decisions remain unfrozen until the 3C/3D review gates pass.
+MAC-SLU packages 3A and 3B and the MIVS structural audit are complete at the working-draft level. The current API checkpoint is the 3C eight-function pilot. Full-population 3D measurement is reproducible, but most source units remain outside the pilot mapping. API names, argument enums, mappings, and final inclusion decisions remain unfrozen until the 3C/3D review gates pass.
 
 ## Record and group identity
 
@@ -122,9 +122,9 @@ The current pilot schema and its staged extension gates are defined by [`vehicle
 
 For an Encoder baseline that uses span supervision, only explicit mentions receive tokenizer-independent Unicode character offsets. Implicit, normalized, defaulted, or context-derived arguments are labeled by provenance and trained through a span-free canonical argument head. Every explicit offset must round-trip to the intended substring. A query/API pair alone must not be treated as complete BIO supervision.
 
-## Freeze gate
+## Primary MAC-SLU freeze gate
 
-Stage 3 is complete only when all of the following hold:
+The primary Stage 3 benchmark is complete only when all of the following hold:
 
 - source file hashes, row counts, tool versions, and audit command are reproducible;
 - every source row has one disposition and machine-readable reason codes;
@@ -134,6 +134,10 @@ Stage 3 is complete only when all of the following hold:
 - validation and test translations have completed bilingual review;
 - released JSONL files, schema, mapping tables, prompt, and QA report have content hashes;
 - test artifacts are sealed before any Stage 5 model or hyperparameter choice uses test results.
+
+## MIVS supplementary release gate
+
+MIVS is tracked independently under [`mivs_adoption_decision.md`](mivs_adoption_decision.md). Its archive and structural audit may be complete while its derived Korean evaluation set remains unreleasable. Supplementary evaluation requires the mandatory adoption gates in that decision, including overlap quarantine, a frozen source-to-canonical mapping, bilingual review, test sealing, and resolution of the redistribution-license caveat. Failure of a MIVS-only gate blocks MIVS reporting, not the primary MAC-SLU benchmark.
 
 ## Primary sources
 

@@ -252,6 +252,19 @@
       }
     },
     {
+      "id": "property.amplitude",
+      "stage": 1,
+      "input": {
+        "path": "slots.调节内容",
+        "values": [
+          "幅度"
+        ]
+      },
+      "emit": {
+        "property": "amplitude"
+      }
+    },
+    {
       "id": "operator.activate",
       "stage": 1,
       "input": {
@@ -455,6 +468,7 @@
         "path": "slots.位置",
         "values": [
           "前排",
+          "前排前排",
           "主副驾",
           "主驾副驾",
           "主驾和副驾"
@@ -462,6 +476,23 @@
       },
       "emit": {
         "zone": "front_row"
+      }
+    },
+    {
+      "id": "zone.window_all",
+      "stage": 2,
+      "requires": {
+        "entity": "window"
+      },
+      "input": {
+        "path": "slots.位置",
+        "values": [
+          "四个",
+          "四门"
+        ]
+      },
+      "emit": {
+        "zone": "all"
       }
     },
     {
@@ -1323,6 +1354,26 @@
           "magnitude": "small"
         }
       }
+    },
+    {
+      "id": "target.window.closed_from_value",
+      "stage": 2,
+      "requires": {
+        "entity": "window",
+        "property": "amplitude"
+      },
+      "input": {
+        "path": "slots.value",
+        "values": [
+          "关闭"
+        ]
+      },
+      "emit": {
+        "target": {
+          "kind": "named",
+          "value": "closed"
+        }
+      }
     }
   ],
   "rules": [
@@ -1464,6 +1515,120 @@
           "zone": {
             "from": "zone",
             "optional": true
+          }
+        }
+      }
+    },
+    {
+      "id": "map.information_fragment.hvac_temperature",
+      "match": {
+        "equals": {
+          "intent_class": "information_fragment",
+          "entity": "hvac",
+          "property": "temperature",
+          "operator": "set"
+        },
+        "present": [
+          "target"
+        ],
+        "absent": [
+          "feature"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "property",
+        "operator",
+        "operator_modifier",
+        "target",
+        "zone"
+      ],
+      "emit": {
+        "function": "set_hvac_temperature",
+        "arguments": {
+          "target": {
+            "from": "target"
+          },
+          "zone": {
+            "from": "zone",
+            "optional": true
+          }
+        }
+      }
+    },
+    {
+      "id": "map.information_fragment.hvac_fan_speed",
+      "match": {
+        "equals": {
+          "intent_class": "information_fragment",
+          "entity": "hvac",
+          "property": "fan_speed",
+          "operator": "set"
+        },
+        "present": [
+          "target"
+        ],
+        "absent": [
+          "feature"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "property",
+        "operator",
+        "operator_modifier",
+        "target",
+        "zone"
+      ],
+      "emit": {
+        "function": "set_hvac_fan_speed",
+        "arguments": {
+          "target": {
+            "from": "target"
+          },
+          "zone": {
+            "from": "zone",
+            "optional": true
+          }
+        }
+      }
+    },
+    {
+      "id": "map.window.set_amplitude",
+      "match": {
+        "equals": {
+          "intent_class": "body_control",
+          "entity": "window",
+          "property": "amplitude",
+          "operator": "set"
+        },
+        "present": [
+          "zone",
+          "target"
+        ],
+        "absent": [
+          "feature",
+          "operator_modifier"
+        ]
+      },
+      "consume": [
+        "intent_class",
+        "entity",
+        "property",
+        "operator",
+        "target",
+        "zone"
+      ],
+      "emit": {
+        "function": "set_window_position",
+        "arguments": {
+          "zone": {
+            "from": "zone"
+          },
+          "target": {
+            "from": "target"
           }
         }
       }
@@ -1862,7 +2027,10 @@
       "match": {
         "equals": {
           "intent_class": "information_fragment"
-        }
+        },
+        "absent": [
+          "entity"
+        ]
       },
       "status": "needs_context",
       "reason_code": "missing_entity_context"
