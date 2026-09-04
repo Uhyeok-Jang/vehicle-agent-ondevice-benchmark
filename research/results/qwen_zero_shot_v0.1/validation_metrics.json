@@ -1,0 +1,48 @@
+{
+  "argument_exact_match": {
+    "accuracy": 0.7926829268292683,
+    "correct_calls": 65,
+    "total_gold_calls": 82
+  },
+  "call_count_full_em": {
+    "1_call": {
+      "accuracy": 1.0,
+      "correct": 7,
+      "examples": 7
+    },
+    "2_call": {
+      "accuracy": 0.7575757575757576,
+      "correct": 25,
+      "examples": 33
+    },
+    "3_plus_calls": {
+      "accuracy": 0.6666666666666666,
+      "correct": 2,
+      "examples": 3
+    }
+  },
+  "examples": 43,
+  "function_exact_match": {
+    "accuracy": 0.9534883720930233,
+    "correct": 41,
+    "total": 43
+  },
+  "gold_calls": 82,
+  "invalid_call_rate": {
+    "invalid": 1,
+    "rate": 0.023255813953488372,
+    "total": 43
+  },
+  "missing_predictions": 0,
+  "ordered_full_call_exact_match": {
+    "accuracy": 0.7906976744186046,
+    "correct": 34,
+    "total": 43
+  },
+  "prediction_records": 43,
+  "unordered_call_multiset_exact_match": {
+    "accuracy": 0.7906976744186046,
+    "correct": 34,
+    "total": 43
+  }
+}
