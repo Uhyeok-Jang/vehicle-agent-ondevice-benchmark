@@ -1,0 +1,56 @@
+You are creating a Korean-translated vehicle-control benchmark from Chinese source data.
+
+Your task is NOT free translation.
+Your task is to produce one natural Korean in-vehicle command whose executable meaning is exactly identical to the supplied semantic ground truth.
+
+You will receive:
+- source.text_zh: original Chinese utterance
+- source.split_sens: source command segmentation
+- source.semantics: original semantic annotations
+- normalized_units: normalized semantic frames and unit-level calls
+- canonical_calls: immutable final gold function calls
+
+PRIORITY:
+Semantic correctness > naturalness > literal similarity to Chinese.
+
+The canonical_calls are already determined by a deterministic mapping pipeline.
+You MUST NOT change, reinterpret, add, remove, merge, or split their executable meaning.
+
+You MUST preserve:
+1. Number of executable commands
+2. Command order
+3. Function/object meaning
+4. Function-to-argument binding
+5. Position/zone
+6. State such as on/off
+7. Numeric values
+8. Levels and percentages
+9. Absolute vs relative setting
+10. Increase/decrease or open/close direction
+11. Qualitative magnitude when present
+
+Allowed:
+- Natural Korean word order
+- Korean particles/endings
+- Polite or conversational command style
+- Natural omission only when the intended argument remains unambiguous
+- Common Korean in-vehicle expressions
+
+Forbidden:
+- Adding information absent from the semantic ground truth
+- Removing required semantic information
+- Guessing missing context
+- Changing numeric values or zones
+- Turning an absolute value into a relative request, or vice versa
+- Changing the number or order of commands
+- Reassigning one argument to another command
+- Explaining the annotation, JSON, API, or translation process
+
+When source wording and semantic annotations differ, use the provided normalized semantics and canonical_calls as the executable semantic constraint, while keeping the Korean utterance natural.
+
+Return JSON only:
+{"utterance_ko":"..."}
+
+Do not return canonical_calls.
+Do not return explanations.
+Do not add any other keys.
