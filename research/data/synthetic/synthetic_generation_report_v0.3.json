@@ -1,0 +1,418 @@
+{
+  "artifact": {
+    "candidate_jsonl": "/home/skkai/ondevice_team/jang/vehicle-agent-ondevice-benchmark/research/data/synthetic/synthetic_candidates_v0.3.jsonl",
+    "candidate_sha256": "8edbab66bcf5ccc65e98d31ab77a94f38b6f6e7fe7626c9315a4a5fceb175214"
+  },
+  "call_count_distribution": {
+    "1": 500,
+    "2": 800,
+    "3": 600,
+    "4": 400
+  },
+  "call_count_targets": {
+    "1": 500,
+    "2": 800,
+    "3": 600,
+    "4": 400
+  },
+  "canonical_signature_novelty": {
+    "original_synthetic_overlap": 0,
+    "original_unique_signatures": 366,
+    "synthetic_unique_signatures": 2300
+  },
+  "coverage": {
+    "directions": {
+      "set_hvac_fan_speed": [
+        "decrease",
+        "increase"
+      ],
+      "set_hvac_power": [],
+      "set_hvac_temperature": [
+        "decrease",
+        "increase"
+      ],
+      "set_seat_climate": [
+        "decrease",
+        "increase"
+      ],
+      "set_seat_massage": [
+        "decrease",
+        "increase"
+      ],
+      "set_sunroof_position": [
+        "close",
+        "open"
+      ],
+      "set_sunshade_position": [
+        "close",
+        "open"
+      ],
+      "set_window_position": [
+        "close",
+        "open"
+      ]
+    },
+    "function_call_counts": {
+      "set_hvac_fan_speed": 688,
+      "set_hvac_power": 688,
+      "set_hvac_temperature": 687,
+      "set_seat_climate": 688,
+      "set_seat_massage": 688,
+      "set_sunroof_position": 687,
+      "set_sunshade_position": 687,
+      "set_window_position": 687
+    },
+    "function_family_call_counts": {
+      "Aperture": 2061,
+      "HVAC": 2063,
+      "Seat": 1376
+    },
+    "function_family_pattern_examples": {
+      "Aperture": 283,
+      "Aperture+Seat": 263,
+      "HVAC": 260,
+      "HVAC+Aperture": 594,
+      "HVAC+Aperture+Seat": 423,
+      "HVAC+Seat": 260,
+      "Seat": 217
+    },
+    "generation_family_count": 1725,
+    "relative_magnitudes": {
+      "set_hvac_fan_speed": [
+        "default",
+        "large",
+        "medium",
+        "small"
+      ],
+      "set_hvac_power": [],
+      "set_hvac_temperature": [
+        "default",
+        "large",
+        "medium",
+        "small"
+      ],
+      "set_seat_climate": [
+        "default",
+        "large",
+        "medium",
+        "small"
+      ],
+      "set_seat_massage": [
+        "default",
+        "large",
+        "medium",
+        "small"
+      ],
+      "set_sunroof_position": [
+        "default",
+        "large",
+        "medium",
+        "small"
+      ],
+      "set_sunshade_position": [
+        "default",
+        "large",
+        "medium",
+        "small"
+      ],
+      "set_window_position": [
+        "default",
+        "large",
+        "medium",
+        "small"
+      ]
+    },
+    "seat_climate_features": [
+      "heating",
+      "ventilation"
+    ],
+    "seat_setting_kinds": {
+      "set_seat_climate": [
+        "absolute_level",
+        "extreme",
+        "relative",
+        "state"
+      ],
+      "set_seat_massage": [
+        "absolute_level",
+        "extreme",
+        "relative",
+        "state"
+      ]
+    },
+    "target_kinds": {
+      "set_hvac_fan_speed": [
+        "absolute",
+        "extreme",
+        "relative"
+      ],
+      "set_hvac_power": [
+        "state"
+      ],
+      "set_hvac_temperature": [
+        "absolute",
+        "extreme",
+        "relative"
+      ],
+      "set_seat_climate": [
+        "absolute_level",
+        "extreme",
+        "relative",
+        "state"
+      ],
+      "set_seat_massage": [
+        "absolute_level",
+        "extreme",
+        "relative",
+        "state"
+      ],
+      "set_sunroof_position": [
+        "absolute_percent",
+        "named",
+        "relative",
+        "relative_percent"
+      ],
+      "set_sunshade_position": [
+        "absolute_percent",
+        "named",
+        "relative",
+        "relative_percent"
+      ],
+      "set_window_position": [
+        "absolute_percent",
+        "named",
+        "relative",
+        "relative_percent"
+      ]
+    },
+    "target_values": {
+      "set_hvac_fan_speed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        "max",
+        "min"
+      ],
+      "set_hvac_power": [
+        "off",
+        "on"
+      ],
+      "set_hvac_temperature": [
+        16.5,
+        17.5,
+        18.5,
+        19.5,
+        20.5,
+        21.5,
+        22.5,
+        23.5,
+        24.5,
+        25.5,
+        26.5,
+        27.5,
+        28.5,
+        29.5,
+        30.5,
+        31.5,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        "max",
+        "min"
+      ],
+      "set_seat_climate": [
+        1,
+        2,
+        3,
+        "max",
+        "min",
+        "off",
+        "on"
+      ],
+      "set_seat_massage": [
+        1,
+        2,
+        3,
+        "max",
+        "min",
+        "off",
+        "on"
+      ],
+      "set_sunroof_position": [
+        0,
+        10,
+        100,
+        15,
+        20,
+        25,
+        30,
+        40,
+        5,
+        50,
+        60,
+        70,
+        75,
+        80,
+        90,
+        "closed",
+        "open",
+        "vent"
+      ],
+      "set_sunshade_position": [
+        0,
+        10,
+        100,
+        15,
+        20,
+        25,
+        30,
+        40,
+        5,
+        50,
+        60,
+        70,
+        75,
+        80,
+        90,
+        "closed",
+        "open"
+      ],
+      "set_window_position": [
+        0,
+        10,
+        100,
+        15,
+        20,
+        25,
+        30,
+        40,
+        5,
+        50,
+        60,
+        70,
+        75,
+        80,
+        90,
+        "closed",
+        "open",
+        "vent"
+      ]
+    },
+    "template_count": 1725,
+    "zones": {
+      "set_hvac_fan_speed": [
+        "__OMITTED__",
+        "all",
+        "driver",
+        "front_passenger",
+        "rear"
+      ],
+      "set_hvac_power": [
+        "__OMITTED__",
+        "all",
+        "driver",
+        "front_passenger",
+        "rear"
+      ],
+      "set_hvac_temperature": [
+        "__OMITTED__",
+        "all",
+        "driver",
+        "front_passenger",
+        "rear"
+      ],
+      "set_seat_climate": [
+        "all",
+        "driver",
+        "front_passenger",
+        "rear_left",
+        "rear_right",
+        "rear_row"
+      ],
+      "set_seat_massage": [
+        "all",
+        "driver",
+        "front_passenger",
+        "rear_left",
+        "rear_right",
+        "rear_row"
+      ],
+      "set_sunroof_position": [
+        "__OMITTED__"
+      ],
+      "set_sunshade_position": [
+        "__OMITTED__"
+      ],
+      "set_window_position": [
+        "all",
+        "driver",
+        "front_passenger",
+        "front_row",
+        "left_side",
+        "rear_left",
+        "rear_right",
+        "rear_row",
+        "right_side"
+      ]
+    }
+  },
+  "generated_candidates": 2300,
+  "generator": "astra_vehicle_aug_v0.3",
+  "generator_version": "0.3.0",
+  "original_normalized_utterance_count": 439,
+  "percentage_grids": {
+    "absolute": [
+      0,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      70,
+      75,
+      80,
+      90,
+      100
+    ],
+    "relative": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      40,
+      50
+    ]
+  },
+  "registry_version": "0.1.0",
+  "rejection_counts": {
+    "original_canonical_signature": 32,
+    "synthetic_canonical_signature": 3
+  },
+  "repeated_function_examples": 97,
+  "schema_id": "urn:vehicle-agent-ondevice-benchmark:vehicle-api:0.1.0",
+  "seed": 20260905,
+  "shared_scope_examples": 74
+}

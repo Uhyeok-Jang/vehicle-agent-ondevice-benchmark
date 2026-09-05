@@ -1,0 +1,3045 @@
+{
+  "argument_coverage": {
+    "set_hvac_fan_speed.target.direction": {
+      "\"decrease\"": 162,
+      "\"increase\"": 162
+    },
+    "set_hvac_fan_speed.target.kind": {
+      "\"absolute\"": 388,
+      "\"extreme\"": 100,
+      "\"relative\"": 324
+    },
+    "set_hvac_fan_speed.target.magnitude": {
+      "\"default\"": 86,
+      "\"large\"": 77,
+      "\"medium\"": 75,
+      "\"small\"": 86
+    },
+    "set_hvac_fan_speed.target.unit": {
+      "\"level\"": 388
+    },
+    "set_hvac_fan_speed.target.value": {
+      "\"max\"": 55,
+      "\"min\"": 45,
+      "1": 61,
+      "2": 55,
+      "3": 58,
+      "4": 54,
+      "5": 42,
+      "6": 40,
+      "7": 40,
+      "8": 38
+    },
+    "set_hvac_fan_speed.zone": {
+      "\"all\"": 141,
+      "\"driver\"": 140,
+      "\"front_passenger\"": 142,
+      "\"rear\"": 136,
+      "<ABSENT>": 253
+    },
+    "set_hvac_power.state": {
+      "\"off\"": 405,
+      "\"on\"": 440
+    },
+    "set_hvac_power.zone": {
+      "\"all\"": 150,
+      "\"driver\"": 142,
+      "\"front_passenger\"": 144,
+      "\"rear\"": 155,
+      "<ABSENT>": 254
+    },
+    "set_hvac_temperature.target.direction": {
+      "\"decrease\"": 74,
+      "\"increase\"": 72
+    },
+    "set_hvac_temperature.target.kind": {
+      "\"absolute\"": 639,
+      "\"extreme\"": 51,
+      "\"relative\"": 146
+    },
+    "set_hvac_temperature.target.magnitude": {
+      "\"default\"": 43,
+      "\"large\"": 31,
+      "\"medium\"": 34,
+      "\"small\"": 38
+    },
+    "set_hvac_temperature.target.unit": {
+      "\"celsius\"": 639
+    },
+    "set_hvac_temperature.target.value": {
+      "\"max\"": 18,
+      "\"min\"": 33,
+      "16": 22,
+      "16.5": 18,
+      "17": 17,
+      "17.5": 16,
+      "18": 22,
+      "18.5": 17,
+      "19": 17,
+      "19.5": 15,
+      "20": 42,
+      "20.5": 16,
+      "21": 21,
+      "21.5": 15,
+      "22": 32,
+      "22.5": 19,
+      "23": 29,
+      "23.5": 16,
+      "24": 28,
+      "24.5": 17,
+      "25": 28,
+      "25.5": 16,
+      "26": 22,
+      "26.5": 16,
+      "27": 16,
+      "27.5": 15,
+      "28": 18,
+      "28.5": 16,
+      "29": 16,
+      "29.5": 18,
+      "30": 15,
+      "30.5": 17,
+      "31": 16,
+      "31.5": 16,
+      "32": 15
+    },
+    "set_hvac_temperature.zone": {
+      "\"all\"": 154,
+      "\"driver\"": 140,
+      "\"front_passenger\"": 144,
+      "\"rear\"": 139,
+      "<ABSENT>": 259
+    },
+    "set_seat_climate.feature": {
+      "\"heating\"": 377,
+      "\"ventilation\"": 415
+    },
+    "set_seat_climate.setting.direction": {
+      "\"decrease\"": 183,
+      "\"increase\"": 188
+    },
+    "set_seat_climate.setting.kind": {
+      "\"absolute_level\"": 138,
+      "\"extreme\"": 91,
+      "\"relative\"": 371,
+      "\"state\"": 192
+    },
+    "set_seat_climate.setting.magnitude": {
+      "\"default\"": 93,
+      "\"large\"": 94,
+      "\"medium\"": 91,
+      "\"small\"": 93
+    },
+    "set_seat_climate.setting.value": {
+      "\"max\"": 45,
+      "\"min\"": 46,
+      "\"off\"": 81,
+      "\"on\"": 111,
+      "1": 46,
+      "2": 47,
+      "3": 45
+    },
+    "set_seat_climate.zone": {
+      "\"all\"": 134,
+      "\"driver\"": 157,
+      "\"front_passenger\"": 147,
+      "\"rear_left\"": 114,
+      "\"rear_right\"": 120,
+      "\"rear_row\"": 120
+    },
+    "set_seat_massage.setting.direction": {
+      "\"decrease\"": 183,
+      "\"increase\"": 186
+    },
+    "set_seat_massage.setting.kind": {
+      "\"absolute_level\"": 138,
+      "\"extreme\"": 92,
+      "\"relative\"": 369,
+      "\"state\"": 145
+    },
+    "set_seat_massage.setting.magnitude": {
+      "\"default\"": 92,
+      "\"large\"": 93,
+      "\"medium\"": 90,
+      "\"small\"": 94
+    },
+    "set_seat_massage.setting.value": {
+      "\"max\"": 45,
+      "\"min\"": 47,
+      "\"off\"": 60,
+      "\"on\"": 85,
+      "1": 46,
+      "2": 45,
+      "3": 47
+    },
+    "set_seat_massage.zone": {
+      "\"all\"": 124,
+      "\"driver\"": 133,
+      "\"front_passenger\"": 131,
+      "\"rear_left\"": 116,
+      "\"rear_right\"": 119,
+      "\"rear_row\"": 121
+    },
+    "set_sunroof_position.target.direction": {
+      "\"close\"": 207,
+      "\"open\"": 206
+    },
+    "set_sunroof_position.target.kind": {
+      "\"absolute_percent\"": 224,
+      "\"named\"": 102,
+      "\"relative\"": 139,
+      "\"relative_percent\"": 274
+    },
+    "set_sunroof_position.target.magnitude": {
+      "\"default\"": 35,
+      "\"large\"": 35,
+      "\"medium\"": 35,
+      "\"small\"": 34
+    },
+    "set_sunroof_position.target.value": {
+      "\"closed\"": 38,
+      "\"open\"": 46,
+      "\"vent\"": 18,
+      "0": 18,
+      "10": 52,
+      "100": 18,
+      "15": 34,
+      "20": 52,
+      "25": 50,
+      "30": 51,
+      "40": 51,
+      "5": 34,
+      "50": 53,
+      "60": 17,
+      "70": 17,
+      "75": 17,
+      "80": 17,
+      "90": 17
+    },
+    "set_sunshade_position.target.direction": {
+      "\"close\"": 212,
+      "\"open\"": 212
+    },
+    "set_sunshade_position.target.kind": {
+      "\"absolute_percent\"": 230,
+      "\"named\"": 81,
+      "\"relative\"": 142,
+      "\"relative_percent\"": 282
+    },
+    "set_sunshade_position.target.magnitude": {
+      "\"default\"": 35,
+      "\"large\"": 36,
+      "\"medium\"": 36,
+      "\"small\"": 35
+    },
+    "set_sunshade_position.target.value": {
+      "\"closed\"": 42,
+      "\"open\"": 39,
+      "0": 18,
+      "10": 52,
+      "100": 17,
+      "15": 36,
+      "20": 52,
+      "25": 53,
+      "30": 53,
+      "40": 52,
+      "5": 36,
+      "50": 53,
+      "60": 18,
+      "70": 18,
+      "75": 18,
+      "80": 18,
+      "90": 18
+    },
+    "set_window_position.target.direction": {
+      "\"close\"": 205,
+      "\"open\"": 203
+    },
+    "set_window_position.target.kind": {
+      "\"absolute_percent\"": 226,
+      "\"named\"": 209,
+      "\"relative\"": 131,
+      "\"relative_percent\"": 277
+    },
+    "set_window_position.target.magnitude": {
+      "\"default\"": 32,
+      "\"large\"": 33,
+      "\"medium\"": 35,
+      "\"small\"": 31
+    },
+    "set_window_position.target.value": {
+      "\"closed\"": 97,
+      "\"open\"": 94,
+      "\"vent\"": 18,
+      "0": 17,
+      "10": 53,
+      "100": 18,
+      "15": 34,
+      "20": 50,
+      "25": 52,
+      "30": 52,
+      "40": 54,
+      "5": 36,
+      "50": 52,
+      "60": 18,
+      "70": 17,
+      "75": 16,
+      "80": 17,
+      "90": 17
+    },
+    "set_window_position.zone": {
+      "\"all\"": 141,
+      "\"driver\"": 102,
+      "\"front_passenger\"": 95,
+      "\"front_row\"": 104,
+      "\"left_side\"": 78,
+      "\"rear_left\"": 78,
+      "\"rear_right\"": 79,
+      "\"rear_row\"": 88,
+      "\"right_side\"": 78
+    }
+  },
+  "call_count_distribution": {
+    "by_split": {
+      "test": {
+        "1": 57,
+        "2": 113,
+        "3": 63,
+        "4": 40
+      },
+      "train": {
+        "1": 457,
+        "2": 907,
+        "3": 505,
+        "4": 323
+      },
+      "validation": {
+        "1": 57,
+        "2": 113,
+        "3": 63,
+        "4": 41
+      }
+    },
+    "original": {
+      "1": 71,
+      "2": 333,
+      "3": 31,
+      "4": 4
+    },
+    "overall": {
+      "1": 571,
+      "2": 1133,
+      "3": 631,
+      "4": 404
+    },
+    "synthetic": {
+      "1": 500,
+      "2": 800,
+      "3": 600,
+      "4": 400
+    }
+  },
+  "canonical_api": {
+    "registry": "research/schema/vehicle_api_registry.v0.1.0.json",
+    "registry_version": "0.1.0",
+    "schema": "research/schema/vehicle_api_schema.v0.1.0.json"
+  },
+  "canonical_signature_policy": {
+    "all_synthetic_signatures_novel": true,
+    "all_synthetic_signatures_unique": true,
+    "duplicate_synthetic_signature_count": 0,
+    "duplicate_synthetic_signatures": [],
+    "ordered_signature_definition": "ordered canonical_calls; JSON object keys sorted",
+    "original_examples": 439,
+    "synthetic_examples": 2300,
+    "synthetic_original_signature_overlap_count": 0,
+    "synthetic_original_signature_overlaps": [],
+    "unique_original_signatures": 366,
+    "unique_synthetic_signatures": 2300
+  },
+  "counts": {
+    "original": 439,
+    "source_type_by_split": {
+      "test": {
+        "original": 43,
+        "synthetic": 230
+      },
+      "train": {
+        "original": 352,
+        "synthetic": 1840
+      },
+      "validation": {
+        "original": 44,
+        "synthetic": 230
+      }
+    },
+    "splits": {
+      "test": 273,
+      "train": 2192,
+      "validation": 274
+    },
+    "synthetic": 2300,
+    "total_examples": 2739
+  },
+  "dataset": "macslu_korean_augmented_v0.3",
+  "deduplication_and_validation": {
+    "conflicts": [],
+    "duplicate_examples": [],
+    "final_synthetic": 2300,
+    "generated_candidates": 2300,
+    "invalid_examples": [],
+    "invalid_reason_counts": {},
+    "rejected_invalid": 0,
+    "removed_conflict": 0,
+    "removed_conflict_by_scope": {},
+    "removed_duplicate": 0,
+    "removed_duplicate_by_scope": {}
+  },
+  "family_counts": {
+    "by_split": {
+      "test": {
+        "Aperture": 224,
+        "HVAC": 256,
+        "Seat": 152
+      },
+      "train": {
+        "Aperture": 1871,
+        "HVAC": 1993,
+        "Seat": 1214
+      },
+      "validation": {
+        "Aperture": 222,
+        "HVAC": 244,
+        "Seat": 170
+      }
+    },
+    "example_combinations": {
+      "Aperture": 367,
+      "Aperture+Seat": 267,
+      "HVAC": 446,
+      "HVAC+Aperture": 664,
+      "HVAC+Aperture+Seat": 427,
+      "HVAC+Seat": 279,
+      "Seat": 289
+    },
+    "overall": {
+      "Aperture": 2317,
+      "HVAC": 2493,
+      "Seat": 1536
+    }
+  },
+  "function_counts": {
+    "by_split": {
+      "test": {
+        "set_hvac_fan_speed": 101,
+        "set_hvac_power": 83,
+        "set_hvac_temperature": 72,
+        "set_seat_climate": 75,
+        "set_seat_massage": 77,
+        "set_sunroof_position": 74,
+        "set_sunshade_position": 72,
+        "set_window_position": 78
+      },
+      "train": {
+        "set_hvac_fan_speed": 622,
+        "set_hvac_power": 696,
+        "set_hvac_temperature": 675,
+        "set_seat_climate": 633,
+        "set_seat_massage": 581,
+        "set_sunroof_position": 602,
+        "set_sunshade_position": 595,
+        "set_window_position": 674
+      },
+      "validation": {
+        "set_hvac_fan_speed": 89,
+        "set_hvac_power": 66,
+        "set_hvac_temperature": 89,
+        "set_seat_climate": 84,
+        "set_seat_massage": 86,
+        "set_sunroof_position": 63,
+        "set_sunshade_position": 68,
+        "set_window_position": 91
+      }
+    },
+    "overall": {
+      "set_hvac_fan_speed": 812,
+      "set_hvac_power": 845,
+      "set_hvac_temperature": 836,
+      "set_seat_climate": 792,
+      "set_seat_massage": 744,
+      "set_sunroof_position": 739,
+      "set_sunshade_position": 735,
+      "set_window_position": 843
+    }
+  },
+  "hashes": {
+    "algorithm": "sha256",
+    "artifacts": {
+      "original_source_pool": {
+        "path": "research/data/synthetic/original_source_pool_v0.3.jsonl",
+        "sha256": "26f3b95c791e9530c429548cc153be47a670e72731f949809851bcd9cbba57bd"
+      },
+      "synthetic_valid": {
+        "path": "research/data/synthetic/synthetic_valid_v0.3.jsonl",
+        "sha256": "7340759362d617fda9b3da5163cd885f0bc2b87129f948f999c34d48d88c318e"
+      },
+      "test": {
+        "path": "research/data/processed/macslu_korean_augmented_v0.3/test.jsonl",
+        "sha256": "e449d08663eaf046311d92ff989a305ee8f6d45d57e7a85f7d388e716be6cd16"
+      },
+      "train": {
+        "path": "research/data/processed/macslu_korean_augmented_v0.3/train.jsonl",
+        "sha256": "82f5d9c2bcec652a700da0d4fa1429410e7c6eec7dd1da48d31c281e15de113a"
+      },
+      "validation": {
+        "path": "research/data/processed/macslu_korean_augmented_v0.3/validation.jsonl",
+        "sha256": "5a7d56ad0b58eaa638da297b57e12b22af3406c1b60171ff0e26f845c804d92c"
+      }
+    },
+    "inputs": {
+      "original_test": {
+        "path": "research/data/processed/macslu_korean_v0.2/test.jsonl",
+        "sha256": "e5243ae656207b69df3209097898df0d227746c6723653a80760b13cf0729461"
+      },
+      "original_train": {
+        "path": "research/data/processed/macslu_korean_v0.2/train.jsonl",
+        "sha256": "8779e51ab4c6f2fe67b861eb665a1f5108b95c8a150b963c8e9581f921ccada6"
+      },
+      "original_validation": {
+        "path": "research/data/processed/macslu_korean_v0.2/validation.jsonl",
+        "sha256": "96797a134a83d62b34fdc7ceb8b45164b10904d61381cdd43c1320332609a8a2"
+      },
+      "registry": {
+        "path": "research/schema/vehicle_api_registry.v0.1.0.json",
+        "sha256": "911b1c95102cbd0a5a4a771d371d06da0f3652cc6f1f861a6a9b29347de4201d"
+      },
+      "schema": {
+        "path": "research/schema/vehicle_api_schema.v0.1.0.json",
+        "sha256": "8c452bfd3bbb2936fe74094ef847d8ddadd0bd6decf1bb00c21b2d6ec5e85491"
+      },
+      "synthetic_candidates": {
+        "path": "research/data/synthetic/synthetic_candidates_v0.3.jsonl",
+        "sha256": "8edbab66bcf5ccc65e98d31ab77a94f38b6f6e7fe7626c9315a4a5fceb175214"
+      }
+    },
+    "v0_2_inputs": {
+      "test": {
+        "expected_sha256": "e5243ae656207b69df3209097898df0d227746c6723653a80760b13cf0729461",
+        "matches_frozen_input": true,
+        "path": "research/data/processed/macslu_korean_v0.2/test.jsonl",
+        "sha256": "e5243ae656207b69df3209097898df0d227746c6723653a80760b13cf0729461"
+      },
+      "train": {
+        "expected_sha256": "8779e51ab4c6f2fe67b861eb665a1f5108b95c8a150b963c8e9581f921ccada6",
+        "matches_frozen_input": true,
+        "path": "research/data/processed/macslu_korean_v0.2/train.jsonl",
+        "sha256": "8779e51ab4c6f2fe67b861eb665a1f5108b95c8a150b963c8e9581f921ccada6"
+      },
+      "validation": {
+        "expected_sha256": "96797a134a83d62b34fdc7ceb8b45164b10904d61381cdd43c1320332609a8a2",
+        "matches_frozen_input": true,
+        "path": "research/data/processed/macslu_korean_v0.2/validation.jsonl",
+        "sha256": "96797a134a83d62b34fdc7ceb8b45164b10904d61381cdd43c1320332609a8a2"
+      }
+    }
+  },
+  "review_sample": {
+    "call_count_distribution": {
+      "1": 8,
+      "2": 8,
+      "3": 8,
+      "4": 8
+    },
+    "count": 32,
+    "covered_function_family_patterns": [
+      "Aperture",
+      "Aperture+Seat",
+      "HVAC",
+      "HVAC+Aperture",
+      "HVAC+Aperture+Seat",
+      "HVAC+Seat",
+      "Seat"
+    ],
+    "covered_functions": [
+      "set_hvac_fan_speed",
+      "set_hvac_power",
+      "set_hvac_temperature",
+      "set_seat_climate",
+      "set_seat_massage",
+      "set_sunroof_position",
+      "set_sunshade_position",
+      "set_window_position"
+    ],
+    "examples": [
+      {
+        "benchmark_split": "train",
+        "call_count": 4,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "feature": "ventilation",
+              "setting": {
+                "kind": "extreme",
+                "value": "min"
+              },
+              "zone": "rear_left"
+            },
+            "function": "set_seat_climate"
+          },
+          {
+            "arguments": {
+              "target": {
+                "direction": "close",
+                "kind": "relative_percent",
+                "value": 5
+              }
+            },
+            "function": "set_sunroof_position"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute_percent",
+                "value": 50
+              }
+            },
+            "function": "set_sunshade_position"
+          },
+          {
+            "arguments": {
+              "setting": {
+                "kind": "state",
+                "value": "off"
+              },
+              "zone": "front_passenger"
+            },
+            "function": "set_seat_massage"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:310355efbc71589a2fcb6bd4",
+        "function_family_pattern": "Aperture+Seat",
+        "generation_family_id": "astra-v03-family-69593ea5fc97ce624a44",
+        "template_id": "compose.c4.and__set_seat_climate.extreme__set_sunroof_position.relative_percent__set_sunshade_position.absolute_percent__set_seat_massage.state_off",
+        "utterance_ko": "왼쪽 뒷좌석 시트의 통풍 세기를 최저로 맞추고 선루프를 지금보다 5% 더 닫아 두고 선셰이드 열림 정도를 50%로 설정하고 그리고 조수석 좌석의 마사지를 꺼 주세요"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 3,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute",
+                "unit": "level",
+                "value": 5
+              }
+            },
+            "function": "set_hvac_fan_speed"
+          },
+          {
+            "arguments": {
+              "feature": "heating",
+              "setting": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "medium"
+              },
+              "zone": "rear_left"
+            },
+            "function": "set_seat_climate"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute",
+                "unit": "celsius",
+                "value": 30.5
+              },
+              "zone": "all"
+            },
+            "function": "set_hvac_temperature"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:a07689a666926411b0763c7d",
+        "function_family_pattern": "HVAC+Seat",
+        "generation_family_id": "astra-v03-family-2ea9a2f4f50f1dd5ce57",
+        "template_id": "compose.c3.chain__set_hvac_fan_speed.absolute__set_seat_climate.relative__set_hvac_temperature.absolute",
+        "utterance_ko": "공조기 바람 세기를 5단으로 설정하고 왼쪽 뒷좌석 시트 열선 세기를 중간 정도로 낮추고 차량 전체의 공조 온도를 30.5도로 설정해"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 4,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "setting": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "large"
+              },
+              "zone": "rear_row"
+            },
+            "function": "set_seat_massage"
+          },
+          {
+            "arguments": {
+              "feature": "ventilation",
+              "setting": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "small"
+              },
+              "zone": "all"
+            },
+            "function": "set_seat_climate"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute_percent",
+                "value": 60
+              }
+            },
+            "function": "set_sunshade_position"
+          },
+          {
+            "arguments": {
+              "target": {
+                "direction": "increase",
+                "kind": "relative",
+                "magnitude": "small"
+              },
+              "zone": "rear"
+            },
+            "function": "set_hvac_fan_speed"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:80bc396c9df300442e2fa6ae",
+        "function_family_pattern": "HVAC+Aperture+Seat",
+        "generation_family_id": "astra-v03-family-37a0754e691fa5b9deb6",
+        "template_id": "compose.c4.and__set_seat_massage.relative__set_seat_climate.relative__set_sunshade_position.absolute_percent__set_hvac_fan_speed.relative",
+        "utterance_ko": "뒷좌석 시트 마사지 세기를 많이 낮추고 모든 좌석의 통풍 세기를 살짝 낮추고 선셰이드 열림 정도를 60%로 설정하고 그리고 뒷좌석 공조기 바람 세기를 조금 올려 주세요"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 4,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "direction": "close",
+                "kind": "relative_percent",
+                "value": 15
+              },
+              "zone": "rear_row"
+            },
+            "function": "set_window_position"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute",
+                "unit": "celsius",
+                "value": 24.5
+              }
+            },
+            "function": "set_hvac_temperature"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute",
+                "unit": "level",
+                "value": 6
+              },
+              "zone": "driver"
+            },
+            "function": "set_hvac_fan_speed"
+          },
+          {
+            "arguments": {
+              "setting": {
+                "direction": "increase",
+                "kind": "relative",
+                "magnitude": "large"
+              },
+              "zone": "all"
+            },
+            "function": "set_seat_massage"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:a49045d31d600bd2a3cc7e45",
+        "function_family_pattern": "HVAC+Aperture+Seat",
+        "generation_family_id": "astra-v03-family-120a49e58e1eac800470",
+        "template_id": "compose.c4.first_then__set_window_position.relative_percent__set_hvac_temperature.absolute__set_hvac_fan_speed.absolute__set_seat_massage.relative",
+        "utterance_ko": "뒷좌석 쪽 창문을 지금보다 15% 더 닫은 다음 공조 온도를 24.5도로 설정하고 운전석 쪽 공조기 바람 세기를 6단으로 맞추고 모든 좌석 마사지 세기를 크게 높여 주세요"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 1,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "direction": "open",
+                "kind": "relative_percent",
+                "value": 15
+              }
+            },
+            "function": "set_sunroof_position"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:43cee28bab1b5605f75d1abf",
+        "function_family_pattern": "Aperture",
+        "generation_family_id": "astra-v03-family-b17b6fa0babe9d06fdd6",
+        "template_id": "compose.c1.single__set_sunroof_position.relative_percent",
+        "utterance_ko": "선루프를 지금보다 15% 더 열어 주세요"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 2,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "state": "on"
+            },
+            "function": "set_hvac_power"
+          },
+          {
+            "arguments": {
+              "target": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "large"
+              },
+              "zone": "front_passenger"
+            },
+            "function": "set_hvac_fan_speed"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:38ea11f099b7a1b1bd82f542",
+        "function_family_pattern": "HVAC",
+        "generation_family_id": "astra-v03-family-53ba0a52ec98344b46ba",
+        "template_id": "compose.c2.continue__set_hvac_power.state_on__set_hvac_fan_speed.relative",
+        "utterance_ko": "공조기를 켜고 이어서 조수석 쪽 공조기 바람 세기를 많이 내려 줘"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 2,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "direction": "open",
+                "kind": "relative_percent",
+                "value": 50
+              },
+              "zone": "front_row"
+            },
+            "function": "set_window_position"
+          },
+          {
+            "arguments": {
+              "state": "off",
+              "zone": "driver"
+            },
+            "function": "set_hvac_power"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:f47318d585e864405d09441c",
+        "function_family_pattern": "HVAC+Aperture",
+        "generation_family_id": "astra-v03-family-4caa4bf75b2c39d416f5",
+        "template_id": "compose.c2.while__set_window_position.relative_percent__set_hvac_power.state_off",
+        "utterance_ko": "앞좌석 창문을 지금보다 50% 더 열면서 운전석 쪽 에어컨을 꺼줘"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 1,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "feature": "ventilation",
+              "setting": {
+                "kind": "absolute_level",
+                "value": 2
+              },
+              "zone": "front_passenger"
+            },
+            "function": "set_seat_climate"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:ed385077b6f54d97b24536de",
+        "function_family_pattern": "Seat",
+        "generation_family_id": "astra-v03-family-ba63c3639f0863d01ff1",
+        "template_id": "compose.c1.single__set_seat_climate.absolute_level",
+        "utterance_ko": "조수석 좌석의 통풍 세기를 2단으로 맞춰"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 2,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute_percent",
+                "value": 40
+              }
+            },
+            "function": "set_sunshade_position"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute",
+                "unit": "celsius",
+                "value": 23.5
+              },
+              "zone": "rear"
+            },
+            "function": "set_hvac_temperature"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:7b8b3ac9f55150dae44e7954",
+        "function_family_pattern": "HVAC+Aperture",
+        "generation_family_id": "astra-v03-family-b9b5e307ade6fc7d094c",
+        "template_id": "compose.c2.chain__set_sunshade_position.absolute_percent__set_hvac_temperature.absolute",
+        "utterance_ko": "선셰이드 열림 정도를 40%로 맞추고 뒤쪽 공조 온도를 23.5도로 설정해 주세요"
+      },
+      {
+        "benchmark_split": "test",
+        "call_count": 1,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "medium"
+              },
+              "zone": "front_passenger"
+            },
+            "function": "set_hvac_temperature"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:b2f22627b0d08869c30dd1b2",
+        "function_family_pattern": "HVAC",
+        "generation_family_id": "astra-v03-family-233a664ba65533eb4bed",
+        "template_id": "compose.c1.single__set_hvac_temperature.relative",
+        "utterance_ko": "조수석 쪽 공조 온도를 중간 정도로 낮춰 줘"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 3,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "small"
+              },
+              "zone": "all"
+            },
+            "function": "set_hvac_fan_speed"
+          },
+          {
+            "arguments": {
+              "feature": "ventilation",
+              "setting": {
+                "direction": "increase",
+                "kind": "relative",
+                "magnitude": "default"
+              },
+              "zone": "rear_left"
+            },
+            "function": "set_seat_climate"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute_percent",
+                "value": 70
+              },
+              "zone": "front_passenger"
+            },
+            "function": "set_window_position"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:c5a7dc8dbc3f94cfe10133ac",
+        "function_family_pattern": "HVAC+Aperture+Seat",
+        "generation_family_id": "astra-v03-family-c307b52b7433f44c19aa",
+        "template_id": "compose.c3.first_then__set_hvac_fan_speed.relative__set_seat_climate.relative__set_window_position.absolute_percent",
+        "utterance_ko": "차량 전체의 에어컨 풍량을 살짝 내린 다음 왼쪽 뒷좌석 시트의 통풍 세기를 올리고 조수석 창문 열림 정도를 70%로 맞춰줘"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 4,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "setting": {
+                "direction": "increase",
+                "kind": "relative",
+                "magnitude": "default"
+              },
+              "zone": "rear_left"
+            },
+            "function": "set_seat_massage"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute",
+                "unit": "celsius",
+                "value": 19
+              },
+              "zone": "rear"
+            },
+            "function": "set_hvac_temperature"
+          },
+          {
+            "arguments": {
+              "setting": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "default"
+              },
+              "zone": "front_passenger"
+            },
+            "function": "set_seat_massage"
+          },
+          {
+            "arguments": {
+              "feature": "heating",
+              "setting": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "large"
+              },
+              "zone": "rear_right"
+            },
+            "function": "set_seat_climate"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:89a75ce48785f35e848953aa",
+        "function_family_pattern": "HVAC+Seat",
+        "generation_family_id": "astra-v03-family-bf1b5bf3e17696c59d4d",
+        "template_id": "compose.c4.and__set_seat_massage.relative__set_hvac_temperature.absolute__set_seat_massage.relative__set_seat_climate.relative",
+        "utterance_ko": "왼쪽 뒷좌석 시트 마사지 세기를 높이고 뒷좌석 공조 온도를 19도로 설정하고 조수석 시트 마사지 세기를 낮추고 그리고 뒷좌석 오른쪽 좌석의 열선 세기를 많이 내려 주세요"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 4,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "state": "off",
+              "zone": "front_passenger"
+            },
+            "function": "set_hvac_power"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute",
+                "unit": "level",
+                "value": 7
+              }
+            },
+            "function": "set_hvac_fan_speed"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute_percent",
+                "value": 25
+              },
+              "zone": "front_row"
+            },
+            "function": "set_window_position"
+          },
+          {
+            "arguments": {
+              "target": {
+                "direction": "close",
+                "kind": "relative_percent",
+                "value": 10
+              }
+            },
+            "function": "set_sunroof_position"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:5b572e6c79a634c1be1c228e",
+        "function_family_pattern": "HVAC+Aperture",
+        "generation_family_id": "astra-v03-family-cbbdf836aa6ff6d9335b",
+        "template_id": "compose.c4.chain__set_hvac_power.state_off__set_hvac_fan_speed.absolute__set_window_position.absolute_percent__set_sunroof_position.relative_percent",
+        "utterance_ko": "조수석 에어컨을 끄고 에어컨 풍량을 7단으로 설정하고 앞좌석 창문 열림 정도를 25%로 설정하고 선루프를 지금보다 10% 더 닫아줘"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 4,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute_percent",
+                "value": 30
+              },
+              "zone": "driver"
+            },
+            "function": "set_window_position"
+          },
+          {
+            "arguments": {
+              "setting": {
+                "kind": "state",
+                "value": "on"
+              },
+              "zone": "driver"
+            },
+            "function": "set_seat_massage"
+          },
+          {
+            "arguments": {
+              "target": {
+                "direction": "open",
+                "kind": "relative_percent",
+                "value": 20
+              }
+            },
+            "function": "set_sunshade_position"
+          },
+          {
+            "arguments": {
+              "feature": "ventilation",
+              "setting": {
+                "kind": "absolute_level",
+                "value": 1
+              },
+              "zone": "rear_row"
+            },
+            "function": "set_seat_climate"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:7ad799dff95066fb86ae5767",
+        "function_family_pattern": "Aperture+Seat",
+        "generation_family_id": "astra-v03-family-c1f048c8cc633cfca1d3",
+        "template_id": "compose.c4.staged__set_window_position.absolute_percent__set_seat_massage.state_on__set_sunshade_position.relative_percent__set_seat_climate.absolute_level",
+        "utterance_ko": "운전석 창문 열림 정도를 30%로 맞추고 그다음 운전석 좌석의 마사지를 켜고 선셰이드를 지금보다 20% 더 열고 뒷좌석 전체의 통풍 세기를 1단으로 설정해 줘"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 3,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute_percent",
+                "value": 10
+              }
+            },
+            "function": "set_sunroof_position"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute_percent",
+                "value": 30
+              }
+            },
+            "function": "set_sunshade_position"
+          },
+          {
+            "arguments": {
+              "state": "on",
+              "zone": "all"
+            },
+            "function": "set_hvac_power"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:44c74d7ed8d90787b8a6171c",
+        "function_family_pattern": "HVAC+Aperture",
+        "generation_family_id": "astra-v03-family-c6f8f5e5a517093e5f57",
+        "template_id": "compose.c3.chain__set_sunroof_position.absolute_percent__set_sunshade_position.absolute_percent__set_hvac_power.state_on",
+        "utterance_ko": "선루프 열림 정도를 10%로 맞추고 선셰이드 열림 정도를 30%로 맞추고 차량 전체의 공조기를 켜 줘"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 4,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "state": "on",
+              "zone": "front_passenger"
+            },
+            "function": "set_hvac_power"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute",
+                "unit": "celsius",
+                "value": 17
+              },
+              "zone": "front_passenger"
+            },
+            "function": "set_hvac_temperature"
+          },
+          {
+            "arguments": {
+              "setting": {
+                "kind": "extreme",
+                "value": "max"
+              },
+              "zone": "all"
+            },
+            "function": "set_seat_massage"
+          },
+          {
+            "arguments": {
+              "feature": "ventilation",
+              "setting": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "small"
+              },
+              "zone": "all"
+            },
+            "function": "set_seat_climate"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:155249d4c3643451fc9f215d",
+        "function_family_pattern": "HVAC+Seat",
+        "generation_family_id": "astra-v03-family-53cd01747496c3850fca",
+        "template_id": "compose.c4.chain.shared_scope__set_hvac_power.state_on__set_hvac_temperature.absolute__set_seat_massage.extreme__set_seat_climate.relative",
+        "utterance_ko": "조수석 쪽 에어컨을 켜고 에어컨 온도를 17도로 설정하고 전체 좌석 마사지 세기를 최대로 맞추고 전체 좌석 통풍 세기를 조금 낮춰 줘"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 1,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "direction": "close",
+                "kind": "relative_percent",
+                "value": 40
+              }
+            },
+            "function": "set_sunshade_position"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:dd43172df4ee13c4535c6e75",
+        "function_family_pattern": "Aperture",
+        "generation_family_id": "astra-v03-family-c6c57ac995edf519f8ab",
+        "template_id": "compose.c1.single__set_sunshade_position.relative_percent",
+        "utterance_ko": "선셰이드를 지금보다 40% 더 닫아"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 2,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "setting": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "large"
+              },
+              "zone": "rear_row"
+            },
+            "function": "set_seat_massage"
+          },
+          {
+            "arguments": {
+              "target": {
+                "direction": "close",
+                "kind": "relative_percent",
+                "value": 20
+              }
+            },
+            "function": "set_sunroof_position"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:ee376ba20f11875f41d1e128",
+        "function_family_pattern": "Aperture+Seat",
+        "generation_family_id": "astra-v03-family-61a0e8540600cc36974e",
+        "template_id": "compose.c2.and__set_seat_massage.relative__set_sunroof_position.relative_percent",
+        "utterance_ko": "뒷좌석 시트 마사지 세기를 크게 내려 줘. 그리고 선루프를 지금보다 20% 더 닫아 둬"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 1,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "setting": {
+                "direction": "increase",
+                "kind": "relative",
+                "magnitude": "large"
+              },
+              "zone": "front_passenger"
+            },
+            "function": "set_seat_massage"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:6471d089f61e0d80d53ccb05",
+        "function_family_pattern": "Seat",
+        "generation_family_id": "astra-v03-family-2877cd9f706da71402b4",
+        "template_id": "compose.c1.single__set_seat_massage.relative",
+        "utterance_ko": "조수석 좌석의 마사지 세기를 많이 높여 주세요"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 2,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute",
+                "unit": "level",
+                "value": 2
+              },
+              "zone": "all"
+            },
+            "function": "set_hvac_fan_speed"
+          },
+          {
+            "arguments": {
+              "setting": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "default"
+              },
+              "zone": "rear_left"
+            },
+            "function": "set_seat_massage"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:cac26ba51d6c529b6b84c43b",
+        "function_family_pattern": "HVAC+Seat",
+        "generation_family_id": "astra-v03-family-d4c1fb1e51421022c227",
+        "template_id": "compose.c2.continue__set_hvac_fan_speed.absolute__set_seat_massage.relative",
+        "utterance_ko": "차량 전체의 에어컨 풍량을 2단으로 맞추고 이어서 뒷좌석 왼쪽 좌석 마사지 세기를 낮춰 줘"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 3,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "direction": "close",
+                "kind": "relative",
+                "magnitude": "default"
+              }
+            },
+            "function": "set_sunroof_position"
+          },
+          {
+            "arguments": {
+              "feature": "heating",
+              "setting": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "medium"
+              },
+              "zone": "rear_row"
+            },
+            "function": "set_seat_climate"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute",
+                "unit": "level",
+                "value": 4
+              },
+              "zone": "front_passenger"
+            },
+            "function": "set_hvac_fan_speed"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:9613708c79cd739c2c899cb5",
+        "function_family_pattern": "HVAC+Aperture+Seat",
+        "generation_family_id": "astra-v03-family-8d3d51f45c590d244be1",
+        "template_id": "compose.c3.and__set_sunroof_position.relative__set_seat_climate.relative__set_hvac_fan_speed.absolute",
+        "utterance_ko": "선루프를 더 닫아 두고 뒷좌석 전체의 열선 세기를 적당히 내리고 그리고 조수석 쪽 에어컨 풍량을 4단으로 맞춰"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 2,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "kind": "named",
+                "value": "closed"
+              },
+              "zone": "rear_left"
+            },
+            "function": "set_window_position"
+          },
+          {
+            "arguments": {
+              "feature": "heating",
+              "setting": {
+                "kind": "absolute_level",
+                "value": 1
+              },
+              "zone": "rear_left"
+            },
+            "function": "set_seat_climate"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:e02481162ec22ff7d113eb25",
+        "function_family_pattern": "Aperture+Seat",
+        "generation_family_id": "astra-v03-family-04b3a041e327c359afa2",
+        "template_id": "compose.c2.chain__set_window_position.named_closed__set_seat_climate.absolute_level",
+        "utterance_ko": "뒷좌석 왼쪽 창문을 닫아 두고 뒷좌석 왼쪽 좌석 열선 세기를 1단으로 맞춰 주세요"
+      },
+      {
+        "benchmark_split": "test",
+        "call_count": 4,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "setting": {
+                "kind": "state",
+                "value": "off"
+              },
+              "zone": "all"
+            },
+            "function": "set_seat_massage"
+          },
+          {
+            "arguments": {
+              "target": {
+                "direction": "close",
+                "kind": "relative_percent",
+                "value": 30
+              }
+            },
+            "function": "set_sunshade_position"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute",
+                "unit": "celsius",
+                "value": 20
+              }
+            },
+            "function": "set_hvac_temperature"
+          },
+          {
+            "arguments": {
+              "feature": "ventilation",
+              "setting": {
+                "kind": "state",
+                "value": "on"
+              },
+              "zone": "rear_right"
+            },
+            "function": "set_seat_climate"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:9fe3b1b7875762b1e9f7f42f",
+        "function_family_pattern": "HVAC+Aperture+Seat",
+        "generation_family_id": "astra-v03-family-e94095fd6b6afd3bcd0f",
+        "template_id": "compose.c4.middle_then__set_seat_massage.state_off__set_sunshade_position.relative_percent__set_hvac_temperature.absolute__set_seat_climate.state_on",
+        "utterance_ko": "모든 좌석 마사지를 끄고 선셰이드를 지금보다 30% 더 닫은 다음 에어컨 온도를 20도로 설정하고 뒷좌석 오른쪽 좌석의 통풍을 작동시켜 주세요"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 3,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "setting": {
+                "kind": "absolute_level",
+                "value": 3
+              },
+              "zone": "rear_right"
+            },
+            "function": "set_seat_massage"
+          },
+          {
+            "arguments": {
+              "target": {
+                "direction": "close",
+                "kind": "relative",
+                "magnitude": "large"
+              }
+            },
+            "function": "set_sunshade_position"
+          },
+          {
+            "arguments": {
+              "feature": "ventilation",
+              "setting": {
+                "kind": "state",
+                "value": "on"
+              },
+              "zone": "rear_right"
+            },
+            "function": "set_seat_climate"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:43bc2c796b3f9890c727772f",
+        "function_family_pattern": "Aperture+Seat",
+        "generation_family_id": "astra-v03-family-ebb806fae9a487add6d7",
+        "template_id": "compose.c3.middle_then__set_seat_massage.absolute_level__set_sunshade_position.relative__set_seat_climate.state_on",
+        "utterance_ko": "오른쪽 뒷좌석 시트 마사지 세기를 3단으로 맞추고 선셰이드를 큰 폭으로 더 닫아 둔 다음 뒷좌석 오른쪽 좌석 통풍을 작동시켜 주세요"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 1,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute_percent",
+                "value": 60
+              },
+              "zone": "rear_left"
+            },
+            "function": "set_window_position"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:f46ba8f2500d54206be3d613",
+        "function_family_pattern": "Aperture",
+        "generation_family_id": "astra-v03-family-4f7afbefe16719a1be75",
+        "template_id": "compose.c1.single__set_window_position.absolute_percent",
+        "utterance_ko": "뒷좌석 왼쪽 창문 열림 정도를 60%로 설정해줘"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 3,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "direction": "close",
+                "kind": "relative",
+                "magnitude": "large"
+              },
+              "zone": "front_row"
+            },
+            "function": "set_window_position"
+          },
+          {
+            "arguments": {
+              "target": {
+                "direction": "close",
+                "kind": "relative_percent",
+                "value": 5
+              }
+            },
+            "function": "set_sunroof_position"
+          },
+          {
+            "arguments": {
+              "feature": "ventilation",
+              "setting": {
+                "kind": "extreme",
+                "value": "max"
+              },
+              "zone": "front_passenger"
+            },
+            "function": "set_seat_climate"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:ca94c99fbf169842192b3116",
+        "function_family_pattern": "Aperture+Seat",
+        "generation_family_id": "astra-v03-family-c3907b72b70cfd7a197e",
+        "template_id": "compose.c3.and__set_window_position.relative__set_sunroof_position.relative_percent__set_seat_climate.extreme",
+        "utterance_ko": "앞좌석 창문을 많이 더 닫고 선루프를 지금보다 5% 더 닫아 두고 그리고 조수석 시트 통풍 세기를 최대로 설정해 줘"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 3,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "setting": {
+                "direction": "increase",
+                "kind": "relative",
+                "magnitude": "default"
+              },
+              "zone": "all"
+            },
+            "function": "set_seat_massage"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute",
+                "unit": "celsius",
+                "value": 21.5
+              },
+              "zone": "all"
+            },
+            "function": "set_hvac_temperature"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute_percent",
+                "value": 25
+              }
+            },
+            "function": "set_sunshade_position"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:7aaafac9d2acd7dad760bb87",
+        "function_family_pattern": "HVAC+Aperture+Seat",
+        "generation_family_id": "astra-v03-family-f85c38e5ab31ba38ecd8",
+        "template_id": "compose.c3.chain__set_seat_massage.relative__set_hvac_temperature.absolute__set_sunshade_position.absolute_percent",
+        "utterance_ko": "모든 좌석 마사지 세기를 올리고 전체 공조 온도를 21.5도로 맞추고 선셰이드 열림 정도를 25%로 설정해 주세요"
+      },
+      {
+        "benchmark_split": "validation",
+        "call_count": 1,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "state": "on",
+              "zone": "front_passenger"
+            },
+            "function": "set_hvac_power"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:67f78c0029bce68134533589",
+        "function_family_pattern": "HVAC",
+        "generation_family_id": "astra-v03-family-bcf59b00937bb3446ce8",
+        "template_id": "compose.c1.single__set_hvac_power.state_on",
+        "utterance_ko": "조수석 쪽 공조기를 작동시켜 줘"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 2,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute",
+                "unit": "celsius",
+                "value": 21.5
+              },
+              "zone": "front_passenger"
+            },
+            "function": "set_hvac_temperature"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "named",
+                "value": "closed"
+              }
+            },
+            "function": "set_sunshade_position"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:8e258b9d5226d9d79fcd0248",
+        "function_family_pattern": "HVAC+Aperture",
+        "generation_family_id": "astra-v03-family-2d0122a3dc9e91bfa029",
+        "template_id": "compose.c2.and__set_hvac_temperature.absolute__set_sunshade_position.named_closed",
+        "utterance_ko": "조수석 에어컨 온도를 21.5도로 설정해. 그리고 선셰이드를 닫아"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 3,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "default"
+              },
+              "zone": "rear"
+            },
+            "function": "set_hvac_fan_speed"
+          },
+          {
+            "arguments": {
+              "feature": "heating",
+              "setting": {
+                "kind": "extreme",
+                "value": "max"
+              },
+              "zone": "rear_left"
+            },
+            "function": "set_seat_climate"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute_percent",
+                "value": 70
+              }
+            },
+            "function": "set_sunshade_position"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:099ae511c1e31230c5e8849c",
+        "function_family_pattern": "HVAC+Aperture+Seat",
+        "generation_family_id": "astra-v03-family-8b57df4a6d4db1dcbad7",
+        "template_id": "compose.c3.and__set_hvac_fan_speed.relative__set_seat_climate.extreme__set_sunshade_position.absolute_percent",
+        "utterance_ko": "뒷좌석 에어컨 풍량을 내리고 뒷좌석 왼쪽 좌석 열선 세기를 최대로 설정하고 그리고 선셰이드 열림 정도를 70%로 설정해줘"
+      },
+      {
+        "benchmark_split": "train",
+        "call_count": 2,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "direction": "increase",
+                "kind": "relative",
+                "magnitude": "default"
+              },
+              "zone": "front_passenger"
+            },
+            "function": "set_hvac_fan_speed"
+          },
+          {
+            "arguments": {
+              "target": {
+                "kind": "absolute_percent",
+                "value": 60
+              }
+            },
+            "function": "set_sunshade_position"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:0a0c54cab5f625d53aa65e4c",
+        "function_family_pattern": "HVAC+Aperture",
+        "generation_family_id": "astra-v03-family-95be491492ee59800490",
+        "template_id": "compose.c2.continue__set_hvac_fan_speed.relative__set_sunshade_position.absolute_percent",
+        "utterance_ko": "조수석 쪽 에어컨 풍량을 올리고 이어서 선셰이드 열림 정도를 60%로 설정해 줘"
+      },
+      {
+        "benchmark_split": "test",
+        "call_count": 1,
+        "canonical_calls": [
+          {
+            "arguments": {
+              "target": {
+                "direction": "decrease",
+                "kind": "relative",
+                "magnitude": "small"
+              },
+              "zone": "rear"
+            },
+            "function": "set_hvac_fan_speed"
+          }
+        ],
+        "example_id": "synthetic:astra_vehicle_aug_v0.3:c92198a1fc960f20070ca13f",
+        "function_family_pattern": "HVAC",
+        "generation_family_id": "astra-v03-family-9776273a8a5b6bb90db7",
+        "template_id": "compose.c1.single__set_hvac_fan_speed.relative",
+        "utterance_ko": "뒷좌석 에어컨 풍량을 조금 낮춰"
+      }
+    ],
+    "selection": "32 deterministic seeded synthetic examples: eight per call_count, greedily covering functions and generation family patterns"
+  },
+  "seed": 20260905,
+  "split": {
+    "actual_counts": {
+      "test": 273,
+      "train": 2192,
+      "validation": 274
+    },
+    "atomic_group_count": 2164,
+    "method": "primitive-cover-first seeded greedy atomic group packing",
+    "primitive_coverage_train_group_count": 30,
+    "primitive_coverage_train_group_ids": [
+      "synthetic::astra-v03-family-ce909219b0cfdf77e761",
+      "synthetic::astra-v03-family-4f7afbefe16719a1be75",
+      "synthetic::astra-v03-family-d92da0ba2aa993de5839",
+      "synthetic::astra-v03-family-d6b3b782ed47e2a2c892",
+      "synthetic::astra-v03-family-e6640aafbf06a472a246",
+      "synthetic::astra-v03-family-3c291c722ba3b346d381",
+      "synthetic::astra-v03-family-ceabeb31a76b110e19fc",
+      "synthetic::astra-v03-family-bf285338c08bb3a811fe",
+      "synthetic::astra-v03-family-37f8a905366c749c096f",
+      "synthetic::astra-v03-family-e1bef0b9449979774170",
+      "synthetic::astra-v03-family-eb846f855c6222fce711",
+      "original::macslu:40670d121a89ad7142e3536ee6dc05374d095f6b:train:9526",
+      "synthetic::astra-v03-family-bacd5e1da5a1bfbc1444",
+      "synthetic::astra-v03-family-055334c7c06d01ac4fc7",
+      "synthetic::astra-v03-family-0c9720ae8b39e95017ba",
+      "synthetic::astra-v03-family-067d69a33b238a7a5773",
+      "synthetic::astra-v03-family-ceb1cfad8d3a79325ec2",
+      "synthetic::astra-v03-family-fbc8bf404822eb731477",
+      "synthetic::astra-v03-family-30298b9d36d9ed298cb5",
+      "synthetic::astra-v03-family-22410e6f982bf6366835",
+      "synthetic::astra-v03-family-2ce2a3266db79d9c09a2",
+      "synthetic::astra-v03-family-db931433f75645a2c87e",
+      "synthetic::astra-v03-family-66892c0b3d7351937365",
+      "synthetic::astra-v03-family-16632840724a3f02c0dc",
+      "synthetic::astra-v03-family-1c0bc2b4dcae8d8d3352",
+      "synthetic::astra-v03-family-c77851e986264fbd1d49",
+      "synthetic::astra-v03-family-b92f96fd6185bf4bd188",
+      "synthetic::astra-v03-family-c3907b72b70cfd7a197e",
+      "original::macslu:40670d121a89ad7142e3536ee6dc05374d095f6b:validation:19363",
+      "synthetic::astra-v03-family-e7ab47488012edc528b5"
+    ],
+    "ratios": {
+      "test": 0.1,
+      "train": 0.8,
+      "validation": 0.1
+    },
+    "stratum_actual": {
+      "original|1": {
+        "test": 7,
+        "train": 57,
+        "validation": 7
+      },
+      "original|2": {
+        "test": 33,
+        "train": 267,
+        "validation": 33
+      },
+      "original|3": {
+        "test": 3,
+        "train": 25,
+        "validation": 3
+      },
+      "original|4": {
+        "test": 0,
+        "train": 3,
+        "validation": 1
+      },
+      "synthetic|1": {
+        "test": 50,
+        "train": 400,
+        "validation": 50
+      },
+      "synthetic|2": {
+        "test": 80,
+        "train": 640,
+        "validation": 80
+      },
+      "synthetic|3": {
+        "test": 60,
+        "train": 480,
+        "validation": 60
+      },
+      "synthetic|4": {
+        "test": 40,
+        "train": 320,
+        "validation": 40
+      }
+    },
+    "stratum_targets": {
+      "original|1": {
+        "test": 7,
+        "train": 57,
+        "validation": 7
+      },
+      "original|2": {
+        "test": 33,
+        "train": 267,
+        "validation": 33
+      },
+      "original|3": {
+        "test": 3,
+        "train": 25,
+        "validation": 3
+      },
+      "original|4": {
+        "test": 0,
+        "train": 3,
+        "validation": 1
+      },
+      "synthetic|1": {
+        "test": 50,
+        "train": 400,
+        "validation": 50
+      },
+      "synthetic|2": {
+        "test": 80,
+        "train": 640,
+        "validation": 80
+      },
+      "synthetic|3": {
+        "test": 60,
+        "train": 480,
+        "validation": 60
+      },
+      "synthetic|4": {
+        "test": 40,
+        "train": 320,
+        "validation": 40
+      }
+    },
+    "target_counts": {
+      "test": 274,
+      "train": 2191,
+      "validation": 274
+    }
+  },
+  "split_integrity": {
+    "assertions": {
+      "final_union_identity_exactly_once": true,
+      "source_type_ratio_within_two_percentage_points": true,
+      "split_ratio_within_one_percentage_point_or_atomic_exception": true,
+      "validation_test_primitives_subset_of_train": true,
+      "zero_normalized_utterance_overlap": true,
+      "zero_synthetic_generation_family_overlap": true
+    },
+    "final_union_identity": {
+      "all_non_split_fields_preserved": true,
+      "expected_examples": 2739,
+      "extra_example_ids": [],
+      "missing_example_ids": [],
+      "non_singleton_example_ids": [],
+      "observed_examples": 2739,
+      "unique_observed_example_ids": 2739
+    },
+    "normalized_utterance_overlap": {
+      "train_test": 0,
+      "train_validation": 0,
+      "validation_test": 0
+    },
+    "ordered_canonical_signature_overlap_diagnostic": {
+      "train_test": 12,
+      "train_validation": 9,
+      "validation_test": 3
+    },
+    "primitive_api_value_coverage": {
+      "extraction": "function-qualified typed recursive API leaves plus absent optional arguments",
+      "test_missing_from_train": [],
+      "unique_test_primitives": 219,
+      "unique_train_primitives": 230,
+      "unique_validation_primitives": 220,
+      "validation_missing_from_train": []
+    },
+    "source_type_ratio_gate": {
+      "test": {
+        "original": {
+          "absolute_deviation_percentage_points": 0.276832,
+          "full_pool_share": 0.16027747,
+          "split_share": 0.15750916,
+          "within_two_percentage_points": true
+        },
+        "synthetic": {
+          "absolute_deviation_percentage_points": 0.276832,
+          "full_pool_share": 0.83972253,
+          "split_share": 0.84249084,
+          "within_two_percentage_points": true
+        }
+      },
+      "train": {
+        "original": {
+          "absolute_deviation_percentage_points": 0.030647,
+          "full_pool_share": 0.16027747,
+          "split_share": 0.16058394,
+          "within_two_percentage_points": true
+        },
+        "synthetic": {
+          "absolute_deviation_percentage_points": 0.030647,
+          "full_pool_share": 0.83972253,
+          "split_share": 0.83941606,
+          "within_two_percentage_points": true
+        }
+      },
+      "validation": {
+        "original": {
+          "absolute_deviation_percentage_points": 0.030647,
+          "full_pool_share": 0.16027747,
+          "split_share": 0.16058394,
+          "within_two_percentage_points": true
+        },
+        "synthetic": {
+          "absolute_deviation_percentage_points": 0.030647,
+          "full_pool_share": 0.83972253,
+          "split_share": 0.83941606,
+          "within_two_percentage_points": true
+        }
+      }
+    },
+    "split_ratio_gate": {
+      "largest_atomic_group_share": 0.02190581,
+      "largest_atomic_group_size": 60,
+      "splits": {
+        "test": {
+          "absolute_deviation_percentage_points": 0.032859,
+          "actual_share": 0.09967141,
+          "atomic_group_exception": false,
+          "target_share": 0.1,
+          "within_one_percentage_point": true
+        },
+        "train": {
+          "absolute_deviation_percentage_points": 0.029208,
+          "actual_share": 0.80029208,
+          "atomic_group_exception": false,
+          "target_share": 0.8,
+          "within_one_percentage_point": true
+        },
+        "validation": {
+          "absolute_deviation_percentage_points": 0.003651,
+          "actual_share": 0.10003651,
+          "atomic_group_exception": false,
+          "target_share": 0.1,
+          "within_one_percentage_point": true
+        }
+      }
+    },
+    "synthetic_generation_family_overlap": {
+      "train_test": 0,
+      "train_validation": 0,
+      "validation_test": 0
+    }
+  },
+  "synthetic_generation": {
+    "function_family_pattern_counts": {
+      "Aperture": 283,
+      "Aperture+Seat": 263,
+      "HVAC": 260,
+      "HVAC+Aperture": 594,
+      "HVAC+Aperture+Seat": 423,
+      "HVAC+Seat": 260,
+      "Seat": 217
+    },
+    "generation_family_count": 1725,
+    "generator": "astra_vehicle_aug_v0.3",
+    "generator_version": "0.3.0",
+    "template_count": 1725
+  },
+  "synthetic_release_coverage": {
+    "checks": {
+      "function_family_patterns": {
+        "expected": [
+          "\"Aperture\"",
+          "\"Aperture+Seat\"",
+          "\"HVAC\"",
+          "\"HVAC+Aperture\"",
+          "\"HVAC+Aperture+Seat\"",
+          "\"HVAC+Seat\"",
+          "\"Seat\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"Aperture\"",
+          "\"Aperture+Seat\"",
+          "\"HVAC\"",
+          "\"HVAC+Aperture\"",
+          "\"HVAC+Aperture+Seat\"",
+          "\"HVAC+Seat\"",
+          "\"Seat\""
+        ],
+        "passed": true
+      },
+      "functions": {
+        "expected": [
+          "\"set_hvac_fan_speed\"",
+          "\"set_hvac_power\"",
+          "\"set_hvac_temperature\"",
+          "\"set_seat_climate\"",
+          "\"set_seat_massage\"",
+          "\"set_sunroof_position\"",
+          "\"set_sunshade_position\"",
+          "\"set_window_position\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"set_hvac_fan_speed\"",
+          "\"set_hvac_power\"",
+          "\"set_hvac_temperature\"",
+          "\"set_seat_climate\"",
+          "\"set_seat_massage\"",
+          "\"set_sunroof_position\"",
+          "\"set_sunshade_position\"",
+          "\"set_window_position\""
+        ],
+        "passed": true
+      },
+      "set_hvac_fan_speed.absolute_levels": {
+        "expected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "missing": [],
+        "observed": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "passed": true
+      },
+      "set_hvac_fan_speed.target.extreme.value": {
+        "expected": [
+          "\"max\"",
+          "\"min\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"max\"",
+          "\"min\""
+        ],
+        "passed": true
+      },
+      "set_hvac_fan_speed.target.kind": {
+        "expected": [
+          "\"absolute\"",
+          "\"extreme\"",
+          "\"relative\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"absolute\"",
+          "\"extreme\"",
+          "\"relative\""
+        ],
+        "passed": true
+      },
+      "set_hvac_fan_speed.target.relative.direction": {
+        "expected": [
+          "\"decrease\"",
+          "\"increase\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"decrease\"",
+          "\"increase\""
+        ],
+        "passed": true
+      },
+      "set_hvac_fan_speed.target.relative.magnitude": {
+        "expected": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "passed": true
+      },
+      "set_hvac_fan_speed.zone": {
+        "expected": [
+          "\"<ABSENT>\"",
+          "\"all\"",
+          "\"driver\"",
+          "\"front_passenger\"",
+          "\"rear\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"<ABSENT>\"",
+          "\"all\"",
+          "\"driver\"",
+          "\"front_passenger\"",
+          "\"rear\""
+        ],
+        "passed": true
+      },
+      "set_hvac_power.state": {
+        "expected": [
+          "\"off\"",
+          "\"on\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"off\"",
+          "\"on\""
+        ],
+        "passed": true
+      },
+      "set_hvac_power.zone": {
+        "expected": [
+          "\"<ABSENT>\"",
+          "\"all\"",
+          "\"driver\"",
+          "\"front_passenger\"",
+          "\"rear\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"<ABSENT>\"",
+          "\"all\"",
+          "\"driver\"",
+          "\"front_passenger\"",
+          "\"rear\""
+        ],
+        "passed": true
+      },
+      "set_hvac_temperature.absolute_grid": {
+        "expected": [
+          "16.0",
+          "16.5",
+          "17.0",
+          "17.5",
+          "18.0",
+          "18.5",
+          "19.0",
+          "19.5",
+          "20.0",
+          "20.5",
+          "21.0",
+          "21.5",
+          "22.0",
+          "22.5",
+          "23.0",
+          "23.5",
+          "24.0",
+          "24.5",
+          "25.0",
+          "25.5",
+          "26.0",
+          "26.5",
+          "27.0",
+          "27.5",
+          "28.0",
+          "28.5",
+          "29.0",
+          "29.5",
+          "30.0",
+          "30.5",
+          "31.0",
+          "31.5",
+          "32.0"
+        ],
+        "missing": [],
+        "observed": [
+          "16",
+          "16.5",
+          "17",
+          "17.5",
+          "18",
+          "18.5",
+          "19",
+          "19.5",
+          "20",
+          "20.5",
+          "21",
+          "21.5",
+          "22",
+          "22.5",
+          "23",
+          "23.5",
+          "24",
+          "24.5",
+          "25",
+          "25.5",
+          "26",
+          "26.5",
+          "27",
+          "27.5",
+          "28",
+          "28.5",
+          "29",
+          "29.5",
+          "30",
+          "30.5",
+          "31",
+          "31.5",
+          "32"
+        ],
+        "passed": true
+      },
+      "set_hvac_temperature.target.extreme.value": {
+        "expected": [
+          "\"max\"",
+          "\"min\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"max\"",
+          "\"min\""
+        ],
+        "passed": true
+      },
+      "set_hvac_temperature.target.kind": {
+        "expected": [
+          "\"absolute\"",
+          "\"extreme\"",
+          "\"relative\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"absolute\"",
+          "\"extreme\"",
+          "\"relative\""
+        ],
+        "passed": true
+      },
+      "set_hvac_temperature.target.relative.direction": {
+        "expected": [
+          "\"decrease\"",
+          "\"increase\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"decrease\"",
+          "\"increase\""
+        ],
+        "passed": true
+      },
+      "set_hvac_temperature.target.relative.magnitude": {
+        "expected": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "passed": true
+      },
+      "set_hvac_temperature.zone": {
+        "expected": [
+          "\"<ABSENT>\"",
+          "\"all\"",
+          "\"driver\"",
+          "\"front_passenger\"",
+          "\"rear\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"<ABSENT>\"",
+          "\"all\"",
+          "\"driver\"",
+          "\"front_passenger\"",
+          "\"rear\""
+        ],
+        "passed": true
+      },
+      "set_seat_climate.absolute_levels": {
+        "expected": [
+          "1",
+          "2",
+          "3"
+        ],
+        "missing": [],
+        "observed": [
+          "1",
+          "2",
+          "3"
+        ],
+        "passed": true
+      },
+      "set_seat_climate.feature": {
+        "expected": [
+          "\"heating\"",
+          "\"ventilation\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"heating\"",
+          "\"ventilation\""
+        ],
+        "passed": true
+      },
+      "set_seat_climate.setting.extreme.value": {
+        "expected": [
+          "\"max\"",
+          "\"min\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"max\"",
+          "\"min\""
+        ],
+        "passed": true
+      },
+      "set_seat_climate.setting.kind": {
+        "expected": [
+          "\"absolute_level\"",
+          "\"extreme\"",
+          "\"relative\"",
+          "\"state\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"absolute_level\"",
+          "\"extreme\"",
+          "\"relative\"",
+          "\"state\""
+        ],
+        "passed": true
+      },
+      "set_seat_climate.setting.relative.direction": {
+        "expected": [
+          "\"decrease\"",
+          "\"increase\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"decrease\"",
+          "\"increase\""
+        ],
+        "passed": true
+      },
+      "set_seat_climate.setting.relative.magnitude": {
+        "expected": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "passed": true
+      },
+      "set_seat_climate.setting.state.value": {
+        "expected": [
+          "\"off\"",
+          "\"on\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"off\"",
+          "\"on\""
+        ],
+        "passed": true
+      },
+      "set_seat_climate.zone": {
+        "expected": [
+          "\"all\"",
+          "\"driver\"",
+          "\"front_passenger\"",
+          "\"rear_left\"",
+          "\"rear_right\"",
+          "\"rear_row\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"all\"",
+          "\"driver\"",
+          "\"front_passenger\"",
+          "\"rear_left\"",
+          "\"rear_right\"",
+          "\"rear_row\""
+        ],
+        "passed": true
+      },
+      "set_seat_massage.absolute_levels": {
+        "expected": [
+          "1",
+          "2",
+          "3"
+        ],
+        "missing": [],
+        "observed": [
+          "1",
+          "2",
+          "3"
+        ],
+        "passed": true
+      },
+      "set_seat_massage.setting.extreme.value": {
+        "expected": [
+          "\"max\"",
+          "\"min\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"max\"",
+          "\"min\""
+        ],
+        "passed": true
+      },
+      "set_seat_massage.setting.kind": {
+        "expected": [
+          "\"absolute_level\"",
+          "\"extreme\"",
+          "\"relative\"",
+          "\"state\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"absolute_level\"",
+          "\"extreme\"",
+          "\"relative\"",
+          "\"state\""
+        ],
+        "passed": true
+      },
+      "set_seat_massage.setting.relative.direction": {
+        "expected": [
+          "\"decrease\"",
+          "\"increase\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"decrease\"",
+          "\"increase\""
+        ],
+        "passed": true
+      },
+      "set_seat_massage.setting.relative.magnitude": {
+        "expected": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "passed": true
+      },
+      "set_seat_massage.setting.state.value": {
+        "expected": [
+          "\"off\"",
+          "\"on\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"off\"",
+          "\"on\""
+        ],
+        "passed": true
+      },
+      "set_seat_massage.zone": {
+        "expected": [
+          "\"all\"",
+          "\"driver\"",
+          "\"front_passenger\"",
+          "\"rear_left\"",
+          "\"rear_right\"",
+          "\"rear_row\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"all\"",
+          "\"driver\"",
+          "\"front_passenger\"",
+          "\"rear_left\"",
+          "\"rear_right\"",
+          "\"rear_row\""
+        ],
+        "passed": true
+      },
+      "set_sunroof_position.absolute_percent_grid": {
+        "expected": [
+          "0",
+          "10",
+          "100",
+          "20",
+          "25",
+          "30",
+          "40",
+          "50",
+          "60",
+          "70",
+          "75",
+          "80",
+          "90"
+        ],
+        "missing": [],
+        "observed": [
+          "0",
+          "10",
+          "100",
+          "20",
+          "25",
+          "30",
+          "40",
+          "50",
+          "60",
+          "70",
+          "75",
+          "80",
+          "90"
+        ],
+        "passed": true
+      },
+      "set_sunroof_position.relative_percent_grid": {
+        "expected": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "40",
+          "5",
+          "50"
+        ],
+        "missing": [],
+        "observed": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "40",
+          "5",
+          "50"
+        ],
+        "passed": true
+      },
+      "set_sunroof_position.target.kind": {
+        "expected": [
+          "\"absolute_percent\"",
+          "\"named\"",
+          "\"relative\"",
+          "\"relative_percent\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"absolute_percent\"",
+          "\"named\"",
+          "\"relative\"",
+          "\"relative_percent\""
+        ],
+        "passed": true
+      },
+      "set_sunroof_position.target.named.value": {
+        "expected": [
+          "\"closed\"",
+          "\"open\"",
+          "\"vent\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"closed\"",
+          "\"open\"",
+          "\"vent\""
+        ],
+        "passed": true
+      },
+      "set_sunroof_position.target.relative.direction": {
+        "expected": [
+          "\"close\"",
+          "\"open\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"close\"",
+          "\"open\""
+        ],
+        "passed": true
+      },
+      "set_sunroof_position.target.relative.magnitude": {
+        "expected": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "passed": true
+      },
+      "set_sunroof_position.target.relative_percent.direction": {
+        "expected": [
+          "\"close\"",
+          "\"open\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"close\"",
+          "\"open\""
+        ],
+        "passed": true
+      },
+      "set_sunshade_position.absolute_percent_grid": {
+        "expected": [
+          "0",
+          "10",
+          "100",
+          "20",
+          "25",
+          "30",
+          "40",
+          "50",
+          "60",
+          "70",
+          "75",
+          "80",
+          "90"
+        ],
+        "missing": [],
+        "observed": [
+          "0",
+          "10",
+          "100",
+          "20",
+          "25",
+          "30",
+          "40",
+          "50",
+          "60",
+          "70",
+          "75",
+          "80",
+          "90"
+        ],
+        "passed": true
+      },
+      "set_sunshade_position.relative_percent_grid": {
+        "expected": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "40",
+          "5",
+          "50"
+        ],
+        "missing": [],
+        "observed": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "40",
+          "5",
+          "50"
+        ],
+        "passed": true
+      },
+      "set_sunshade_position.target.kind": {
+        "expected": [
+          "\"absolute_percent\"",
+          "\"named\"",
+          "\"relative\"",
+          "\"relative_percent\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"absolute_percent\"",
+          "\"named\"",
+          "\"relative\"",
+          "\"relative_percent\""
+        ],
+        "passed": true
+      },
+      "set_sunshade_position.target.named.value": {
+        "expected": [
+          "\"closed\"",
+          "\"open\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"closed\"",
+          "\"open\""
+        ],
+        "passed": true
+      },
+      "set_sunshade_position.target.relative.direction": {
+        "expected": [
+          "\"close\"",
+          "\"open\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"close\"",
+          "\"open\""
+        ],
+        "passed": true
+      },
+      "set_sunshade_position.target.relative.magnitude": {
+        "expected": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "passed": true
+      },
+      "set_sunshade_position.target.relative_percent.direction": {
+        "expected": [
+          "\"close\"",
+          "\"open\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"close\"",
+          "\"open\""
+        ],
+        "passed": true
+      },
+      "set_window_position.absolute_percent_grid": {
+        "expected": [
+          "0",
+          "10",
+          "100",
+          "20",
+          "25",
+          "30",
+          "40",
+          "50",
+          "60",
+          "70",
+          "75",
+          "80",
+          "90"
+        ],
+        "missing": [],
+        "observed": [
+          "0",
+          "10",
+          "100",
+          "20",
+          "25",
+          "30",
+          "40",
+          "50",
+          "60",
+          "70",
+          "75",
+          "80",
+          "90"
+        ],
+        "passed": true
+      },
+      "set_window_position.relative_percent_grid": {
+        "expected": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "40",
+          "5",
+          "50"
+        ],
+        "missing": [],
+        "observed": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "40",
+          "5",
+          "50"
+        ],
+        "passed": true
+      },
+      "set_window_position.target.kind": {
+        "expected": [
+          "\"absolute_percent\"",
+          "\"named\"",
+          "\"relative\"",
+          "\"relative_percent\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"absolute_percent\"",
+          "\"named\"",
+          "\"relative\"",
+          "\"relative_percent\""
+        ],
+        "passed": true
+      },
+      "set_window_position.target.named.value": {
+        "expected": [
+          "\"closed\"",
+          "\"open\"",
+          "\"vent\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"closed\"",
+          "\"open\"",
+          "\"vent\""
+        ],
+        "passed": true
+      },
+      "set_window_position.target.relative.direction": {
+        "expected": [
+          "\"close\"",
+          "\"open\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"close\"",
+          "\"open\""
+        ],
+        "passed": true
+      },
+      "set_window_position.target.relative.magnitude": {
+        "expected": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"default\"",
+          "\"large\"",
+          "\"medium\"",
+          "\"small\""
+        ],
+        "passed": true
+      },
+      "set_window_position.target.relative_percent.direction": {
+        "expected": [
+          "\"close\"",
+          "\"open\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"close\"",
+          "\"open\""
+        ],
+        "passed": true
+      },
+      "set_window_position.zone": {
+        "expected": [
+          "\"all\"",
+          "\"driver\"",
+          "\"front_passenger\"",
+          "\"front_row\"",
+          "\"left_side\"",
+          "\"rear_left\"",
+          "\"rear_right\"",
+          "\"rear_row\"",
+          "\"right_side\""
+        ],
+        "missing": [],
+        "observed": [
+          "\"all\"",
+          "\"driver\"",
+          "\"front_passenger\"",
+          "\"front_row\"",
+          "\"left_side\"",
+          "\"rear_left\"",
+          "\"rear_right\"",
+          "\"rear_row\"",
+          "\"right_side\""
+        ],
+        "passed": true
+      }
+    },
+    "failures": {},
+    "function_call_counts": {
+      "set_hvac_fan_speed": 688,
+      "set_hvac_power": 688,
+      "set_hvac_temperature": 687,
+      "set_seat_climate": 688,
+      "set_seat_massage": 688,
+      "set_sunroof_position": 687,
+      "set_sunshade_position": 687,
+      "set_window_position": 687
+    },
+    "function_frequency_max_min_ratio": 1.001456,
+    "maximum_allowed_function_ratio": 1.1,
+    "passed": true
+  },
+  "synthetic_targets": {
+    "actual": {
+      "1": 500,
+      "2": 800,
+      "3": 600,
+      "4": 400
+    },
+    "exact_target_met": true,
+    "excess": {},
+    "shortfall": {},
+    "target": {
+      "1": 500,
+      "2": 800,
+      "3": 600,
+      "4": 400
+    }
+  },
+  "utterance_character_length": {
+    "by_source_type": {
+      "original": {
+        "count": 439,
+        "max": 49,
+        "mean": 23.931663,
+        "median": 23,
+        "min": 7,
+        "p95": 37
+      },
+      "synthetic": {
+        "count": 2300,
+        "max": 108,
+        "mean": 49.960435,
+        "median": 47.5,
+        "min": 9,
+        "p95": 88
+      }
+    },
+    "by_split": {
+      "test": {
+        "count": 273,
+        "max": 108,
+        "mean": 44.945055,
+        "median": 42,
+        "min": 8,
+        "p95": 86
+      },
+      "train": {
+        "count": 2192,
+        "max": 108,
+        "mean": 45.825274,
+        "median": 43.0,
+        "min": 7,
+        "p95": 86
+      },
+      "validation": {
+        "count": 274,
+        "max": 96,
+        "mean": 46.335766,
+        "median": 45.0,
+        "min": 12,
+        "p95": 85
+      }
+    },
+    "definition": "Unicode character count after v0.2 whitespace normalization",
+    "overall": {
+      "count": 2739,
+      "max": 108,
+      "mean": 45.788609,
+      "median": 43,
+      "min": 7,
+      "p95": 86
+    }
+  }
+}
